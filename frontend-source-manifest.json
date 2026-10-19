@@ -61,11 +61,11 @@
   "metafileEvidence": null,
   "intendedRepository": {
     "name": "sansphase-frontend-v2",
-    "visibility": "private",
+    "visibility": "public",
     "defaultBranch": "main"
   },
   "sourceAuthority": "Git blobs at the explicit frozen commit; no working-tree source or private data copied.",
-  "securityBoundary": "Private repository. No backend/server tree, production data, real account fixtures, .env, credentials, .local, outputs, uploads or database.",
+  "securityBoundary": "Public frontend repository. No backend/server tree, production data, real account fixtures, .env, credentials, .local, outputs, uploads or database.",
   "lockGeneration": "Official npm package-lock-only --ignore-scripts; complete root package versions/integrities verified against the frozen upstream pnpm lock.",
   "validation": {
     "sourceGraph": "checked",
@@ -1917,8 +1917,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "60cf24bdb418863119abb0289410df077d31c346b39a0ee6a7c88692de7ee117",
-      "bytes": 3315,
+      "sha256": "5ecab90bcdd84cf57cee2756231e72fe5a669ee18eb181d1f22ceee002ca4ba2",
+      "bytes": 3323,
       "generated": true
     },
     {

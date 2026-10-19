@@ -1,6 +1,6 @@
 # SANSPHASE frontend V2
 
-Private source export from upstream commit **eec520cbbde47e5e93845dbdab342abff8185406** (2026-10-19T20:04:20+08:00). Default branch: main. This repository contains the V2 frontend and its exact shared browser dependencies, retaining the original relative paths. It does not contain the backend, production configuration, credentials, accounts, uploads or a production data snapshot.
+Public frontend source export from upstream commit **eec520cbbde47e5e93845dbdab342abff8185406** (2026-10-19T20:04:20+08:00). Default branch: main. This repository contains the V2 frontend and its exact shared browser dependencies, retaining the original relative paths. It does not contain the backend, production configuration, credentials, accounts, uploads or a production data snapshot.
 
 ## Install and verify
 
