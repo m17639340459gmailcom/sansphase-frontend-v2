@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceCommit": "eec520cbbde47e5e93845dbdab342abff8185406",
-  "sourceCommitDate": "2026-10-19T20:04:20+08:00",
+  "sourceCommit": "16e48bf0b9fa89e4855f0665e1c27ef3eda4017e",
+  "sourceCommitDate": "2026-10-19T20:51:26+08:00",
   "heroFileCount": 256,
   "exporterSha256": "46ed8cfdfb0e004e2d33c429c6b2525e39e5722352d503f2b54a1afc895184c6",
   "rootSourceFiles": [
@@ -1639,9 +1639,9 @@
     },
     {
       "path": "src/admin-console-navigation.ts",
-      "gitBlob": "c67e5c0e7e8cc491978fdb7b5f792f2a9780f9de",
-      "sha256": "3e508d52e8bc172470c525942abd4c99c2c50129c518e42e1c1929f504a9cdb2",
-      "bytes": 1699
+      "gitBlob": "a64c45f4d08e690ce4511aff1547a25b7fd87284",
+      "sha256": "fb81977afcfd0327be0da6c4e00251e8317a6558c961f8ae8b2eea29e24c49e7",
+      "bytes": 2201
     },
     {
       "path": "src/book-image-viewer.mjs",

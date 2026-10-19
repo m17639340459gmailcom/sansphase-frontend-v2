@@ -20,6 +20,20 @@ export function adminConsoleHref(section: string = "readers"): string {
   return "/admin-console/#/" + consoleSection(section);
 }
 
+/** Fixed same-origin exits must not carry console filters or login-return intent. */
+export function adminMainSiteHref(preview = false): string {
+  return preview ? "/?mainPreview=1#/notes" : "/";
+}
+
+export function adminAuthorPanelHref(
+  preview = false,
+  mainFrontend: unknown = "v1",
+): string {
+  // Only the runtime-selected V2 retains V1 at /original; V1 uses its root.
+  if (preview) return "/?mainPreview=1#/account";
+  return mainFrontend === "v2" ? "/original#/account" : "/#/account";
+}
+
 export function adminLoginHref(route: string): string {
   return "/?adminReturn=" + consoleSection(route) + "#/account";
 }
