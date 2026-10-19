@@ -1,0 +1,51 @@
+/*!
+ * CSS-only adaptation of scastiel/book-cover-3d, getCssForSettings.
+ * Copyright (c) 2020 Sebastien Castiel. MIT, see LICENSE and UPSTREAM.md.
+ * Pinned source: 0304f59006705ac9d681505eabd9d70c1252bfb4.
+ * Keep upstream's front / fore-edge / back geometry; use CSS variables in
+ * place of generated settings. The host supplies its own book content.
+ */
+.book-cover-3d {
+  --book-width: 220px;
+  --book-depth: 30px;
+  --book-half-depth: calc(var(--book-depth) / 2);
+  --book-inset: 3px;
+  --book-board: #232b3a;
+  position: relative;
+  width: var(--book-width);
+  aspect-ratio: 3 / 4;
+  transform-style: preserve-3d;
+  transform: rotateY(-28deg);
+  transition: transform .65s cubic-bezier(.22, 1, .36, 1);
+}
+.book-cover-3d > :first-child {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(var(--book-half-depth));
+  border-radius: 1px 4px 4px 1px;
+  background-color: var(--book-board);
+}
+.book-cover-3d::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: var(--book-inset);
+  width: calc(var(--book-depth) - 2px);
+  height: calc(100% - var(--book-inset) * 2);
+  transform: translateX(calc(var(--book-width) - var(--book-half-depth) - var(--book-inset))) rotateY(90deg);
+  background: repeating-linear-gradient(90deg, #e1ded5 0px, #f8f5ec 1px, #f8f5ec 2px, #e8e4da 3px);
+  box-shadow: inset 0 0 5px #57492c24;
+}
+.book-cover-3d::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: translateZ(calc(-1 * var(--book-half-depth)));
+  background-color: var(--book-board);
+  border-radius: 1px 4px 4px 1px;
+  box-shadow: -10px 10px 32px -12px #0006;
+}

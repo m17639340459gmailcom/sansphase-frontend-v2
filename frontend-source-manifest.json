@@ -1,0 +1,3588 @@
+{
+  "version": 1,
+  "sourceCommit": "eec520cbbde47e5e93845dbdab342abff8185406",
+  "sourceCommitDate": "2026-10-19T20:04:20+08:00",
+  "heroFileCount": 256,
+  "exporterSha256": "46ed8cfdfb0e004e2d33c429c6b2525e39e5722352d503f2b54a1afc895184c6",
+  "rootSourceFiles": [
+    "src/admin-console-navigation.mjs",
+    "src/admin-console-navigation.ts",
+    "src/book-image-viewer.mjs",
+    "src/book-progress.mjs",
+    "src/book-progress.ts",
+    "src/book-reader.mjs",
+    "src/book-section-reader.mjs",
+    "src/book-shell.mjs",
+    "src/community-entry.ts",
+    "src/community-vip-frame.mjs",
+    "src/community-vip-frame.ts",
+    "src/content-images.ts",
+    "src/content-reader.mjs",
+    "src/content-reader.ts",
+    "src/core.mjs",
+    "src/core.ts",
+    "src/image-compression-library.mjs",
+    "src/image-compression-library.ts",
+    "src/image-sources.mjs",
+    "src/image-sources.ts",
+    "src/login-verification-control.mjs",
+    "src/login-verification-control.ts",
+    "src/login-verification-library.mjs",
+    "src/login-verification-library.ts",
+    "src/login-verification.css",
+    "src/login-verification.mjs",
+    "src/login-verification.ts",
+    "src/reader-frames.mjs",
+    "src/reader-frames.ts",
+    "src/reader-membership.mjs",
+    "src/reader-membership.ts",
+    "src/reader-policy.mjs",
+    "src/reader-policy.ts",
+    "src/reader-ui.ts",
+    "src/section-reading-position.mjs",
+    "src/upload-image-metadata.mjs",
+    "src/upload-image-metadata.ts",
+    "src/upload-image.mjs",
+    "src/upload-image.ts",
+    "src/upload-policy.mjs",
+    "src/vip-book-prompt.mjs"
+  ],
+  "rootPackages": {
+    "compressorjs": "1.4.0",
+    "image-size": "2.0.4"
+  },
+  "rootPackageClosure": {
+    "blueimp-canvas-to-blob": "3.29.0",
+    "compressorjs": "1.4.0",
+    "image-size": "2.0.4",
+    "is-blob": "2.1.0"
+  },
+  "sourceFileCount": 300,
+  "metafileEvidence": null,
+  "intendedRepository": {
+    "name": "sansphase-frontend-v2",
+    "visibility": "private",
+    "defaultBranch": "main"
+  },
+  "sourceAuthority": "Git blobs at the explicit frozen commit; no working-tree source or private data copied.",
+  "securityBoundary": "Private repository. No backend/server tree, production data, real account fixtures, .env, credentials, .local, outputs, uploads or database.",
+  "lockGeneration": "Official npm package-lock-only --ignore-scripts; complete root package versions/integrities verified against the frozen upstream pnpm lock.",
+  "validation": {
+    "sourceGraph": "checked",
+    "npmLockIntegrity": "checked",
+    "cleanInstall": "not run by exporter",
+    "typecheck": "not run by exporter",
+    "build": "not run by exporter",
+    "tests": "not run by exporter",
+    "deployment": "not performed"
+  },
+  "files": [
+    {
+      "path": "docs/FRONTEND-DELIVERY.md",
+      "gitBlob": "e741b01fd6ba221e04f72857eef220f352ab9579",
+      "sha256": "d046c908f3a842dd418b5a531e1273d6caf95d6de0b21636102bcc0c6486a759",
+      "bytes": 4261
+    },
+    {
+      "path": "docs/FRONTEND-LOCAL-INTEGRATION.md",
+      "gitBlob": "532d1f8e1219d176d619e691fa31aedc5d395df0",
+      "sha256": "5cce3fc97e6ea5736419f552557be4c7283be1a3e6c0e6a1a4c76e66b81864e7",
+      "bytes": 7643
+    },
+    {
+      "path": "docs/STATIC-DELIVERY.md",
+      "gitBlob": "f1820a0868bb95fa6ad59ed17391311a1ae19a4c",
+      "sha256": "a7fc23f3db9b950530ebd7b232b41458e0a7f2e62c3e44487ba4d3e60420c155",
+      "bytes": 7506
+    },
+    {
+      "path": "previews/hero-upgrade/.gitattributes",
+      "gitBlob": "5a67ee0b0c6f026653f532247594339e24f2492f",
+      "sha256": "74b2554593c370ddfa2321571b7fac163585e65b7b671181ec1058975a8700f4",
+      "bytes": 111
+    },
+    {
+      "path": "previews/hero-upgrade/DEMO_CONTENT_SOURCES.md",
+      "gitBlob": "d7ab920fcf64839463ac301cc72eab8ff4e46c16",
+      "sha256": "363a64b5638871b6a0477d0cdde09492f3fde710d091d36e42b2725a682f7f98",
+      "bytes": 7197
+    },
+    {
+      "path": "previews/hero-upgrade/HOMEPAGE_ACCEPTANCE.md",
+      "gitBlob": "4b9a1cef680becd51484f73a51b2fde722bad1b4",
+      "sha256": "8d824474919081e8f6f007d5e37d762a705e1c9915ad53e0d449479ca7609b1e",
+      "bytes": 4783
+    },
+    {
+      "path": "previews/hero-upgrade/INNER_PAGES_ACCEPTANCE.md",
+      "gitBlob": "059e9914532afa3235780d3e299f888dded93dce",
+      "sha256": "2294d5eb000ef86c38e114c9204ab0f3c26b1d958813e9660678610aaedf066c",
+      "bytes": 40555
+    },
+    {
+      "path": "previews/hero-upgrade/LOADING_AUDIT.md",
+      "gitBlob": "b166b6d0c04c6394dcb57174443eb66ad6be48a9",
+      "sha256": "eb765147e40881f736718c67657f84ed5868c00aba8b3a7cbd72652dec2cd022",
+      "bytes": 6357
+    },
+    {
+      "path": "previews/hero-upgrade/LOCAL-INTEGRATION.md",
+      "gitBlob": "5617267b4728ff2d5abb30675e24e6265a9054ac",
+      "sha256": "232ce183d278967bb79f4535c14dbbc51bf77aabe6143d73143bc8ead715ccfa",
+      "bytes": 20490
+    },
+    {
+      "path": "previews/hero-upgrade/README.md",
+      "gitBlob": "767c75aa7159ff8d4b92cde44fba2e46a6d98256",
+      "sha256": "9dd4ea1d689b416a793b9c2331385c2fe1b96dcb72b174c4f4e93d3b6ca7643b",
+      "bytes": 39576
+    },
+    {
+      "path": "previews/hero-upgrade/SECOND_UX_REVIEW.md",
+      "gitBlob": "637dd6b6ad1925d425d26e2f2559a3ba3b9b02df",
+      "sha256": "a6597e2417893b3ee58181ecb146d91b2d0f967ffaacdcc611ebf2787ed475ac",
+      "bytes": 7298
+    },
+    {
+      "path": "previews/hero-upgrade/SOURCES.json",
+      "gitBlob": "f294d1af2456b9191a2a3c65e821fa2daa54eb1d",
+      "sha256": "5d8bb6c4efa34633304e7ad3aa77a7e578d7140d18274ce5d56950dbd68792a3",
+      "bytes": 90418
+    },
+    {
+      "path": "previews/hero-upgrade/TASK_ACCEPTANCE_20261019.md",
+      "gitBlob": "099fee1f95c76618766f64e24a9f99d176bff83b",
+      "sha256": "7b5a85bb2f55e1bad8e2b611ad7246dd30de427c5e3e9a89e6f63c196ce39bb8",
+      "bytes": 5297
+    },
+    {
+      "path": "previews/hero-upgrade/UI_SWAP_CONTRACT.md",
+      "gitBlob": "b58525f22b34af0daf7670365cef0475c9a28c02",
+      "sha256": "50217a0fd205f1af4e1ed5fd2fbe167341cc3d60d9f7d434a5a2c6c35948dd89",
+      "bytes": 16554
+    },
+    {
+      "path": "previews/hero-upgrade/integration-server.ts",
+      "gitBlob": "8ce7af09fc5f1cf54e19ff06b3612e6c137c88c3",
+      "sha256": "1197ff8d8fe370011eda332c398d30b463077c146370c770996d2163f6ef0713",
+      "bytes": 4645
+    },
+    {
+      "path": "previews/hero-upgrade/package-lock.json",
+      "gitBlob": "352f424d9d9262fcbfa44207ac7d8b43837a3bac",
+      "sha256": "ea9d72f7a8383db50e86833b67d6d15c8d54ecbd6d7ca7df4987fc2321275498",
+      "bytes": 53681
+    },
+    {
+      "path": "previews/hero-upgrade/package.json",
+      "gitBlob": "7dcd5eaaf4524428d7fc4ec7d4ff8abbc0bae66b",
+      "sha256": "e3b8b27d32d2ee374e5817ec9f5426e7cb6c479548743c905ea8ef345bb7057c",
+      "bytes": 966
+    },
+    {
+      "path": "previews/hero-upgrade/scripts/build-config.ts",
+      "gitBlob": "02f2b4ed804208e86ef4b05733aa76031b36f0fd",
+      "sha256": "fb38ca962af48539014b1928f36b0736949d716c5604a1cad884cd3ee5c17823",
+      "bytes": 3441
+    },
+    {
+      "path": "previews/hero-upgrade/scripts/build.mjs",
+      "gitBlob": "0641b2943479791603a654684086fdea06530b50",
+      "sha256": "14a5f26c7bfa0d9136f48d230aeb3a03ae9127de95ff8a18b7fc5a9d5b1c48c7",
+      "bytes": 378
+    },
+    {
+      "path": "previews/hero-upgrade/scripts/test.mjs",
+      "gitBlob": "f5dc9c56d04ddf754ea438eee6fa253bbcce663c",
+      "sha256": "797b3a9b2c949fd9b04dd5fcee0e41aa5b437132132ecf9ab6ffeff733b24f4f",
+      "bytes": 1569
+    },
+    {
+      "path": "previews/hero-upgrade/server-model.ts",
+      "gitBlob": "e1fcf307b988a25a26c62da97cdc14758f928f3f",
+      "sha256": "8d7ba43e27a4f477e3f87a10f1616e78416ec8e3840d230d9350bdab356bd260",
+      "bytes": 5491
+    },
+    {
+      "path": "previews/hero-upgrade/server-response.ts",
+      "gitBlob": "837aa47fe72ffd44ecb5311746b216646365dd89",
+      "sha256": "61e3c7e4d4d3906f96f97f39e0c9367707decf7afbf78034472467e5d6dd991f",
+      "bytes": 3631
+    },
+    {
+      "path": "previews/hero-upgrade/server.ts",
+      "gitBlob": "2830ae7b262541312ef41f03283849e37b13c588",
+      "sha256": "9cdee71b87845f7d56ea33004c93d23d29236af3e286b0222f674985c583b2d8",
+      "bytes": 6559
+    },
+    {
+      "path": "previews/hero-upgrade/src/ambient.css",
+      "gitBlob": "6df56945d2f16f226af5f7fd20b59c5c6e765787",
+      "sha256": "4358788a5098fc3c51bbbd21ae98219690224bfc1fbaad2580316750feb3e2ac",
+      "bytes": 7179
+    },
+    {
+      "path": "previews/hero-upgrade/src/ambient.ts",
+      "gitBlob": "513b29bee2e70b92b2c96aef7f6664c467fba515",
+      "sha256": "e13badb7a27511aa70b3088471e82d059811177306a36d55205d06e6b00794f5",
+      "bytes": 26743
+    },
+    {
+      "path": "previews/hero-upgrade/src/article-images.ts",
+      "gitBlob": "2f7d4d04d19f365042cf29abb0b3d2998b535cff",
+      "sha256": "f82d0d0bd788f4fb59f9547b456285d775ffdbbad37970738b08846539db2f62",
+      "bytes": 11220
+    },
+    {
+      "path": "previews/hero-upgrade/src/article.ts",
+      "gitBlob": "1c1249638468a799faf396d447f0c173e020db0f",
+      "sha256": "23ccd29b386547d565150e4a70881bf49679167a96116867ad2352090d55530d",
+      "bytes": 27939
+    },
+    {
+      "path": "previews/hero-upgrade/src/assets.d.ts",
+      "gitBlob": "35306c6fc9aed088a742e2337d44bbf877c6ae8e",
+      "sha256": "da5bf71d48cf909584a01c80b445f730507068f5b34c920f352e2bfcf0315e4c",
+      "bytes": 24
+    },
+    {
+      "path": "previews/hero-upgrade/src/blog-query.ts",
+      "gitBlob": "0ef8184543006e0b1535ad5f5299bf1bc23b0056",
+      "sha256": "f2c9f8c9c7cfd1b09b3654da601fc9cfc9969ca5eda47b523a9b420ff3909da6",
+      "bytes": 1430
+    },
+    {
+      "path": "previews/hero-upgrade/src/catalog-model.ts",
+      "gitBlob": "d76ecff03be5be9021b46a670b788d34de0fcf80",
+      "sha256": "8a30b7b97ad6e9a6c573a4aa2ac12077d865be0f15991ec43fa07c4e62d9f8a2",
+      "bytes": 6649
+    },
+    {
+      "path": "previews/hero-upgrade/src/catalog-page.css",
+      "gitBlob": "35b28f97b5396f7a842409f624b3005525878115",
+      "sha256": "38a7f19cd6fb5e0fdac9aeb96d1748528a22f2b210660e141c72be73c2452363",
+      "bytes": 18768
+    },
+    {
+      "path": "previews/hero-upgrade/src/catalog-page.ts",
+      "gitBlob": "037bed98a97ce29fc202cefc749664bd709a2c1f",
+      "sha256": "955d933fba779dbb10e6caefc8195ff432aa885dc42936d72e6408623d0a4e32",
+      "bytes": 34355
+    },
+    {
+      "path": "previews/hero-upgrade/src/content.ts",
+      "gitBlob": "2e29bffce682ef0bd5b87e2df6ffb497ff6cb047",
+      "sha256": "391dc1726bcc6db044525f8a4ad2cd1d1bbc3968da5b6bb882de25d080e6183f",
+      "bytes": 12641
+    },
+    {
+      "path": "previews/hero-upgrade/src/demo-catalog.ts",
+      "gitBlob": "abd4b0e32f232a3dade203aa363843050761f079",
+      "sha256": "da27395cd56d88ecd70ef3a1f74ca7fab71485d257fa71c399a7e34fff6b34ed",
+      "bytes": 23513
+    },
+    {
+      "path": "previews/hero-upgrade/src/demo-library.ts",
+      "gitBlob": "5bcd4cce3dc61527fb174516f9180917d1655c8d",
+      "sha256": "52064babc5bd0a4df62778c1ad2b804c56f49034da7d687c83d2fb7af849db4f",
+      "bytes": 2427
+    },
+    {
+      "path": "previews/hero-upgrade/src/directions.css",
+      "gitBlob": "d442dbfebeba90a61999c0152f42bcb569884281",
+      "sha256": "bcf88a89d67d3ebbfe86cc97a0c87714e8de5ad1baa6fe504ea4deb2e0d50341",
+      "bytes": 12125
+    },
+    {
+      "path": "previews/hero-upgrade/src/directions.ts",
+      "gitBlob": "ef5e6d22ad75ed6b16ad5cbf9f145b7c4bf1ef30",
+      "sha256": "12cf3d07eb79701e864c4c93dfabae6320befb46aba5e80bc347082ed9190c5e",
+      "bytes": 15751
+    },
+    {
+      "path": "previews/hero-upgrade/src/facts.css",
+      "gitBlob": "9f86d9351c987a4e80c00c29ae7d3a368c7f290e",
+      "sha256": "4f8ea2cb6a9cb0c1fe0112ca1c8a53bba9569d551c25186f2c530587b5d74515",
+      "bytes": 5496
+    },
+    {
+      "path": "previews/hero-upgrade/src/facts.ts",
+      "gitBlob": "e43a94433a22c4d86c3ba88c8dd0969f462ede5e",
+      "sha256": "0bc06e990874cc2439fc39b725a89c1156f184453a26c6d766f07d9da9993035",
+      "bytes": 10429
+    },
+    {
+      "path": "previews/hero-upgrade/src/header.ts",
+      "gitBlob": "62df3770f6255045ce78aa9a296de98cf28e1f1d",
+      "sha256": "2e0014ed01f72042e7b2b4506e808bdc3ab15f9e2d9da041d80e4af2ecee5051",
+      "bytes": 5165
+    },
+    {
+      "path": "previews/hero-upgrade/src/hero-hud.css",
+      "gitBlob": "b921170b3a427b6a7a7f5bc0a0330d48ed6e06d8",
+      "sha256": "e5172271b28cef3712a3fab0c56312f8507815b0f6dab451ae05f93df49887a8",
+      "bytes": 10195
+    },
+    {
+      "path": "previews/hero-upgrade/src/hero-sources.ts",
+      "gitBlob": "0f5fe37bce42e6a52f9f5eecfce5325c671cf7d9",
+      "sha256": "cd99f7c0a7853f43b908359d9a41c086629f52a26cf622a8f262521bcaca3921",
+      "bytes": 1044
+    },
+    {
+      "path": "previews/hero-upgrade/src/hero.css",
+      "gitBlob": "1094af0bd356cf24ea203af6d98847c28c88e0d0",
+      "sha256": "aadbbdb87a94a56a958b80dd8a7aaa335bbbba7dd4af155ab2b6438419c26406",
+      "bytes": 6865
+    },
+    {
+      "path": "previews/hero-upgrade/src/hero.ts",
+      "gitBlob": "736fbea444d9deb25607660b2d5847b4390a8216",
+      "sha256": "76552951861c290f11ed18c4b35ba63c80db790210d91575bab5a64817d9512d",
+      "bytes": 10797
+    },
+    {
+      "path": "previews/hero-upgrade/src/home-closing.css",
+      "gitBlob": "cff638e084e8f2f189fdf657c4440bf71551abf4",
+      "sha256": "d402ed6b5a6b7497612aacd02c65be472751d1e1a9da41b0086d25d438813121",
+      "bytes": 10312
+    },
+    {
+      "path": "previews/hero-upgrade/src/home-closing.ts",
+      "gitBlob": "93abc9ea337349b0641bcc234260092908488c5f",
+      "sha256": "a405645890f9ea71bee06369cd03fde9d7abccf41939e79acff4a36b8293e53f",
+      "bytes": 12178
+    },
+    {
+      "path": "previews/hero-upgrade/src/home-sections.css",
+      "gitBlob": "3fc1ef4e9ecbcba52f56f963a0f24204085dd91d",
+      "sha256": "8d77e8783863e70e61a5f1feb37d253d29bcd1f140c511a4ece21819bceb62a0",
+      "bytes": 15314
+    },
+    {
+      "path": "previews/hero-upgrade/src/home-sections.ts",
+      "gitBlob": "1f02b706c0c82ff544e21212681150edafda87f0",
+      "sha256": "16896a84f6f6414c06633d00b190949fe3125a5673924eaf73e271915d37c51f",
+      "bytes": 12924
+    },
+    {
+      "path": "previews/hero-upgrade/src/i18n.ts",
+      "gitBlob": "941971c8b0b7dac43fb6d148fd75a3e5608d4e3b",
+      "sha256": "51a49d025db41798213ce47d8c3de3b464badb4782d58ec916634e32516ff77c",
+      "bytes": 11624
+    },
+    {
+      "path": "previews/hero-upgrade/src/icons.css",
+      "gitBlob": "5abea83a8cdc520674088476518a5368ab9c6f52",
+      "sha256": "bfa9177b231ae737731dacc805f0481dc3268f40d8c2fb01018c37bda7308ea6",
+      "bytes": 116
+    },
+    {
+      "path": "previews/hero-upgrade/src/icons.ts",
+      "gitBlob": "06cb80a91b6d507508ae967fd0e08b1f23f33f71",
+      "sha256": "f6545ad72ec31d22856376348e63b77d29e8d3eb955457f039a4c01f2ccff864",
+      "bytes": 5211
+    },
+    {
+      "path": "previews/hero-upgrade/src/inner-pages.css",
+      "gitBlob": "cc2c8cb81b97678de4b89748250509eb0531f808",
+      "sha256": "560057f363c1e0e30a5c7b95b7de710a9c8fb6485bbc8fff4ceb6118a813d556",
+      "bytes": 13010
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-access.ts",
+      "gitBlob": "850684554264f627bbe55b3878f4399d1f4658c1",
+      "sha256": "c09141a6dcac6a42d0381503e5b1455314253e4c6ed278e89b538b356c1d0bd5",
+      "bytes": 1774
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-account.css",
+      "gitBlob": "6f17b71092ba6a9de605c6677e354fa6b8419c2d",
+      "sha256": "b401b83f4e4a603190a1c3d0f8d8f1290c1c22784bae0ac6743cf7db6a572137",
+      "bytes": 13417
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-account.ts",
+      "gitBlob": "ac5af100367941bab4ec9b5fcfc86b50ec7cfcd1",
+      "sha256": "728449913998c4c09fd47cff297b7cc0c0f33ad1a7b944b4654a72271b88b767",
+      "bytes": 6464
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-article-source.ts",
+      "gitBlob": "492a1f74e2e2e63b66689449df688b1eb938b861",
+      "sha256": "cc7c50292fc4a72ab6b595668f04dfbab3df539e57a94caf5d336fbb99add1d7",
+      "bytes": 1743
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-community.ts",
+      "gitBlob": "ec8e79f7728bf8791a5847d4cd5733a65662ebbb",
+      "sha256": "664f50e6d42421c2139c073421b9a4207be18dc50189f9190592bdbdb4d6e8d0",
+      "bytes": 7567
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-content-model.ts",
+      "gitBlob": "c3f0cefb81e79bb01d19114e3dfb8b6833ec8fff",
+      "sha256": "9f0759a59a75bd5febd03ed9c2116c76b1765fe2e2aa0081bd60e13eea2914e3",
+      "bytes": 7959
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-content.css",
+      "gitBlob": "dbd32eb7f3fde20ed4e3d5ca79c9d47b613859dc",
+      "sha256": "4a03ec54a6312c23f03d7c157fc2a4244a19d6851016646cb84c8e8287852e4e",
+      "bytes": 23292
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-content.ts",
+      "gitBlob": "887cb1fd7e23925fca67e34d1ac8ce0718d920ef",
+      "sha256": "2400d72f50e696715e806b1df157c5b7e4ce40506addfaf4ffaa54f678ecdfb8",
+      "bytes": 17959
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-context.ts",
+      "gitBlob": "01fdc67324800ada7333a07c4d1270b217cdf09b",
+      "sha256": "031a1d51d5ce3ef672598698d10107dfbeb5ee4070c63d49c2cb0cb5bfc7b90c",
+      "bytes": 2076
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-date.ts",
+      "gitBlob": "455f62afced24296d91515cd364b2f695b049f81",
+      "sha256": "1d1c6485b05d065b27422cf80736f99567efcdff5855bcf51c5db553fd1e570c",
+      "bytes": 809
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-journal.css",
+      "gitBlob": "c9dda34d8e011dc4eeb3891e3eff3c52440a42ca",
+      "sha256": "1b34fd53afd94eaeca82f6ac13d6ab1f07000c10adabb54dc3cdc4970379aafe",
+      "bytes": 3088
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-journal.ts",
+      "gitBlob": "6fed396b083de8e460ba7b00a4cb5c189050ade1",
+      "sha256": "a8b7f13c05c9b61993ba5d9ca8ea8acd5b22b41ba37b2a8dd9ac8f64b2306a0e",
+      "bytes": 14302
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-legacy.d.ts",
+      "gitBlob": "cd969eb393b2a181503f07c054b5156a124c61c3",
+      "sha256": "209881da7c55549bf94682420a15640c25199cbb8fd1c3b3c671e16af1c633f8",
+      "bytes": 952
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration-runtime.ts",
+      "gitBlob": "01c94c72d93fe60b6571a452140bb8bdfb0e7a2c",
+      "sha256": "e0455a58b588be7ea3fd83ae3e6d01c1da5e66e64ad94191e738e2c5f010fe7c",
+      "bytes": 12208
+    },
+    {
+      "path": "previews/hero-upgrade/src/integration.css",
+      "gitBlob": "785597364685224c1996d8ae86376dc2f9d0d940",
+      "sha256": "045f795d029662c5f9adddc5512f6c9af87935cd19a7277d489c6069a4bf1923",
+      "bytes": 646
+    },
+    {
+      "path": "previews/hero-upgrade/src/journal-experience.ts",
+      "gitBlob": "490bd922a6d12d47010480a9b4a47112760012f5",
+      "sha256": "ef64905ce1a235cc7ed719b5542774f51d4bd3562e32f78995caa15cb9dca63a",
+      "bytes": 17022
+    },
+    {
+      "path": "previews/hero-upgrade/src/journal-page.css",
+      "gitBlob": "b0ec0a5e5ccde25aa2cacbcac7c1cdf2edde4b44",
+      "sha256": "4a9baab261fdd2beeaaa1e294dfcb0147efeb0cdeb0a8bd28ae269f58e727a6b",
+      "bytes": 35040
+    },
+    {
+      "path": "previews/hero-upgrade/src/journal-page.ts",
+      "gitBlob": "2fd85eb8b3ef608c45e391c76f709bf743965beb",
+      "sha256": "af3e2adab2e4f4ceed007e32c3a7bffea31327d6fa3082ceaa07bc7973b5d692",
+      "bytes": 9458
+    },
+    {
+      "path": "previews/hero-upgrade/src/library-book-viewer.ts",
+      "gitBlob": "02244c2ba88c26947a46cc8ffdbfb8201d3bad31",
+      "sha256": "866ecdc33061766b4453d4218506130ea98fe83670a0931fb2a620afc13d6431",
+      "bytes": 9712
+    },
+    {
+      "path": "previews/hero-upgrade/src/library-book.ts",
+      "gitBlob": "fc398e4ed40f3a76e9fe3c14766b3d29c342f20e",
+      "sha256": "b58abdbd52b6d87dc91b6425e243e3d25a149eaaa7d43a8c2eeb9df1ec305527",
+      "bytes": 8208
+    },
+    {
+      "path": "previews/hero-upgrade/src/library-model.ts",
+      "gitBlob": "7823a59f3e857a40b6bc7e85eac55b81732276e5",
+      "sha256": "5ef9103231cd1344e10d679f147e3712c6919ce18a785d48c91240ca9d9c7b84",
+      "bytes": 3894
+    },
+    {
+      "path": "previews/hero-upgrade/src/library-page.css",
+      "gitBlob": "2950dc9f2f6906234bbc5366b0df2f4793c89eda",
+      "sha256": "e9aa548688053961ebe13f48a44d1a72acdc380b936b409f563aa50539851dad",
+      "bytes": 25874
+    },
+    {
+      "path": "previews/hero-upgrade/src/library-page.ts",
+      "gitBlob": "cdcd3633759996a8d24555508182129d1d0fdb1b",
+      "sha256": "e50f3d768a29441365fde5913e8609bd671757b477b093abf8a04afc00acc4fb",
+      "bytes": 25023
+    },
+    {
+      "path": "previews/hero-upgrade/src/magnetic.ts",
+      "gitBlob": "7ebe76d6e50b99985c3db65dfcf22d40079691a0",
+      "sha256": "aac52310d5a7e483dd4671d5b707d544f09bfc3bddda3e188e7a85e32ffc8ba0",
+      "bytes": 6069
+    },
+    {
+      "path": "previews/hero-upgrade/src/main.ts",
+      "gitBlob": "6df0d1291c514edf481da83aae8f43c593c85b36",
+      "sha256": "25f427d74891d14c0c16478addc2b627fbaae4ed98e4a59a10acc21b4640ee7e",
+      "bytes": 48548
+    },
+    {
+      "path": "previews/hero-upgrade/src/manifesto.css",
+      "gitBlob": "ea52ae493bb432ff7f02870505e5f1fadcfab887",
+      "sha256": "7db4cff168715df04f4fd036c418a939c961de07f48b82fea29aadbe97f31f1f",
+      "bytes": 1266
+    },
+    {
+      "path": "previews/hero-upgrade/src/manifesto.ts",
+      "gitBlob": "008405cfe833e5b33245a1106bfa10ddc7248197",
+      "sha256": "a5c6bc8959ec22a6702f77136079dd9aa366ab0b6ef6e0cee571a3202e0c77aa",
+      "bytes": 6012
+    },
+    {
+      "path": "previews/hero-upgrade/src/marquee.ts",
+      "gitBlob": "51e9f92ab8295b3c2b5f46720265c8a676b5a000",
+      "sha256": "244c9866e503d4e896bdb52f7cfd842169499fda9e11be4ba448df82ca7ff84d",
+      "bytes": 3981
+    },
+    {
+      "path": "previews/hero-upgrade/src/navigation-state.ts",
+      "gitBlob": "00f578a33e5f88dac8d207439fef0ffadf7f2840",
+      "sha256": "2dcd80493f848f54b4ec6b811d859055a85577e9276587bf303182e33671df80",
+      "bytes": 6210
+    },
+    {
+      "path": "previews/hero-upgrade/src/page-experience.css",
+      "gitBlob": "13ccfcbb237cabd7022640577323979bbaab3552",
+      "sha256": "0be0de24c47b0da7764847e7a667ce12d9c3111e132205b8c43fa14adb2de20f",
+      "bytes": 3006
+    },
+    {
+      "path": "previews/hero-upgrade/src/page-experience.ts",
+      "gitBlob": "feeaef480d2a27d22664123eb55c6ac16cdd1f48",
+      "sha256": "fe3379d9ade9d9973a8bbd35213f45bd294f1f2a969fd0e4e085f88d69ed29c6",
+      "bytes": 11031
+    },
+    {
+      "path": "previews/hero-upgrade/src/page-transition.ts",
+      "gitBlob": "f7296ad183067441fb77db3d4048fc08894ebf3d",
+      "sha256": "3d9074720056409ac63d1580d85958173b3b8052e252ecbcadeac9db6bce1a4b",
+      "bytes": 3597
+    },
+    {
+      "path": "previews/hero-upgrade/src/pages.ts",
+      "gitBlob": "447b9e4d607ef0aa06f3d9e06829e65e15e97a62",
+      "sha256": "cebe30dd2ebb7523ab1e2abb70fe22519c975e937d2bcaec1ed6df9ce7821ce2",
+      "bytes": 27194
+    },
+    {
+      "path": "previews/hero-upgrade/src/palette.ts",
+      "gitBlob": "eb80c4311ee8c0d95e6b1b243e603a83461c01e2",
+      "sha256": "d28a1d854e20b5d096a49777581ed8e4671b12162aa856f81f974f9994da5b44",
+      "bytes": 6176
+    },
+    {
+      "path": "previews/hero-upgrade/src/practice-content.ts",
+      "gitBlob": "6a6db866c87cd1b518dfa7bf1633c5c8537097fb",
+      "sha256": "85917dfe15686be477d30896e2ee7fec02843b9d719bb8bc1c2fecfaaf1f41ff",
+      "bytes": 2298
+    },
+    {
+      "path": "previews/hero-upgrade/src/reader-reveal.ts",
+      "gitBlob": "923bf8885089694322dd52a57fa259c8fe894bd2",
+      "sha256": "bab44650a49df84a1fe4b25a42ed271cc52527a98b3db86f05df3f7b3b3ed6e9",
+      "bytes": 703
+    },
+    {
+      "path": "previews/hero-upgrade/src/reader.css",
+      "gitBlob": "040fbcd92d9e092cebd4537a767f5e62b25990a9",
+      "sha256": "978ddc8ba419e8da0ce42976c505e87ef122577885f80af29dfc768e2f423cd7",
+      "bytes": 12532
+    },
+    {
+      "path": "previews/hero-upgrade/src/route-anchor.ts",
+      "gitBlob": "8518f62fb1f57e0527377d687eaf16f1d37b3bfc",
+      "sha256": "458c88bd51cd0ad614e3648abcee9c706523cbf90ba5eebda6b68217dd688c9d",
+      "bytes": 1660
+    },
+    {
+      "path": "previews/hero-upgrade/src/sample-dialog.css",
+      "gitBlob": "ba32a3b2a0eb72681d4448ff249717b077a94306",
+      "sha256": "a95417f12378466ff8929d439bde2d3f20e7649e000e10cc5b08ab2961ceb407",
+      "bytes": 1805
+    },
+    {
+      "path": "previews/hero-upgrade/src/sample-dialog.ts",
+      "gitBlob": "145b5980d5eb0cb1db0874d8f07be7112243ca70",
+      "sha256": "202d3f3b9fd7c471af48d2c861a5b543b003237e889bc16d6669b2df01f5de1e",
+      "bytes": 3254
+    },
+    {
+      "path": "previews/hero-upgrade/src/scene-control.ts",
+      "gitBlob": "81a2ba53b7a63e2929247fdd97f447227bb26e05",
+      "sha256": "85314a808acd5ffd1e94b4009f94c4c0fdb0c602c0fcf22c508a481edd617e71",
+      "bytes": 2685
+    },
+    {
+      "path": "previews/hero-upgrade/src/scene-shapes.ts",
+      "gitBlob": "6f04839b1bad58bca7cfe46e75a5e49cc29d6b89",
+      "sha256": "c521aea04b05b26f33c0dc3e904730c9ded0097dada987c251454ce6e4ede271",
+      "bytes": 8646
+    },
+    {
+      "path": "previews/hero-upgrade/src/scene.ts",
+      "gitBlob": "879b836cdabeebd4ea3b20a4cfc89552e6d20b54",
+      "sha256": "041435f7205d0bb5b4b0abe93099b84abba30f9f98bda25d731bcd8061d5b794",
+      "bytes": 16352
+    },
+    {
+      "path": "previews/hero-upgrade/src/showcase.css",
+      "gitBlob": "1217cf310ec77a101b8368191c0145b25d8a5f5c",
+      "sha256": "1e13ee3b2697c850d2b1fd61b4cb503a34e494102674187a1f63f97cb589eba2",
+      "bytes": 14008
+    },
+    {
+      "path": "previews/hero-upgrade/src/showcase.ts",
+      "gitBlob": "e2d665190c469bc79cfcfc0802747717c4743ea2",
+      "sha256": "4c89c0641c83c744a67ca3395e848cc63f1ed942f24c1f76d4da7316d278fe4a",
+      "bytes": 25785
+    },
+    {
+      "path": "previews/hero-upgrade/src/software-cards.css",
+      "gitBlob": "78722a91e0e93c0b6258dd03b40bf3c328ee4311",
+      "sha256": "1d37c79f88d3148383ae50189575efa0ecd03ec6ca7a48ffa692284e84dd37ea",
+      "bytes": 5568
+    },
+    {
+      "path": "previews/hero-upgrade/src/theme-transition.ts",
+      "gitBlob": "c5990c363e539b516215777c4dfc89b0fcdfcc66",
+      "sha256": "437da4d413d65250255863741ecab64eff30482f5ce18d6822b607ca017005b3",
+      "bytes": 1443
+    },
+    {
+      "path": "previews/hero-upgrade/src/theme.ts",
+      "gitBlob": "89e82ada253a3b0d3b8d77484d4ce1bb2de10b56",
+      "sha256": "e58d1549718b3b4e39cfac225e3f38fe0bb77e577a4098cd5052d742de178c05",
+      "bytes": 2184
+    },
+    {
+      "path": "previews/hero-upgrade/src/util.ts",
+      "gitBlob": "c628bca1d4ac5d5d41b7cde1c3955530cc533289",
+      "sha256": "4ebf0da62e396918f34f06cd79d883a703a610d68bcb43a64d64b105b9bbf6ce",
+      "bytes": 753
+    },
+    {
+      "path": "previews/hero-upgrade/tests/ambient-lifecycle.test.mjs",
+      "gitBlob": "21d54af6979a118aa6c92b6361869bdb5c5766eb",
+      "sha256": "9a58acd9affe633432cace1d5d517d1b3a5287b1312b73b5cd7ef257fe74acb1",
+      "bytes": 30034
+    },
+    {
+      "path": "previews/hero-upgrade/tests/article-images.test.mjs",
+      "gitBlob": "e785c0fb83c4f6e88b91f881ed8eef178705ccfd",
+      "sha256": "db3d27b04d46b4d35ceabf21627730c9ff98d7fc9b05b69d0716057d1d5d2b2b",
+      "bytes": 14624
+    },
+    {
+      "path": "previews/hero-upgrade/tests/catalog-contract.test.mjs",
+      "gitBlob": "f2e35f9a7ef0d8dded0eb93484c8b7ffac2bcbd3",
+      "sha256": "597784e0497cf171475b97fb37f452c858dc9ca85905de0feff76f6a2e14af81",
+      "bytes": 12864
+    },
+    {
+      "path": "previews/hero-upgrade/tests/catalog-demo.test.mjs",
+      "gitBlob": "84e3c8d04154f7f1da825119c31f147f3c32977f",
+      "sha256": "bf5ee0e20a8490c853e9544c454a787be05eeb4f12349ae533a505fa62c57b5a",
+      "bytes": 6020
+    },
+    {
+      "path": "previews/hero-upgrade/tests/catalog-page.test.mjs",
+      "gitBlob": "2f5c3659ab3e12b180fcef0ae6e9f0e03d76a353",
+      "sha256": "226a45d994e8cc0562e86db9266e46db78daf4cd3e83bb50f3fefd6f0b275756",
+      "bytes": 15164
+    },
+    {
+      "path": "previews/hero-upgrade/tests/demo-content.test.mjs",
+      "gitBlob": "627345c8e3b9ed4b4d0fafa3672a9eea7c0a62f4",
+      "sha256": "2ce08a34912de3b8bfd7c33d20fa05ae62ddcfc6d4af91b1906d5e6e69c59f23",
+      "bytes": 6534
+    },
+    {
+      "path": "previews/hero-upgrade/tests/directions.test.mjs",
+      "gitBlob": "9640279f6e878a1312de2bc383e60c605d0f1c3b",
+      "sha256": "b00bf5d2fb43c4376186228377107aad7fc22ce783776455347592072ff3762a",
+      "bytes": 31904
+    },
+    {
+      "path": "previews/hero-upgrade/tests/facts.test.mjs",
+      "gitBlob": "ca062c802c1afbc1cc5586c6f0c59a22dfdebeec",
+      "sha256": "ee146bd0a661317be888453b8605ec8b2714771e9940918e2af1692cdc8e1e66",
+      "bytes": 15701
+    },
+    {
+      "path": "previews/hero-upgrade/tests/header.test.mjs",
+      "gitBlob": "8d279f9ade0c2af8e0afa30f67b2dd80d014cf86",
+      "sha256": "f67666acb599802f95b53faee4b518e2845ca158e4b6fd07b56ee17e6bbf5f55",
+      "bytes": 11385
+    },
+    {
+      "path": "previews/hero-upgrade/tests/hero-content.test.mjs",
+      "gitBlob": "c93c9672b682f2300f78dcec963d3fd3607a425b",
+      "sha256": "eb5d6f8a5fc71163fb0659ec452f9ce97d31abba8841d5426535bc54db9256f9",
+      "bytes": 5340
+    },
+    {
+      "path": "previews/hero-upgrade/tests/hero-scene-ui.test.mjs",
+      "gitBlob": "f5250221b13e03013d7dec71a32c4b7e66a84d01",
+      "sha256": "e325311dfb595b74c76e52cb0634b997c8778b76468035980ebf30244042a4d2",
+      "bytes": 8455
+    },
+    {
+      "path": "previews/hero-upgrade/tests/home-closing.test.mjs",
+      "gitBlob": "a0742c8997fff69b2425c0dd54ec4e3347b7db4e",
+      "sha256": "857f897a30da5660da2e2e0a966d217b366b88d74cecb64dc483d40d33b24691",
+      "bytes": 21221
+    },
+    {
+      "path": "previews/hero-upgrade/tests/home-sections.test.mjs",
+      "gitBlob": "db00e4285b5833ed12215f66908b107fe0da8b6b",
+      "sha256": "9bede9fe0ba99980ba16bda0d1300a343e846ad38129b421100ce8af9ab136c3",
+      "bytes": 15806
+    },
+    {
+      "path": "previews/hero-upgrade/tests/inner-pages.test.mjs",
+      "gitBlob": "f709149120fe780a94641e708d0e959eb47ac460",
+      "sha256": "827a8326967dc2cf29db1e17c8283b3501bef215ea847a721af2748e2577d01b",
+      "bytes": 15565
+    },
+    {
+      "path": "previews/hero-upgrade/tests/integration-account.test.mjs",
+      "gitBlob": "b0c7ebadc47b61dc89c5224c1d118218fc24a739",
+      "sha256": "e2288dd4e8c935bb56f1d8129c576f42d2954f6df526a750857b77f892a59443",
+      "bytes": 25224
+    },
+    {
+      "path": "previews/hero-upgrade/tests/integration-community.test.mjs",
+      "gitBlob": "524d186d48835f7ef66c817a215e3a3bb68e5abb",
+      "sha256": "813416f768bd4a60c6a9c4d5e9a43193d430fa9828e4e2454b1d16804b7c5ecf",
+      "bytes": 10652
+    },
+    {
+      "path": "previews/hero-upgrade/tests/integration-content.test.mjs",
+      "gitBlob": "2c7474a3a0f1cb895a16aa7c84f3c053905b00c6",
+      "sha256": "ed2d98fdde460702af7cc7c66f2d4da20ff47cf1de58a17446130bc81bd3b998",
+      "bytes": 19282
+    },
+    {
+      "path": "previews/hero-upgrade/tests/integration-directories.test.mjs",
+      "gitBlob": "12e12fa752e0ebfb25a02e4a4de4a191e767909a",
+      "sha256": "2ad37c8018da32465964eaa2198385a5c023c89b79230cc311da43defd2037ec",
+      "bytes": 16109
+    },
+    {
+      "path": "previews/hero-upgrade/tests/integration-empty.test.mjs",
+      "gitBlob": "486328acd763e036d2c85890cfeb7b33f85b57e1",
+      "sha256": "9cc5cc3c918bf874141cec17f0bca8e4b9adbfd51a5062a36418e4b5a27de744",
+      "bytes": 5402
+    },
+    {
+      "path": "previews/hero-upgrade/tests/integration-journal.test.mjs",
+      "gitBlob": "8d2907fff887343a8bec138470b118c1ab31dc77",
+      "sha256": "7d21306663813056a6a0f08c6ca3186a9050cff6f0ee44ba1a7f61940b16864f",
+      "bytes": 12164
+    },
+    {
+      "path": "previews/hero-upgrade/tests/integration-runtime.test.mjs",
+      "gitBlob": "5151106153dda6d4f712a1ab4890ae454932ee53",
+      "sha256": "17f99708e5b509c667b4f34f19972b8992235e01c476d2830e3e74748ca1cc46",
+      "bytes": 18092
+    },
+    {
+      "path": "previews/hero-upgrade/tests/integration-server.test.mjs",
+      "gitBlob": "51b4af2b3c8eb834e5e64c0483570510c1710b04",
+      "sha256": "623e88f83b27575747135a1660cedaa421b377d94881d9072b9c2bd500d4f87b",
+      "bytes": 4452
+    },
+    {
+      "path": "previews/hero-upgrade/tests/journal-page.test.mjs",
+      "gitBlob": "ab9995df8ef70084a18771d238cc4875f82ff513",
+      "sha256": "d721922eb110100f0f8d70280dba0f744d9b50d10f01997deab35137e5d20cbb",
+      "bytes": 26241
+    },
+    {
+      "path": "previews/hero-upgrade/tests/library-book-viewer.test.mjs",
+      "gitBlob": "fef367984e653b7eeec420049e3635b6ab67a84d",
+      "sha256": "1ad6e777959470765aaffdac50970d1072050b3191df6cff51718259bfc1cf69",
+      "bytes": 9032
+    },
+    {
+      "path": "previews/hero-upgrade/tests/library-book.test.mjs",
+      "gitBlob": "86258db32618f527ec2e32c5f708f98985e6523b",
+      "sha256": "651ff6807f80489c4b93b7ec41f3ba1e6a23c33f1e69853fe2fecac0f72bbc96",
+      "bytes": 11643
+    },
+    {
+      "path": "previews/hero-upgrade/tests/library-contract.test.mjs",
+      "gitBlob": "ec93e680d208580b681d37cbc8c95f4d24d32a20",
+      "sha256": "dbd11bfe00d6549f59c52cfa6c53b7c14bf9eac3060272fea3eb3ac876291d24",
+      "bytes": 16275
+    },
+    {
+      "path": "previews/hero-upgrade/tests/library-demo.test.mjs",
+      "gitBlob": "ae2236d795a7834c16e7b9a13007eaabdf059020",
+      "sha256": "7d2d30ead0ac4f7ae4864780950f197c57bdee4f1c4d073ee22d4dcb1731da7a",
+      "bytes": 8741
+    },
+    {
+      "path": "previews/hero-upgrade/tests/library-page.test.mjs",
+      "gitBlob": "6131de6909453e14983f101f0cd4ec20f6c2b07c",
+      "sha256": "c207b295848fb30a5a6f91fdbd64569511174c77dcbd6e027dd773e3371128f5",
+      "bytes": 15617
+    },
+    {
+      "path": "previews/hero-upgrade/tests/loading-architecture.test.mjs",
+      "gitBlob": "143000399614f56e446953c58049c13cf706bfad",
+      "sha256": "03331e804638add65cb687a04cb3c33ddda8ba1058ba33dcad09516757190d61",
+      "bytes": 26789
+    },
+    {
+      "path": "previews/hero-upgrade/tests/magnetic.test.mjs",
+      "gitBlob": "181be79c1f3d003b3d056f18c8d2602481fce427",
+      "sha256": "bfbe54558f81602d496a7713f489c1ff16f3c193f4df094dd1075f8fbbb6f78b",
+      "bytes": 11286
+    },
+    {
+      "path": "previews/hero-upgrade/tests/manifesto.test.mjs",
+      "gitBlob": "46c547e0c71fbf5356efea903e2bcd96e73e3122",
+      "sha256": "c8c77e6b1aee5272b8abd0fbffc96bced182576f538b5b7db1c975d78dd6003e",
+      "bytes": 10158
+    },
+    {
+      "path": "previews/hero-upgrade/tests/marquee.test.mjs",
+      "gitBlob": "0ce3dfe94c18918f633d84b4df60872c2cca9a40",
+      "sha256": "00ee60494f223f5f27e3fb03f908a24cc3084f8d5569e8bc651812803413f858",
+      "bytes": 11091
+    },
+    {
+      "path": "previews/hero-upgrade/tests/microtype.test.mjs",
+      "gitBlob": "999f5822a2bd5a46e313e17e20882426ae7b47f0",
+      "sha256": "0821ac359eeaf23603261fb54ba882d34f532243b6e8ba62353434487d7f46fa",
+      "bytes": 7670
+    },
+    {
+      "path": "previews/hero-upgrade/tests/navigation-state.test.mjs",
+      "gitBlob": "b74735eb20fa7595ceadbafe39f72fb5fcd4e3ef",
+      "sha256": "1527313debe8d371e309564c23440eaf17a24fc295f1bcc65bb520a357082878",
+      "bytes": 8504
+    },
+    {
+      "path": "previews/hero-upgrade/tests/page-experience.test.mjs",
+      "gitBlob": "6aac945a1c846cce0ef44a435078d2db874e30aa",
+      "sha256": "84b35e3e6d8a731e608b3a0466b4771105c6939eb3fc33e5682b980e4e4a585b",
+      "bytes": 18501
+    },
+    {
+      "path": "previews/hero-upgrade/tests/page-transition.test.mjs",
+      "gitBlob": "b95ca2d9667f4dc953dffe2e78d4ad0d88490a23",
+      "sha256": "f9ee4ae7d2b65c2f16a72a5c3049b430dca71cd3e15b7c2f3ee34eecfead1047",
+      "bytes": 9596
+    },
+    {
+      "path": "previews/hero-upgrade/tests/palette-modal.test.mjs",
+      "gitBlob": "f1412863947dee8bf8db2dd8fafb43cd4c1fbba4",
+      "sha256": "23da06de501d257753670e133afc2898f80ab9b2a5a4344e683eb7c5f8c84c2c",
+      "bytes": 2402
+    },
+    {
+      "path": "previews/hero-upgrade/tests/preview.test.ts",
+      "gitBlob": "4585371bb9ade9dbb3d77362c7a58c4b015d9635",
+      "sha256": "221f1ace1476ebd85ca263b1b075fefcfa5fc16c13088e1589dd73eeb0187d31",
+      "bytes": 3069
+    },
+    {
+      "path": "previews/hero-upgrade/tests/reader-experience.test.mjs",
+      "gitBlob": "bc4b922f7ef3f88f15118e6039b4b12ca4fa02b8",
+      "sha256": "955f6daf71929d8378c4d81faf37aec7f07dd6a05190248aa704a8a429cdd99a",
+      "bytes": 31001
+    },
+    {
+      "path": "previews/hero-upgrade/tests/reader-focus.test.mjs",
+      "gitBlob": "aba6776fe36c5107e828d093a5affe7a751a3da9",
+      "sha256": "db8e86e0dcf89a02e795b5e7e26bb33c7ab8a506d7f5c4427cae5f14e11dac21",
+      "bytes": 4829
+    },
+    {
+      "path": "previews/hero-upgrade/tests/reader-navigation.test.mjs",
+      "gitBlob": "3b804c5319a047a9a6640cd34a73e9396c5110ec",
+      "sha256": "36ee11aa37c7a1c3d53a382c710526ebab7bc887001459691d89e8c1a9a672eb",
+      "bytes": 24380
+    },
+    {
+      "path": "previews/hero-upgrade/tests/route-anchor.test.mjs",
+      "gitBlob": "b09f03895becf45c97997d20918f1804843f43e0",
+      "sha256": "5cc6ba0e8d264d53ce5a9d9393320035b6d2f2b944b2b2b143f3def10d18facf",
+      "bytes": 4542
+    },
+    {
+      "path": "previews/hero-upgrade/tests/scene-control.test.mjs",
+      "gitBlob": "688bbfde2e13eb3e923e35a0ea707968b61389d5",
+      "sha256": "974bb1c17d9eb00a16591103f74e952f743c0acee4caef2c82ee3e615c2657de",
+      "bytes": 5197
+    },
+    {
+      "path": "previews/hero-upgrade/tests/scene-lifecycle.test.mjs",
+      "gitBlob": "dde2a02ccd4f3254b59edb9e90a9cf52158a6085",
+      "sha256": "2464105d9fcb5729defdc7a9d1eae6e46f51d4b882fc275d662e5bf471410c26",
+      "bytes": 12754
+    },
+    {
+      "path": "previews/hero-upgrade/tests/scene-shapes.test.mjs",
+      "gitBlob": "07168a1c111e7228f14fc106293f9aab6579fb0c",
+      "sha256": "e9e2c248ed60c3657d0c9d205347801ac9631101d3893219979813ae45f7b2ad",
+      "bytes": 4407
+    },
+    {
+      "path": "previews/hero-upgrade/tests/showcase.test.mjs",
+      "gitBlob": "9657595de5241717078f97fbf852daf34683ec92",
+      "sha256": "f4c9683e9968837953bb3be69af228e806c483cdfeae725bc9a68bb3532e1670",
+      "bytes": 21375
+    },
+    {
+      "path": "previews/hero-upgrade/tests/theme.test.mjs",
+      "gitBlob": "621de37074edb2746f42e173af495e54a38f80e1",
+      "sha256": "51d7c5e6d9df5e1cec519f92416754d5cf877a8af276f18c8b1eed3306d492b4",
+      "bytes": 3872
+    },
+    {
+      "path": "previews/hero-upgrade/tsconfig.json",
+      "gitBlob": "2bbd1bbea1a23f4bca7dbf328c4fc27febf8515e",
+      "sha256": "e5896e4ac1c96fb701b070d7bb854f5bd3cc81e8eaa8fef7c7e1e78fa32f21eb",
+      "bytes": 543
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/book-cover-3d/LICENSE",
+      "gitBlob": "8c11399b792a65af126fe076c01121016d5c5616",
+      "sha256": "4127cd5b7c2107a9eb54c697878d29ad5ccd887639132d2249f097161f859a30",
+      "bytes": 1096
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/book-cover-3d/UPSTREAM.md",
+      "gitBlob": "a4c1e74f0653763b5a14e7510c0e0200548a19ca",
+      "sha256": "0502cea965eea39ca62aef6fecd5f79b18a7a5ac7f69330c04d6360cdd3e6d38",
+      "bytes": 1803
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/book-cover-3d/book.css",
+      "gitBlob": "e2d27227ad90b9bd4007f4419a09a64629cb332b",
+      "sha256": "bffe8d231c04822780d809f49a6166461c82d93ce5d59f81419e679bc4a5de37",
+      "bytes": 1652
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/book-cover-3d/index.source.tsx",
+      "gitBlob": "26fc31b29c1d29ca5b562609b0d213aad57bdc47",
+      "sha256": "b0df64f49a8f942940e734815d742f21f566c7eaecbc1c1b19596a691a02beec",
+      "bytes": 4563
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/LICENSE",
+      "gitBlob": "cea5859125802e4f03708b57aaac02f6cabb655c",
+      "sha256": "ec38e21d0dba8243a85a34748620724e371b612715578a53ca0392a1f18a5da0",
+      "bytes": 1080
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/UPSTREAM.md",
+      "gitBlob": "47a682cbf6da205c5573e10674f1350a25ae71b7",
+      "sha256": "c0245e4d640bbce5982160a338d18d5f6f9d38b2c1707c84133c0b4a99a41d10",
+      "bytes": 6618
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.d.ts",
+      "gitBlob": "f374b08eda751aceb43a63a1d744883bff833447",
+      "sha256": "744653e0b69a38f6c909094d4aa2059a59b23ad1f88723773d128bfdb822790b",
+      "bytes": 2286
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js",
+      "gitBlob": "3bbd31c7fd7b35598466820bbb331874857836b5",
+      "sha256": "9dd1767e4154b3e806245e71d61c3b170d2d117811caa4c72b767660cb19d88f",
+      "bytes": 28031
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/firstPage.js",
+      "gitBlob": "734904c8c447dc1792f06f711dcbf84d563e116c",
+      "sha256": "6410d37dab4defc4f00cccfaabf4fd4500db8372bf1d7ff56af1e5da0a22278c",
+      "bytes": 4013
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/geometry/profiles.js",
+      "gitBlob": "d3b7be30aa1728efd1b3fa323638f4396c9f81e9",
+      "sha256": "dc87e6530adf110488f67f8885b10f4f7b99a9a03560834078097fbbe6c54293",
+      "bytes": 17921
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/geometry/sweptProfile.js",
+      "gitBlob": "5e2f01f71f9de4b88ac71e717471802abd4e994d",
+      "sha256": "59c956f9256e86ea77ac5f9b4cf913c7704898193e326721b3853d6097f80982",
+      "bytes": 8950
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/headband.js",
+      "gitBlob": "dad67c94b4513093775451e23171d30aede94734",
+      "sha256": "42a2ba3d5b1f9291d28bae5d54671f5dcf6a09eecddcb5bd23fa076a77fbcbde",
+      "bytes": 2128
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/hinge.js",
+      "gitBlob": "e01d002d08b2343eb1459e784b9041ef5f996b73",
+      "sha256": "d6af2e7cb1fcab677742f087ecaed7d260fa1d0d8123c1565d27de12d05a2f15",
+      "bytes": 2699
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/materials.js",
+      "gitBlob": "431b53c4d16bd11ffc253d19867ed02e4fdabc89",
+      "sha256": "51229cf0e3072031df66c99eb460b39cc3fb65efd517dc8719658ae88795750f",
+      "bytes": 12641
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/textures/coverArt.js",
+      "gitBlob": "17e212e02091a990b4ec46fcd546fd7df1d3a6fc",
+      "sha256": "91b29351088b78d369e8eed11b8267b0f2f40f5c037a2eef367249f2e60d556e",
+      "bytes": 18047
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/textures/pageEdge.js",
+      "gitBlob": "a475f03ae7288e2a758cf1641e9b9ccfef260169",
+      "sha256": "1fc146eec6614cd17e5bfb66c0b4d4d4ea1037a0c0e75101025b2cd63335b26f",
+      "bytes": 3655
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/textures/procedural.js",
+      "gitBlob": "d196b8541edc735862f1dfe48bc860c21e29cfd4",
+      "sha256": "110ec8bbf05b286f6880dcb0dfa6160bd871522c4fd7ab1ff5c8056c5a9bba75",
+      "bytes": 7339
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/irma-book/book3d/textures/surfaces.js",
+      "gitBlob": "d1adcad3f22a2a73f65d3d18b9e37bcf37525b27",
+      "sha256": "8823929638992f3392e9051c4170d64963b3da4c574d9ba15159319a9bc5f130",
+      "bytes": 4310
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/LICENSE",
+      "gitBlob": "718bb3f0e44153809972abed31839375804bf652",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "bytes": 3208
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/book-open.svg",
+      "gitBlob": "9e0ace59b788e2b45fc35d9fbf68c2a80bd518bc",
+      "sha256": "9b9bed0ff057283d5c5c5a1c71f8d3e927db26a56639603a92fdf7b25961510e",
+      "bytes": 387
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/LICENSE",
+      "gitBlob": "718bb3f0e44153809972abed31839375804bf652",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "bytes": 3208
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/arrow-down.svg",
+      "gitBlob": "ac67e2fa7122b402a5edd5998f1bc6c72f1b496b",
+      "sha256": "bfbfb708818e6cc0b02d830254c8b00f6b6dae659f50006ea253b37b8b05a5bf",
+      "bytes": 343
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/arrow-right.svg",
+      "gitBlob": "6073a3133f28a52b1b40f20fa7686f0cee1facd2",
+      "sha256": "7fffdce8d4505927f8dfe0395331083397e2c7d7fd59f3291f73d00c2369efdb",
+      "bytes": 343
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/arrow-up-right.svg",
+      "gitBlob": "0afdbf3bb22eaa4467f910d34c6285de20572ef1",
+      "sha256": "688de0b689495d62072ce1b221ed71e6d6ba2f534eee7fde4f3c852f6e236b73",
+      "bytes": 345
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/book-open.svg",
+      "gitBlob": "2f210ab7823621137a527bea5348058f91ada4a0",
+      "sha256": "3cc66629bf1967e1f6fdf0a7700c9581b6c556111495bdfe925a91ba99d25ee1",
+      "bytes": 467
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/chevron-right.svg",
+      "gitBlob": "ce608c540d027672bb524e3673f685bcb5423d63",
+      "sha256": "b9e4521dff43288a385af1421b625da8fd40cf28c272a508c933217002090776",
+      "bytes": 321
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/files.svg",
+      "gitBlob": "ef8f8fafea04d2b4c228b7ca6b19d24d55e5e803",
+      "sha256": "2885ed83fe87d96872bd73e547b4bcbf9bd72b062019a1e9dbe4bc01d4bad3ab",
+      "bytes": 520
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/layers.svg",
+      "gitBlob": "c19b9cfb3e9a7b512b72972e81c5fc9098d45f36",
+      "sha256": "2db56bec69d08216e9118099b76cab533791e7ab9c93894b3d26f7b9b9664fcc",
+      "bytes": 587
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/monitor.svg",
+      "gitBlob": "e26eaf0c30a88ee1eb0ac0581815c1e845590757",
+      "sha256": "29e6d353da67d16641f2090c1f62995cf04df9a27897c690bcb1350070c14548",
+      "bytes": 424
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/search.svg",
+      "gitBlob": "a6a31fbfa1938afbff6b046141a659462cf78452",
+      "sha256": "c151d66bb2d179451283dfbf8b88609b1789ef07699884d941eea07245ab7cd8",
+      "bytes": 352
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/terminal.svg",
+      "gitBlob": "c5925fd1977a2d3e2636e17739929ec8fb4cbba4",
+      "sha256": "94abfb54e3fbcf7f6b1cdc0fbb05bb16b319d11500a3a80cbcb8d938c73cbb58",
+      "bytes": 340
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/workflow.svg",
+      "gitBlob": "98779fe251a2f648543033a11ef521a649c6689e",
+      "sha256": "74ada228c66bc05a57b4b5ccea5d0701dffe5850f7a09956181bfda334a1b72e",
+      "bytes": 430
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/lucide/package/icons/x.svg",
+      "gitBlob": "ded96b6a5218f6929bd577dbeedd3ed12d3456ee",
+      "sha256": "b22c83fd632ff4082021e34d64b1393591134e7ce2889a6dad5361eff2fcc716",
+      "bytes": 332
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/photoswipe/LICENSE",
+      "gitBlob": "5e0ff4d6c825895d919e888b6985caef745bbb74",
+      "sha256": "cde09603222c99259f63c7d082fe20ecf855e86b5a4c5bd7ebff1fa93c653bc1",
+      "bytes": 1109
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/LICENSE",
+      "gitBlob": "b50c7e23f135cdda6a52b6adde847c3afae79114",
+      "sha256": "b47cd456759aefa82d400b158a976ef8af67bcd1752eb32c5f7d6e5321ecb45c",
+      "bytes": 1299
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/README.md",
+      "gitBlob": "a5da462df0323326199fc9fd6ede4db52b1e2d3a",
+      "sha256": "a2aaa723431a8bac24b1852e59a4134dc35fdbf15ade19ccc3de86a31df763c8",
+      "bytes": 4929
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/SOURCE-MANIFEST.json",
+      "gitBlob": "d6c02c15676e6843ac176f331ce889d5a1378d4e",
+      "sha256": "88c74e2af5374ef3cb86c4d601accb18d7b0aefc71e78f83513c9b6ce5d4ab3e",
+      "bytes": 3368
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/UPSTREAM.md",
+      "gitBlob": "56eb106a85728b3b5e744378342657bff4b812bf",
+      "sha256": "b13e64ec0f86e552355f0f6d45b5f8708fe887e31d208b1c46aa345622ce3286",
+      "bytes": 4175
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/build.mjs",
+      "gitBlob": "b9de3af8928d5fd436d14b4fd49f1c7196f1167f",
+      "sha256": "bfd7bdf40b38d58ed7ecd65eed2b2a37a5c3e0db891898c84f41e9b9b675b455",
+      "bytes": 1160
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/index.d.ts",
+      "gitBlob": "8a60948f0dd9eeded44ad0bee6dbefadba45a197",
+      "sha256": "473104595ca7a228b99eaba12c003b79e4665ad3e6ee2696bbb34f0212127fc4",
+      "bytes": 1211
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/index.js",
+      "gitBlob": "fb04134659477b3159c15a87d9fd57e2f9ed6b88",
+      "sha256": "b134ed2ce1ce742be4eaf96f9e1b9b38accb560839bd3c56a436b3ba9b7cb709",
+      "bytes": 47099
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/src/FlipBook.ts",
+      "gitBlob": "bbad643affb64f88d35b3f626e72be530c74a242",
+      "sha256": "4ea2787ee575466a7cf839d4cad01b1088fa46ca5e0caf593e61b16513606df0",
+      "bytes": 14698
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/src/FlipPage.ts",
+      "gitBlob": "157000e85dd337fe787e38ad4dd38affacf39ce4",
+      "sha256": "9773c5aa0a5ebb1bf9a62e316d94af071b6d4083fb9859afd9c91946db5736f6",
+      "bytes": 4481
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/src/modifier/PageCurve.ts",
+      "gitBlob": "c47e4f2fa849f45a251a957b21b0b6c087bd75cd",
+      "sha256": "43dea1ca2d04233b8b90e9d5871b44a68b46038536c14f3307ed0edefce848aa",
+      "bytes": 1975
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/LICENSE-SOURCE.md",
+      "gitBlob": "83c82402d622ff238597cb34a775b5f3a05f49e1",
+      "sha256": "ba4e41226af191e22c1180d411f8b8f2a49a4c61ba003e3cc1e3bf5005e7901d",
+      "bytes": 782
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/README.md",
+      "gitBlob": "4deddbcaccc711845ea7ece93b044093523aeaf1",
+      "sha256": "0a3dc4ed545e22c065005486e3ac19ed487377fffc080b9e92e73206f56cbb26",
+      "bytes": 4035
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/package.json",
+      "gitBlob": "6077a9542cb8d1b3c070daa1651597cdfc5ca3f2",
+      "sha256": "3f20cae1c6c1453b76c75f5812690a9caafaf8284bcf385447d9494f6f893262",
+      "bytes": 982
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/ModifierStack.ts",
+      "gitBlob": "e92377f2b7bae6144bed7759f79a02ea329872c4",
+      "sha256": "b42935d17eea1e60727247b204747cbf614be6afdae442beb7e2e6cc2970a5c8",
+      "bytes": 1559
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/core/FaceProxy.ts",
+      "gitBlob": "82ce2c5231cd13e381004bfaeeb5f468433e0a1f",
+      "sha256": "3086260e5430a78fbad20ec9acb921d65841ad0ea139a04e0751802112cf6f51",
+      "bytes": 1100
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/core/IModifier.ts",
+      "gitBlob": "952c2164172f44f38ce67a9dbf6e7ba6097d7470",
+      "sha256": "fd562d20dc4b196738d84d32640a5400e2c35765bd4d233ee812a393de0dd635",
+      "bytes": 203
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/core/MeshProxy.ts",
+      "gitBlob": "f346a585f1feea43b244c392c06a501183a95902",
+      "sha256": "fed028f3730f93281a99a244f14e9dce621af4dbd6521600eaba4c41bd038aba",
+      "bytes": 5323
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/core/Modifier.ts",
+      "gitBlob": "f8d21f132dcb2811dc97ab9f451451ba7995d934",
+      "sha256": "c88347091bf04624519c5baff8cb6efbde6d313d91f2a9306d888ba0dbdd480b",
+      "bytes": 293
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/core/VertexProxy.ts",
+      "gitBlob": "c4baf7f296e7962004c6c1d15b748d1bca6fa60f",
+      "sha256": "d8639c186cb4c037ec5b31af2c911c85a2ef97469f4bd4d29cfc895c85961fa5",
+      "bytes": 2814
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/core/verlet/VerletConnection.ts",
+      "gitBlob": "13c2dafbfd8d2aa85481f50c33b096f9f2dd7c4e",
+      "sha256": "0527a3d1c71550cb57b1d436873d2fb5b5f66ffbafe80a3b1b37029529ba1119",
+      "bytes": 1667
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/core/verlet/VerletVertex.ts",
+      "gitBlob": "d637a393d2efa652c79f67bcb402e2e9d5b4a57b",
+      "sha256": "698dbeaf6a7083de7603c123cdea6c816b2317cee70f9d14996847df9c8c9ff9",
+      "bytes": 2269
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/index.ts",
+      "gitBlob": "f3a1a38757551c82ecba3ec9d311a7b9fda18c77",
+      "sha256": "44486d8e24ab3ee4ad9e00797ae36b9ab6c8faab5c64121e993ae50bc1b83d55",
+      "bytes": 615
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/math/Matrix.ts",
+      "gitBlob": "00f5217f70e352e1a000b9b8d888bb0eaffa8990",
+      "sha256": "15da246a883d00c5a45f787ee89d1adc369a3cbc4e6ccc4812f11f3500399f4e",
+      "bytes": 1695
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/math/Matrix4.ts",
+      "gitBlob": "f5a08368ad44a1556ca9349234456a62181cd5e0",
+      "sha256": "e8e0d0357c20b026fed7067a8695d2143153cffe8051d7b471204763078a7d69",
+      "bytes": 4141
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/math/Phase.ts",
+      "gitBlob": "6857f6ba66e12e036a4e8b7d593422b3290342e6",
+      "sha256": "b5d89f0b5caafa18623982be9ca09393a15ab4f237346c61baa26a6be0892852",
+      "bytes": 438
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/math/Range.ts",
+      "gitBlob": "8e94b1a10e26b717be8e44df0849e29133923d31",
+      "sha256": "1dd3a21cdb890a5e27f74126415c497572bd88c370be2fba233dad00c4208e81",
+      "bytes": 1041
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/math/TMath.ts",
+      "gitBlob": "51e371ca8e3e3d45077e891cb6a2f8e47d6ba6cd",
+      "sha256": "0aad02b7c2ca1ae50b40af981d90435b465200c65afa83a157b4ac7db3826fdc",
+      "bytes": 2087
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/math/Value.ts",
+      "gitBlob": "5feb78bb980dfb85db7e8f796eec875b37aecfed",
+      "sha256": "5ce0e4cd75586c722bcd734ada212716fddca6cd09ff79558f4cf994b5f96455",
+      "bytes": 1580
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/math/Vector2.ts",
+      "gitBlob": "fc4f9187b2f6e67d330727b529f602ed698cf2f2",
+      "sha256": "6eb2ae6d7952f11c6e4aed6e0daa44795706c43f1e62936141201f7a8f1ac6c8",
+      "bytes": 1797
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/math/Vector3.ts",
+      "gitBlob": "3f05bbf0435440eb47286873e8a5c4b3a19cd358",
+      "sha256": "8218ec521f1dc4004475c78ebc88549cfc31daba9495673c25a75b6e90860645",
+      "bytes": 2542
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/Bend.ts",
+      "gitBlob": "951bda8da910a959741734f48bb01af0bff396c1",
+      "sha256": "53d002f7418b499ce30a518e543ecb59fd368cff40a6907862ec89915f64944c",
+      "bytes": 3455
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/Bloat.ts",
+      "gitBlob": "e274f274c8e16f51d90b85eed2c2ad4a246f6b83",
+      "sha256": "5e57ad79ad6c1dc37baf2e95ce5c3ca37f33949b9dfa7f2175efa506d8fd360c",
+      "bytes": 1353
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/Break.ts",
+      "gitBlob": "871b50b110cee15bd2db0787c76dde515c0b491e",
+      "sha256": "b1fbf3736da5dd5a830f2a8dc3edafabbb8a9db88540e9311842fcf4b12242e6",
+      "bytes": 1482
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/Cloth.ts",
+      "gitBlob": "128863b37b0d6f5f537b29ad8792dba2c9f5eb1b",
+      "sha256": "b8894c7df665a6c677f3981f8b7bdcfebed71014f4c6955c34661c5160a670b7",
+      "bytes": 7108
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/Noise.ts",
+      "gitBlob": "660e825b2cc90cccf1dc94150affe4523ecca0ef",
+      "sha256": "e1d4f9d7938d1e2e06f1ac076fd7f1d19ff3abe6727f2b65d2e696422a17c56b",
+      "bytes": 1467
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/Pivot.ts",
+      "gitBlob": "752acf33d157d201c8aabe0eecb131786efcfdc3",
+      "sha256": "d98c7066e53898fe0187cc228a54b9186f2f9cee99e914ea4b6d2ce6ec8966bd",
+      "bytes": 1038
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/Skew.ts",
+      "gitBlob": "3434f284397345005c738a1e8a86926e4052ea51",
+      "sha256": "089e17b28d678a11878310ef24480a95900f2d8f8790a58a9d038e9e9034d81b",
+      "bytes": 3469
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/Taper.ts",
+      "gitBlob": "e7ca1e5d3f359bab8ff462b94eaaf8c181683c00",
+      "sha256": "902f0f6463e7e44052e4d00d84f839c88cfda949b47cdf09480ef14125607f50",
+      "bytes": 1520
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/Twist.ts",
+      "gitBlob": "3dbb579e66dcfa887a26ded2f7e96bfd7ca9e3e9",
+      "sha256": "838e6b9cbb555311f927cbf092ff2e45c57d288372ea9c306e7af9ebea9944c3",
+      "bytes": 1593
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/UserDefined.ts",
+      "gitBlob": "a24616018623a1c714217a7f9c8704cc5de415aa",
+      "sha256": "2f334b2a44a040dee2f9200292d55fc4712e9266ed70df6d42697bb20986ff48",
+      "bytes": 1228
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/modifiers/Wheel.ts",
+      "gitBlob": "b7bae4a99e58afe9963125c2938d8dc5a965e3d3",
+      "sha256": "84190afff3e855d554092ae6c1efa1a72fca67c834f8e6574c4fe5ea1d3cc102",
+      "bytes": 1849
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/three/IBufferAttribute.ts",
+      "gitBlob": "4b7a5ab9e3e09db840bf48a3b5b7ff2cc85aa995",
+      "sha256": "5a02a3adfc94f95e95367f38e597180936133572d55157e2f4291597836342b9",
+      "bytes": 365
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/three/IMesh.ts",
+      "gitBlob": "5722c814f9dcc2bdc55c110b106f53e790f15ed2",
+      "sha256": "3428c3f8695285e4d1ecbc270a05f03742d44df7a47e7467e211774721f54fdb",
+      "bytes": 374
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/three/IVector3.ts",
+      "gitBlob": "c9b4dbf88e5640dd0452ccd6ba4b18bc3eb43977",
+      "sha256": "143e426d5e1c7f9fed9f116fb19bf239cffea8db1be4f7d55168e99c445eae2d",
+      "bytes": 69
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/three/ThreeMesh.ts",
+      "gitBlob": "8f4232d324594099403cc489c079eea6c80ef82b",
+      "sha256": "55da0d856754818f3295d083c07801042962c5808c5db4649be626d4f10ba6ee",
+      "bytes": 5150
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/three/ThreeVertex.ts",
+      "gitBlob": "5d3147b777fe24b6ca4b1caedeb90b4dbffc657a",
+      "sha256": "5963f31385f22bd90be369c674f172319416c04bf573d9234cc88e5dc25af8ba",
+      "bytes": 852
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/util/Dictionary.ts",
+      "gitBlob": "884739cf1d01d4a0ab5171d9e81e4ab5fa1639a7",
+      "sha256": "fbc779f687af2dab298a13713732d923d84cb8f5a1b1595a569d59b3bf640f36",
+      "bytes": 548
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/util/EventEmitter.ts",
+      "gitBlob": "f70e576946d2a00e3593e66cedde9cd2322fe7fd",
+      "sha256": "2e8268549322c1bc401e74daec42f5e7a1838733e9602cfb65bc5579258dfdfd",
+      "bytes": 1575
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/util/Log.ts",
+      "gitBlob": "41f2e932b674826f0e7e9b405119c3a2e182e95b",
+      "sha256": "1ed7acc5e3646cda95c3032d589118e06d52babe04c78028904b451925fec9df",
+      "bytes": 177
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/util/ModConstant.ts",
+      "gitBlob": "548b8f2657ba322c53842eec5df90c94de3fad19",
+      "sha256": "ac72b98b819a611728d9a9c29d79eac3dbc1cbbdc903edaf3fe3e21a04afd281",
+      "bytes": 228
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/third-party/three-modifiers/src/util/TMap.ts",
+      "gitBlob": "ad034fbb2c07c520402604b23bddbb217d2135ce",
+      "sha256": "92206471ac89773de68ca50ed94447c62e3bc5507d382bb94a3349c054064c68",
+      "bytes": 1246
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/quick-flipbook/verify.mjs",
+      "gitBlob": "3c8ba83e7ae25ec2a903b0518dac65364bb031fc",
+      "sha256": "6eded1883901c6265cbebd22bfbeb0bd0544ae949524221366d146718d81e507",
+      "bytes": 2712
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/shadcn-item/LICENSE",
+      "gitBlob": "fad4d887a681dd49233e5ed01ee2c7a1513089a0",
+      "sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f",
+      "bytes": 1063
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/shadcn-item/UPSTREAM.md",
+      "gitBlob": "c807e71868b7a63e0d18bae7a7c62002f94925c9",
+      "sha256": "c89266285331784302a0bbf547e196deaf71fda89a0c053126a7a7023d8a3f68",
+      "bytes": 719
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/shadcn-item/item.source.tsx",
+      "gitBlob": "22bc2521ad4fa762b0de948f3f9d53bc217f1069",
+      "sha256": "9ade8136f010284b7ec0142f52606616dd4b23798012e75a9fc6aac1fb2d792e",
+      "bytes": 4487
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/.gitattributes",
+      "gitBlob": "0c31add358b6cc9d4376ea8bc06f77b997c8f02a",
+      "sha256": "4512a9d059a4de46d33084b038431094434121d80f1522c05c823cf2e411dcb1",
+      "bytes": 25
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/BASELINE.md",
+      "gitBlob": "0c2c1c1a8937456b26cf6112167ec1f54759d70c",
+      "sha256": "c8367ef93003c435839a1f4875a1b2140087d7726173153ce6a6178637eca86c",
+      "bytes": 2292
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/LICENSE",
+      "gitBlob": "c1fcda796e45dc198c86c19b0f7f8af85668a252",
+      "sha256": "0a3304cbd40d1b32a263e7208dcb3ce97ef0131e1dc4eeb3a4203be69794d208",
+      "bytes": 1068
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-cycle.ts",
+      "gitBlob": "87fa5e7c4b1adec025c8144ec0dfbcb541b63ca1",
+      "sha256": "54b8ed33c5ba3c21aaa25bf0968e110307ccc970cea8c744c7f06590c1c66dc6",
+      "bytes": 5862
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-cycle.upstream.ts",
+      "gitBlob": "1dac3f1646b2b024269386afbe3a52a005a1dac6",
+      "sha256": "ce9194c9832f56e9140b419337d9886f236e56869cbf368a10f3b93029665c9d",
+      "bytes": 5862
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-database.ts",
+      "gitBlob": "a549a7b45498fee770ac3321116aee6a0649ebe4",
+      "sha256": "b83c446813e2eb744887af1c4eeef1865bb3b7d557d230abd79e6d529ae24980",
+      "bytes": 7929
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-engine.ts",
+      "gitBlob": "b4429e64b6e0c4a2a077870cee0db2c27e61d5a7",
+      "sha256": "b3dba391abfe384f1cd8388f4aa869648c8d1919dce0298432fad94e7ba5d058",
+      "bytes": 24402
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-interaction.ts",
+      "gitBlob": "aa390e74983fa411424bf7d4474ee90fafe513b2",
+      "sha256": "23d7512e53fac76ac752d463726cd5590f01d4de52ba2f1ecbd467d944853ab9",
+      "bytes": 5566
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-lattice.ts",
+      "gitBlob": "5721d708af105c2eef6324432e9a75231d72bbb5",
+      "sha256": "f8b64a897760781b9e6ed6eaa458fda6e8cd709c29a9a84077f7aa0464fb83e5",
+      "bytes": 1563
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-math.ts",
+      "gitBlob": "aaecaa73abb9443b06d0cbcf0584caa0ca42e330",
+      "sha256": "75e2b13252c4a4410802cb08de9cc02f94f3362104913c70758419104ace1d13",
+      "bytes": 3520
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-monogram.ts",
+      "gitBlob": "ae26599381f0981743aeccf98691f0e2d5755d3e",
+      "sha256": "f9b447239a05b0375be83136fa817bee0f2b0af0f6f781289e59ae60edeccb6e",
+      "bytes": 3715
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-network.ts",
+      "gitBlob": "8b90ac0e56b3c227745171bc294acddaf364c9e0",
+      "sha256": "decb7350cbd4558ab23e3b63937d31936713311eeeaa9742ad116d9d241410c3",
+      "bytes": 8435
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-sampler.ts",
+      "gitBlob": "4973527f373b7b92b97a90e4155331a25c63d986",
+      "sha256": "7c6813f98ef7512cd1e1d5156a84438270a582304df5acab85eb73e356f9075f",
+      "bytes": 9027
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-shaders.ts",
+      "gitBlob": "d6b37e27efbea1464835ecdd19ec7d2bb641aefa",
+      "sha256": "d79515bb4be5f91ae4ec5ce48ed2c690b00d9a9fb6de2db2c2e88505c9e25a78",
+      "bytes": 27987
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts",
+      "gitBlob": "6a01e46b25d6c5bb16ca4a5a469045209af00166",
+      "sha256": "e49c4cd329857bc159cfbdf8c1d2fba068625cc6cc2f9cb4cedf71ef5ef3a66c",
+      "bytes": 10321
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/hero-simulation.ts",
+      "gitBlob": "96323e0374db5e29eafd12c37b3aefa2d11c11e3",
+      "sha256": "a8cf75366ffea0e3208a659d146601d9f79dcfb1fb7eb8cd98e88823116f684b",
+      "bytes": 6199
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/palette.ts",
+      "gitBlob": "807217ec36ff4ca8af216e5a0d7e417e6613577a",
+      "sha256": "9037fa83cfe07c9c5ce4bb0c37d63159e84570fc61d4702819a3f2d61f1ad4e0",
+      "bytes": 805
+    },
+    {
+      "path": "previews/hero-upgrade/vendor/tdx/provenance.json",
+      "gitBlob": "756bd2774ad5c8307c72c335d8b8de914b4ced3b",
+      "sha256": "8850cf3b68602c66460986f9e617a186dca02edbbcdb972b9fac0e2693d6deac",
+      "bytes": 3174
+    },
+    {
+      "path": "previews/hero-upgrade/www/index.html",
+      "gitBlob": "59f06868bffce82e01f056fcb0bcb8c001a4f8d7",
+      "sha256": "ea6a269d13859ad2b7bcb52acab63659683ba3a513a97eb3b1524b6f6129abf1",
+      "bytes": 21633
+    },
+    {
+      "path": "previews/hero-upgrade/www/style.css",
+      "gitBlob": "5bb73c0e92eb76d3634ef0b78a8d64f1d5a71435",
+      "sha256": "312cb8d0c8af750503137644c3c5a7dd8638fec0d79a44bf6da1d4a7d6f7611e",
+      "bytes": 24334
+    },
+    {
+      "path": "previews/hero-upgrade/www/third-party-notices.txt",
+      "gitBlob": "99dd508abb8a7deb82e7ca103fb5dfe6d996843d",
+      "sha256": "b2bd6104c90a3011d4d8bdd535ec30c32e1c545383f60f51d37d74915e19c806",
+      "bytes": 33712
+    },
+    {
+      "path": "src/admin-console-navigation.mjs",
+      "gitBlob": "1cc788c6500100b399ef62307416459e1f9f1216",
+      "sha256": "1e4162f1e8097f5999dbc533bb8efd8a9c1b27e2422d7a74b39da482fdf72420",
+      "bytes": 124
+    },
+    {
+      "path": "src/admin-console-navigation.ts",
+      "gitBlob": "c67e5c0e7e8cc491978fdb7b5f792f2a9780f9de",
+      "sha256": "3e508d52e8bc172470c525942abd4c99c2c50129c518e42e1c1929f504a9cdb2",
+      "bytes": 1699
+    },
+    {
+      "path": "src/book-image-viewer.mjs",
+      "gitBlob": "2c50f280a86ab4bdaaa6763d4cbffb4b81f3b1cf",
+      "sha256": "f18373fd94f4edad01efa94fbd83ec8f0c4dec140e151d46616fbf4bfb6857cc",
+      "bytes": 6407
+    },
+    {
+      "path": "src/book-progress.mjs",
+      "gitBlob": "dfb5436917b0e5dd3af15ce343d0ba24b3759975",
+      "sha256": "d500c31264a1da9d2277b5dc1d848898887a63f927429ffc9a163723471bd036",
+      "bytes": 113
+    },
+    {
+      "path": "src/book-progress.ts",
+      "gitBlob": "0dc5d56ed3d1c90d5a0b80aedd65ed7f03fe18c0",
+      "sha256": "1a6df762dd9ae0b194d0707e16e0a7b1ba8ace1cc0b7c9416bd2d2247a799920",
+      "bytes": 2774
+    },
+    {
+      "path": "src/book-reader.mjs",
+      "gitBlob": "331a4454cf41ae6070138a3b1c4ccfd8ba1cfd94",
+      "sha256": "b6a500589993da7e1e144870d64091c84605fefaa25077458838debff46380e5",
+      "bytes": 16741
+    },
+    {
+      "path": "src/book-section-reader.mjs",
+      "gitBlob": "00d479423ea50499c37801e2677413817bda6434",
+      "sha256": "c434968058b098fdf5c4b3b303c22f5fd5de17c5dc7ddb14f651ec262a0eab98",
+      "bytes": 19635
+    },
+    {
+      "path": "src/book-shell.mjs",
+      "gitBlob": "18831b04f396ee1966ff66879d59bc5d7c550f45",
+      "sha256": "dc122fd949acfecf16ffa3204d6e6348f27a58fd49e7cb5ff409db368cd31a99",
+      "bytes": 1459
+    },
+    {
+      "path": "src/community-entry.ts",
+      "gitBlob": "8682f075e8deb963c53185d2998223e09903074b",
+      "sha256": "78ef5539b9d895eaca8b675d0064ee6cb4ea4f55ad628707cc8afe0bda17d178",
+      "bytes": 7289
+    },
+    {
+      "path": "src/community-vip-frame.mjs",
+      "gitBlob": "081119ec57297e1e6fbb72ee1e9a1c69c3e63f93",
+      "sha256": "b7daf6602d22ef39ba9aa85ba06b92606ea429081cebcd6b9efa3549a12818cc",
+      "bytes": 119
+    },
+    {
+      "path": "src/community-vip-frame.ts",
+      "gitBlob": "26a148356e1c0e0d37ff2bea9dd967bee58459db",
+      "sha256": "bdcbfabbf414c59c24c8d9b48cd13d023adf93ccae0d86f3b4604781339d2ac5",
+      "bytes": 716
+    },
+    {
+      "path": "src/content-images.ts",
+      "gitBlob": "e1e21ea2d6cc5348e63d58b960a24cc0f82647aa",
+      "sha256": "1e16f2413fc471334eed27fa8c03e6cf62d813f699e9624145b977728ae0c3a2",
+      "bytes": 3137
+    },
+    {
+      "path": "src/content-reader.mjs",
+      "gitBlob": "ff01e5bcd659ebc0a2c32c5c1d97329adc157f36",
+      "sha256": "3686161aa9df2d37b508631d62d21ff59f27cdb4d699fd267d7d6bbb823e3dfa",
+      "bytes": 114
+    },
+    {
+      "path": "src/content-reader.ts",
+      "gitBlob": "d30f0e620ddf34fb6c5d23ba6b218efcee59bd96",
+      "sha256": "1206037e240927e06c5429ccdcc0433f628c46e23db3b1922aa01a0b50e15da3",
+      "bytes": 6506
+    },
+    {
+      "path": "src/core.mjs",
+      "gitBlob": "e2638cdf9455deb71511363447a1ee5725123c56",
+      "sha256": "2879105a7d5c2ce40f96743ed73c365aa84f317540b648b865463a20cfeeeb76",
+      "bytes": 104
+    },
+    {
+      "path": "src/core.ts",
+      "gitBlob": "fba5aa60236d2abffe02b91c1750561fdaca132b",
+      "sha256": "63d25519378f30b91cb8021f62e517ef9633f85bdfb6b4d5af5c638a79bf8964",
+      "bytes": 1833
+    },
+    {
+      "path": "src/image-compression-library.mjs",
+      "gitBlob": "102cc4081ea189d4191513f73ad4b530cca0ea29",
+      "sha256": "e65ccc6a07f2fc922321debd055745dd74d75fb3472dd7858cacd9ae1a3e01a3",
+      "bytes": 125
+    },
+    {
+      "path": "src/image-compression-library.ts",
+      "gitBlob": "ac848d82f4956354f50fbd0c67a970f7fd87bf61",
+      "sha256": "05fc0653cf77eb96597b1fc214c73acd01f85f9a139e887d8a59577643634bc9",
+      "bytes": 1931
+    },
+    {
+      "path": "src/image-sources.mjs",
+      "gitBlob": "8408111ece69331c4e741d908fba3b09f2129800",
+      "sha256": "ecdda4ea32ced0af7132d57e8b7aef7bd3ab31d0318c18c4c6812059f9570a4a",
+      "bytes": 113
+    },
+    {
+      "path": "src/image-sources.ts",
+      "gitBlob": "78814543faea3e3c0ee42db1318563e61d3341f9",
+      "sha256": "b8a2e553806c71640fe25a196f2abe7fc15b4ed3b816a9623ddffc7aa5a64c8a",
+      "bytes": 1106
+    },
+    {
+      "path": "src/login-verification-control.mjs",
+      "gitBlob": "8f95e222c2944a9e530af5682417940c608fae85",
+      "sha256": "99026d740e4f4c13f76710d27c2698016d696cfd1e8b877f6d4784706379096b",
+      "bytes": 126
+    },
+    {
+      "path": "src/login-verification-control.ts",
+      "gitBlob": "8ac22baac06e7c608f64c5bfe47d105d859164c6",
+      "sha256": "e0205e682bfdb1b4f2d2402567f0b7fccb81b177a8cfc56874577518066bc25a",
+      "bytes": 11453
+    },
+    {
+      "path": "src/login-verification-library.mjs",
+      "gitBlob": "834bd179dcda3679f88898f2f34a9261bb34df57",
+      "sha256": "e6490b34b32f87193e0ed738d279cb209dd655f3fa0095c1f211f2a48dac00d5",
+      "bytes": 126
+    },
+    {
+      "path": "src/login-verification-library.ts",
+      "gitBlob": "0e1076e53835b2dabfc892453d2940f326e79521",
+      "sha256": "1dfc29080265e83ceeb4627c3ed0fa301ce8b65f6ffe3e664558dfec1d2c8b19",
+      "bytes": 19547
+    },
+    {
+      "path": "src/login-verification.css",
+      "gitBlob": "b84b05454662a672f68c480d032fba501c7d34c9",
+      "sha256": "436720bd9dea0deef605e16d1f93d8d6f673db4cd546a3bcfdbcee3b5ef7a5a8",
+      "bytes": 3604
+    },
+    {
+      "path": "src/login-verification.mjs",
+      "gitBlob": "6e4cad5c908a909bf464f75b0b4b09a83e7a3792",
+      "sha256": "b2d79f9a6761abfd6572bec4aec3e3cea9d23306ef1d6f2b58d1f99fe4badb10",
+      "bytes": 118
+    },
+    {
+      "path": "src/login-verification.ts",
+      "gitBlob": "b0f828d323f560f34a55fadb6ca1a44baea870df",
+      "sha256": "0a8093b71b5ab3c138edb7cecdb0daeaa12050fa74f3d40cccdf367eeed35a9c",
+      "bytes": 10013
+    },
+    {
+      "path": "src/reader-frames.mjs",
+      "gitBlob": "ef536d806ec598c930db4fe063bd608ea2c0c84b",
+      "sha256": "ac9eef54d7af50ff27dd815700dca6254a594b644af51b2718b56ed12e377f27",
+      "bytes": 113
+    },
+    {
+      "path": "src/reader-frames.ts",
+      "gitBlob": "030580ad592abebfa6502114dfad0537bd7b41dd",
+      "sha256": "1261b10b46a59b87dfea1fc5cdd176ce5ea815fd47fbba17d4e2a9e6caf8bc84",
+      "bytes": 12225
+    },
+    {
+      "path": "src/reader-membership.mjs",
+      "gitBlob": "c3636487570b331892d6d8051b7e4a0308a90cae",
+      "sha256": "a26afcbdbb3be64fd1f1d5d28e39fa073d391f42d2ec6ff27b5be399911f845b",
+      "bytes": 117
+    },
+    {
+      "path": "src/reader-membership.ts",
+      "gitBlob": "4bea3801266b17cb6ff47ff96203fc402766acb6",
+      "sha256": "33720b8ca1f7e66f307c6bb184927465946f77f701b9a71531aa158715fad6ea",
+      "bytes": 7662
+    },
+    {
+      "path": "src/reader-policy.mjs",
+      "gitBlob": "f0314eb2e3c8d6702f6d4acb576edc88805a73ca",
+      "sha256": "ab729d0e66cf1405c1f42cb5b9bba12f796b1be0c6e7b7cb4dacc3281869aea0",
+      "bytes": 113
+    },
+    {
+      "path": "src/reader-policy.ts",
+      "gitBlob": "9c270af56b41ac370adeca0b0e6c784e6d30f144",
+      "sha256": "3f9a9897b2fe5d2f61f395c9f2515c8056f1e9c90e47dbae49d9ea5daa4260cf",
+      "bytes": 491
+    },
+    {
+      "path": "src/reader-ui.ts",
+      "gitBlob": "33602fa1d9cde58ef088ec06d4cdcdc72fad3f0c",
+      "sha256": "1158792ac5a0de54510d0c69bdd068f5363a0e7c4055d972e730465231b7ba60",
+      "bytes": 41597
+    },
+    {
+      "path": "src/section-reading-position.mjs",
+      "gitBlob": "fe620255ed28930de4f4ad3da71cd92200d52ff4",
+      "sha256": "10b9da98b541b9f6162ba76f16ca3ad80e43a1e4564d1e71925c9688ec91591b",
+      "bytes": 4700
+    },
+    {
+      "path": "src/upload-image-metadata.mjs",
+      "gitBlob": "11def730fe1285f5eb66c857d1ce20c8658ec579",
+      "sha256": "d9d22362bfb934170a8ea10ee5b635cdea7f738bb2be13b327f54070d592b649",
+      "bytes": 121
+    },
+    {
+      "path": "src/upload-image-metadata.ts",
+      "gitBlob": "89b449e970128a7365b93e6f787db0d9ddf69973",
+      "sha256": "1dc142a0e6f24f795d3dc8b28575595c76aee1b5cba9d95a39bb006baa4e317d",
+      "bytes": 1100
+    },
+    {
+      "path": "src/upload-image.mjs",
+      "gitBlob": "d19f705bb5baf086b2383d740b54a949092fc03b",
+      "sha256": "3e1759ddc0956632b0b9cc3418f7bb885c78edde3355ef03e16288ad1e5422c2",
+      "bytes": 112
+    },
+    {
+      "path": "src/upload-image.ts",
+      "gitBlob": "2689a305e70774b2c222bc40238ce5057571a6dc",
+      "sha256": "71ac69a428cd9aaa37886e5de00dcd2ec0b58fc6362c204b4894eea7ad776494",
+      "bytes": 7289
+    },
+    {
+      "path": "src/upload-policy.mjs",
+      "gitBlob": "7c9f4f122bd08adaf2057e19c0c3b74d4d12bfc1",
+      "sha256": "b328eec9525711028fd8a611eb6fb4c6d431840081fb68e1bcaf23bbe1884e1b",
+      "bytes": 492
+    },
+    {
+      "path": "src/vip-book-prompt.mjs",
+      "gitBlob": "23d84d30a5aa9bbb92623b49859343cab759a2f6",
+      "sha256": "824d6148c6c05ab57acbba45da7012342dfa9dd50d5bfa66fb64d44a80dd9614",
+      "bytes": 2060
+    }
+  ],
+  "generatedFiles": [
+    {
+      "path": "package.json",
+      "sha256": "4cfef25281eddf24e4acf3911f2f2ed844fed70d58e1ea9ffc4d752a805c1525",
+      "bytes": 701,
+      "generated": true
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "4cea7e1554b0d951fbd61056e9e84ac03c815eab6721406b5b1907c11671d048",
+      "bytes": 1911,
+      "generated": true
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "d4de2f5a9ac32ff532d9a6f5964aca802489fa17f0444d7de8c324ad27295694",
+      "bytes": 80,
+      "generated": true
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "c8a61e9d6967ef1868f84bda25abb0c0756500bce6e7edbddf49f672eb9fc459",
+      "bytes": 175,
+      "generated": true
+    },
+    {
+      "path": ".nvmrc",
+      "sha256": "73fb1b615e2043a933be1c0895cde4358036acc28d785692509b822aa53c761f",
+      "bytes": 8,
+      "generated": true
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "sha256": "9cead0badaca29248867d28e354b5157c748d2db8c6b9635ca9f86fce1e96e41",
+      "bytes": 744,
+      "generated": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "60cf24bdb418863119abb0289410df077d31c346b39a0ee6a7c88692de7ee117",
+      "bytes": 3315,
+      "generated": true
+    },
+    {
+      "path": "docs/FRONTEND-CI.md",
+      "sha256": "24f66f73688864a2fd77b71c00c40be1d6be0d4ac16d52fe9beef458227b98cb",
+      "bytes": 742,
+      "generated": true
+    }
+  ],
+  "dependencyEdges": [
+    {
+      "from": "previews/hero-upgrade/integration-server.ts",
+      "import": "./server-response.ts",
+      "to": "previews/hero-upgrade/server-response.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/scripts/build.mjs",
+      "import": "./build-config.ts",
+      "to": "previews/hero-upgrade/scripts/build-config.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/server-model.ts",
+      "import": "./src/catalog-model.ts",
+      "to": "previews/hero-upgrade/src/catalog-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/server-model.ts",
+      "import": "./src/content.ts",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/server-model.ts",
+      "import": "./src/library-model.ts",
+      "to": "previews/hero-upgrade/src/library-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/server.ts",
+      "import": "./scripts/build-config.ts",
+      "to": "previews/hero-upgrade/scripts/build-config.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/server.ts",
+      "import": "./server-model.ts",
+      "to": "previews/hero-upgrade/server-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/server.ts",
+      "import": "./server-response.ts",
+      "to": "previews/hero-upgrade/server-response.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/server.ts",
+      "import": "./src/catalog-model.ts",
+      "to": "previews/hero-upgrade/src/catalog-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/server.ts",
+      "import": "./src/library-model.ts",
+      "to": "previews/hero-upgrade/src/library-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/article-images.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/article.ts",
+      "import": "./article-images",
+      "to": "previews/hero-upgrade/src/article-images.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/article.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/article.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/article.ts",
+      "import": "./integration-article-source",
+      "to": "previews/hero-upgrade/src/integration-article-source.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/article.ts",
+      "import": "./integration-context",
+      "to": "previews/hero-upgrade/src/integration-context.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/article.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/blog-query.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-model.ts",
+      "import": "../../../src/content-reader.ts",
+      "to": "src/content-reader.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./ambient",
+      "to": "previews/hero-upgrade/src/ambient.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./catalog-model",
+      "to": "previews/hero-upgrade/src/catalog-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./catalog-model",
+      "to": "previews/hero-upgrade/src/catalog-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./demo-catalog",
+      "to": "previews/hero-upgrade/src/demo-catalog.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./icons",
+      "to": "previews/hero-upgrade/src/icons.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./integration-content-model",
+      "to": "previews/hero-upgrade/src/integration-content-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./integration-context",
+      "to": "previews/hero-upgrade/src/integration-context.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./integration-date.ts",
+      "to": "previews/hero-upgrade/src/integration-date.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./practice-content",
+      "to": "previews/hero-upgrade/src/practice-content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./sample-dialog",
+      "to": "previews/hero-upgrade/src/sample-dialog.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/catalog-page.ts",
+      "import": "../../../src/content-reader.ts",
+      "to": "src/content-reader.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/demo-catalog.ts",
+      "import": "./catalog-model",
+      "to": "previews/hero-upgrade/src/catalog-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/demo-catalog.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/demo-library.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/demo-library.ts",
+      "import": "./demo-catalog",
+      "to": "previews/hero-upgrade/src/demo-catalog.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/demo-library.ts",
+      "import": "./demo-catalog",
+      "to": "previews/hero-upgrade/src/demo-catalog.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/demo-library.ts",
+      "import": "./library-model",
+      "to": "previews/hero-upgrade/src/library-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/directions.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/directions.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/directions.ts",
+      "import": "./icons",
+      "to": "previews/hero-upgrade/src/icons.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/directions.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/facts.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/facts.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/facts.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/header.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/hero-sources.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/hero.css",
+      "import": "./hero-hud.css",
+      "to": "previews/hero-upgrade/src/hero-hud.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/hero.ts",
+      "import": "./ambient",
+      "to": "previews/hero-upgrade/src/ambient.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/hero.ts",
+      "import": "./hero-sources",
+      "to": "previews/hero-upgrade/src/hero-sources.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/hero.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/hero.ts",
+      "import": "./scene-control",
+      "to": "previews/hero-upgrade/src/scene-control.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/hero.ts",
+      "import": "./scene",
+      "to": "previews/hero-upgrade/src/scene.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/hero.ts",
+      "import": "./scene",
+      "to": "previews/hero-upgrade/src/scene.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/hero.ts",
+      "import": "./theme",
+      "to": "previews/hero-upgrade/src/theme.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/hero.ts",
+      "import": "../vendor/tdx/hero-cycle",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-cycle.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/home-sections.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/i18n.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-access.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-access.ts",
+      "import": "../../../src/vip-book-prompt.mjs",
+      "to": "src/vip-book-prompt.mjs"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-account.css",
+      "import": "../../../src/login-verification.css",
+      "to": "src/login-verification.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-account.ts",
+      "import": "../../../src/admin-console-navigation.ts",
+      "to": "src/admin-console-navigation.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-account.ts",
+      "import": "../../../src/core.ts",
+      "to": "src/core.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-account.ts",
+      "import": "../../../src/reader-ui.ts",
+      "to": "src/reader-ui.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-article-source.ts",
+      "import": "../../../src/content-reader.ts",
+      "to": "src/content-reader.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-community.ts",
+      "import": "./integration-account.ts",
+      "to": "previews/hero-upgrade/src/integration-account.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-community.ts",
+      "import": "./integration-context.ts",
+      "to": "previews/hero-upgrade/src/integration-context.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-community.ts",
+      "import": "./integration-runtime.ts",
+      "to": "previews/hero-upgrade/src/integration-runtime.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-community.ts",
+      "import": "./util.ts",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-community.ts",
+      "import": "../../../src/community-entry.ts",
+      "to": "src/community-entry.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-community.ts",
+      "import": "../../../src/community-entry.ts",
+      "to": "src/community-entry.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content-model.ts",
+      "import": "./integration-context.ts",
+      "to": "previews/hero-upgrade/src/integration-context.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "./icons.ts",
+      "to": "previews/hero-upgrade/src/icons.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "./integration-content-model.ts",
+      "to": "previews/hero-upgrade/src/integration-content-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "./integration-content-model.ts",
+      "to": "previews/hero-upgrade/src/integration-content-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "./integration-content-model.ts",
+      "to": "previews/hero-upgrade/src/integration-content-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "./integration-content-model.ts",
+      "to": "previews/hero-upgrade/src/integration-content-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "./integration-date.ts",
+      "to": "previews/hero-upgrade/src/integration-date.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "./util.ts",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "../../../src/book-image-viewer.mjs",
+      "to": "src/book-image-viewer.mjs"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "../../../src/book-reader.mjs",
+      "to": "src/book-reader.mjs"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "../../../src/book-shell.mjs",
+      "to": "src/book-shell.mjs"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "../../../src/content-images.ts",
+      "to": "src/content-images.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-content.ts",
+      "import": "../../../src/content-reader.ts",
+      "to": "src/content-reader.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-journal.ts",
+      "import": "./content.ts",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-journal.ts",
+      "import": "./i18n.ts",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-journal.ts",
+      "import": "./icons.ts",
+      "to": "previews/hero-upgrade/src/icons.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-journal.ts",
+      "import": "./integration-date.ts",
+      "to": "previews/hero-upgrade/src/integration-date.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-journal.ts",
+      "import": "./integration-journal.css",
+      "to": "previews/hero-upgrade/src/integration-journal.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-journal.ts",
+      "import": "./journal-page.ts",
+      "to": "previews/hero-upgrade/src/journal-page.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-journal.ts",
+      "import": "./util.ts",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-journal.ts",
+      "import": "../../../src/content-reader.ts",
+      "to": "src/content-reader.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "./content.ts",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "./content.ts",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "./i18n.ts",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "./integration-account.ts",
+      "to": "previews/hero-upgrade/src/integration-account.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "./integration-account.ts",
+      "to": "previews/hero-upgrade/src/integration-account.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "./integration-article-source.ts",
+      "to": "previews/hero-upgrade/src/integration-article-source.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "./integration-context.ts",
+      "to": "previews/hero-upgrade/src/integration-context.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "./integration-date.ts",
+      "to": "previews/hero-upgrade/src/integration-date.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "./util.ts",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "../../../src/community-entry.ts",
+      "to": "src/community-entry.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/integration-runtime.ts",
+      "import": "../../../src/content-reader.ts",
+      "to": "src/content-reader.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/journal-experience.ts",
+      "import": "./ambient",
+      "to": "previews/hero-upgrade/src/ambient.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/journal-experience.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/journal-page.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/journal-page.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/journal-page.ts",
+      "import": "./icons",
+      "to": "previews/hero-upgrade/src/icons.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/journal-page.ts",
+      "import": "./integration-context",
+      "to": "previews/hero-upgrade/src/integration-context.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/journal-page.ts",
+      "import": "./practice-content",
+      "to": "previews/hero-upgrade/src/practice-content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/journal-page.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-book-viewer.ts",
+      "import": "../vendor/irma-book/book3d/BookViewer.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-book-viewer.ts",
+      "import": "../vendor/irma-book/book3d/BookViewer.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-book-viewer.ts",
+      "import": "../vendor/quick-flipbook/index.js",
+      "to": "previews/hero-upgrade/vendor/quick-flipbook/index.js"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-book.ts",
+      "import": "./library-book-viewer",
+      "to": "previews/hero-upgrade/src/library-book-viewer.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-book.ts",
+      "import": "../vendor/irma-book/book3d/BookViewer.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-model.ts",
+      "import": "../../../src/content-reader.ts",
+      "to": "src/content-reader.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./demo-library",
+      "to": "previews/hero-upgrade/src/demo-library.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./icons",
+      "to": "previews/hero-upgrade/src/icons.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./integration-access",
+      "to": "previews/hero-upgrade/src/integration-access.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./integration-content-model",
+      "to": "previews/hero-upgrade/src/integration-content-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./integration-context",
+      "to": "previews/hero-upgrade/src/integration-context.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./integration-date.ts",
+      "to": "previews/hero-upgrade/src/integration-date.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./library-book",
+      "to": "previews/hero-upgrade/src/library-book.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./library-model",
+      "to": "previews/hero-upgrade/src/library-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./library-model",
+      "to": "previews/hero-upgrade/src/library-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./sample-dialog",
+      "to": "previews/hero-upgrade/src/sample-dialog.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/library-page.ts",
+      "import": "../../../src/content-reader.ts",
+      "to": "src/content-reader.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./ambient.css",
+      "to": "previews/hero-upgrade/src/ambient.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./article",
+      "to": "previews/hero-upgrade/src/article.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./catalog-page.css",
+      "to": "previews/hero-upgrade/src/catalog-page.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./catalog-page",
+      "to": "previews/hero-upgrade/src/catalog-page.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./directions.css",
+      "to": "previews/hero-upgrade/src/directions.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./directions",
+      "to": "previews/hero-upgrade/src/directions.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./facts.css",
+      "to": "previews/hero-upgrade/src/facts.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./facts",
+      "to": "previews/hero-upgrade/src/facts.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./header",
+      "to": "previews/hero-upgrade/src/header.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./hero.css",
+      "to": "previews/hero-upgrade/src/hero.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./hero",
+      "to": "previews/hero-upgrade/src/hero.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./home-closing.css",
+      "to": "previews/hero-upgrade/src/home-closing.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./home-closing",
+      "to": "previews/hero-upgrade/src/home-closing.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./home-sections.css",
+      "to": "previews/hero-upgrade/src/home-sections.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./home-sections",
+      "to": "previews/hero-upgrade/src/home-sections.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./icons.css",
+      "to": "previews/hero-upgrade/src/icons.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./inner-pages.css",
+      "to": "previews/hero-upgrade/src/inner-pages.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-access",
+      "to": "previews/hero-upgrade/src/integration-access.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-account.css",
+      "to": "previews/hero-upgrade/src/integration-account.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-account",
+      "to": "previews/hero-upgrade/src/integration-account.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-account",
+      "to": "previews/hero-upgrade/src/integration-account.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-account",
+      "to": "previews/hero-upgrade/src/integration-account.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-account",
+      "to": "previews/hero-upgrade/src/integration-account.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-community",
+      "to": "previews/hero-upgrade/src/integration-community.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-community",
+      "to": "previews/hero-upgrade/src/integration-community.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-content.css",
+      "to": "previews/hero-upgrade/src/integration-content.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-content",
+      "to": "previews/hero-upgrade/src/integration-content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-content",
+      "to": "previews/hero-upgrade/src/integration-content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-content",
+      "to": "previews/hero-upgrade/src/integration-content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-context",
+      "to": "previews/hero-upgrade/src/integration-context.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-journal",
+      "to": "previews/hero-upgrade/src/integration-journal.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-journal",
+      "to": "previews/hero-upgrade/src/integration-journal.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-runtime",
+      "to": "previews/hero-upgrade/src/integration-runtime.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration-runtime",
+      "to": "previews/hero-upgrade/src/integration-runtime.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./integration.css",
+      "to": "previews/hero-upgrade/src/integration.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./journal-experience",
+      "to": "previews/hero-upgrade/src/journal-experience.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./journal-page.css",
+      "to": "previews/hero-upgrade/src/journal-page.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./library-page.css",
+      "to": "previews/hero-upgrade/src/library-page.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./library-page",
+      "to": "previews/hero-upgrade/src/library-page.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./magnetic",
+      "to": "previews/hero-upgrade/src/magnetic.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./manifesto.css",
+      "to": "previews/hero-upgrade/src/manifesto.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./manifesto",
+      "to": "previews/hero-upgrade/src/manifesto.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./marquee",
+      "to": "previews/hero-upgrade/src/marquee.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./navigation-state",
+      "to": "previews/hero-upgrade/src/navigation-state.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./page-experience.css",
+      "to": "previews/hero-upgrade/src/page-experience.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./page-experience",
+      "to": "previews/hero-upgrade/src/page-experience.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./page-transition",
+      "to": "previews/hero-upgrade/src/page-transition.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./pages",
+      "to": "previews/hero-upgrade/src/pages.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./pages",
+      "to": "previews/hero-upgrade/src/pages.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./palette",
+      "to": "previews/hero-upgrade/src/palette.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./palette",
+      "to": "previews/hero-upgrade/src/palette.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./reader-reveal",
+      "to": "previews/hero-upgrade/src/reader-reveal.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./reader.css",
+      "to": "previews/hero-upgrade/src/reader.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./route-anchor",
+      "to": "previews/hero-upgrade/src/route-anchor.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./sample-dialog.css",
+      "to": "previews/hero-upgrade/src/sample-dialog.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./showcase.css",
+      "to": "previews/hero-upgrade/src/showcase.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./showcase",
+      "to": "previews/hero-upgrade/src/showcase.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./software-cards.css",
+      "to": "previews/hero-upgrade/src/software-cards.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./theme",
+      "to": "previews/hero-upgrade/src/theme.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/main.ts",
+      "import": "../vendor/book-cover-3d/book.css",
+      "to": "previews/hero-upgrade/vendor/book-cover-3d/book.css"
+    },
+    {
+      "from": "previews/hero-upgrade/src/manifesto.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/manifesto.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/manifesto.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/marquee.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/page-experience.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./blog-query",
+      "to": "previews/hero-upgrade/src/blog-query.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./blog-query",
+      "to": "previews/hero-upgrade/src/blog-query.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./catalog-page",
+      "to": "previews/hero-upgrade/src/catalog-page.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./icons",
+      "to": "previews/hero-upgrade/src/icons.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./integration-context",
+      "to": "previews/hero-upgrade/src/integration-context.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./journal-page",
+      "to": "previews/hero-upgrade/src/journal-page.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./library-page",
+      "to": "previews/hero-upgrade/src/library-page.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./practice-content",
+      "to": "previews/hero-upgrade/src/practice-content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./practice-content",
+      "to": "previews/hero-upgrade/src/practice-content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/pages.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/palette.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/palette.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/practice-content.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/practice-content.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/sample-dialog.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/sample-dialog.ts",
+      "import": "./icons",
+      "to": "previews/hero-upgrade/src/icons.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/sample-dialog.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene-control.ts",
+      "import": "../vendor/tdx/hero-cycle",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-cycle.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene-shapes.ts",
+      "import": "../vendor/tdx/hero-math",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-math.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene-shapes.ts",
+      "import": "../vendor/tdx/hero-sampler",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-sampler.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene-shapes.ts",
+      "import": "../vendor/tdx/hero-shapes",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene.ts",
+      "import": "./scene-control",
+      "to": "previews/hero-upgrade/src/scene-control.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene.ts",
+      "import": "./scene-shapes",
+      "to": "previews/hero-upgrade/src/scene-shapes.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene.ts",
+      "import": "../vendor/tdx/hero-cycle",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-cycle.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene.ts",
+      "import": "../vendor/tdx/hero-engine",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-engine.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene.ts",
+      "import": "../vendor/tdx/hero-interaction",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-interaction.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene.ts",
+      "import": "../vendor/tdx/hero-shapes",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene.ts",
+      "import": "../vendor/tdx/hero-simulation",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-simulation.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/scene.ts",
+      "import": "../vendor/tdx/palette",
+      "to": "previews/hero-upgrade/vendor/tdx/palette.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/showcase.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/showcase.ts",
+      "import": "./i18n",
+      "to": "previews/hero-upgrade/src/i18n.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/showcase.ts",
+      "import": "./icons",
+      "to": "previews/hero-upgrade/src/icons.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/showcase.ts",
+      "import": "./util",
+      "to": "previews/hero-upgrade/src/util.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/theme.ts",
+      "import": "./theme-transition",
+      "to": "previews/hero-upgrade/src/theme-transition.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/src/util.ts",
+      "import": "./content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/tests/integration-directories.test.mjs",
+      "import": "../../../src/vip-book-prompt.mjs",
+      "to": "src/vip-book-prompt.mjs"
+    },
+    {
+      "from": "previews/hero-upgrade/tests/library-book-viewer.test.mjs",
+      "import": "../vendor/irma-book/book3d/hinge.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/hinge.js"
+    },
+    {
+      "from": "previews/hero-upgrade/tests/loading-architecture.test.mjs",
+      "import": "../scripts/build-config.ts",
+      "to": "previews/hero-upgrade/scripts/build-config.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/tests/loading-architecture.test.mjs",
+      "import": "../server-response.ts",
+      "to": "previews/hero-upgrade/server-response.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/tests/loading-architecture.test.mjs",
+      "import": "../../../src/vip-book-prompt.mjs",
+      "to": "src/vip-book-prompt.mjs"
+    },
+    {
+      "from": "previews/hero-upgrade/tests/preview.test.ts",
+      "import": "../server-model",
+      "to": "previews/hero-upgrade/server-model.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/tests/preview.test.ts",
+      "import": "../src/content",
+      "to": "previews/hero-upgrade/src/content.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/tests/preview.test.ts",
+      "import": "../src/pages",
+      "to": "previews/hero-upgrade/src/pages.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js",
+      "import": "./firstPage.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/firstPage.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js",
+      "import": "./geometry/profiles.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/geometry/profiles.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js",
+      "import": "./geometry/sweptProfile.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/geometry/sweptProfile.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js",
+      "import": "./headband.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/headband.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js",
+      "import": "./hinge.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/hinge.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js",
+      "import": "./materials.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/materials.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/BookViewer.js",
+      "import": "./textures/coverArt.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/textures/coverArt.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/firstPage.js",
+      "import": "./textures/coverArt.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/textures/coverArt.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/firstPage.js",
+      "import": "./textures/procedural.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/textures/procedural.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/headband.js",
+      "import": "./textures/procedural.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/textures/procedural.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/materials.js",
+      "import": "./hinge.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/hinge.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/materials.js",
+      "import": "./textures/coverArt.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/textures/coverArt.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/materials.js",
+      "import": "./textures/pageEdge.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/textures/pageEdge.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/materials.js",
+      "import": "./textures/surfaces.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/textures/surfaces.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/textures/coverArt.js",
+      "import": "./procedural.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/textures/procedural.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/textures/pageEdge.js",
+      "import": "./procedural.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/textures/procedural.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/irma-book/book3d/textures/surfaces.js",
+      "import": "./procedural.js",
+      "to": "previews/hero-upgrade/vendor/irma-book/book3d/textures/procedural.js"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-engine.ts",
+      "import": "./hero-cycle",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-cycle.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-engine.ts",
+      "import": "./hero-interaction",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-interaction.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-engine.ts",
+      "import": "./hero-network",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-network.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-engine.ts",
+      "import": "./hero-shaders",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-shaders.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-engine.ts",
+      "import": "./hero-shapes",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-engine.ts",
+      "import": "./hero-simulation",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-simulation.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-engine.ts",
+      "import": "./palette",
+      "to": "previews/hero-upgrade/vendor/tdx/palette.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-monogram.ts",
+      "import": "./hero-math",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-math.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-sampler.ts",
+      "import": "./hero-math",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-math.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-sampler.ts",
+      "import": "./hero-shapes",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-shaders.ts",
+      "import": "./hero-cycle",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-cycle.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-shaders.ts",
+      "import": "./hero-database",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-database.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts",
+      "import": "./hero-cycle",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-cycle.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts",
+      "import": "./hero-database",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-database.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts",
+      "import": "./hero-lattice",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-lattice.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts",
+      "import": "./hero-math",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-math.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts",
+      "import": "./hero-monogram",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-monogram.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-shapes.ts",
+      "import": "./hero-network",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-network.ts"
+    },
+    {
+      "from": "previews/hero-upgrade/vendor/tdx/hero-simulation.ts",
+      "import": "./hero-shaders",
+      "to": "previews/hero-upgrade/vendor/tdx/hero-shaders.ts"
+    },
+    {
+      "from": "src/admin-console-navigation.mjs",
+      "import": "./admin-console-navigation.ts",
+      "to": "src/admin-console-navigation.ts"
+    },
+    {
+      "from": "src/book-progress.mjs",
+      "import": "./book-progress.ts",
+      "to": "src/book-progress.ts"
+    },
+    {
+      "from": "src/book-reader.mjs",
+      "import": "./book-image-viewer.mjs",
+      "to": "src/book-image-viewer.mjs"
+    },
+    {
+      "from": "src/book-reader.mjs",
+      "import": "./book-progress.mjs",
+      "to": "src/book-progress.mjs"
+    },
+    {
+      "from": "src/book-reader.mjs",
+      "import": "./book-section-reader.mjs",
+      "to": "src/book-section-reader.mjs"
+    },
+    {
+      "from": "src/book-reader.mjs",
+      "import": "./content-reader.mjs",
+      "to": "src/content-reader.mjs"
+    },
+    {
+      "from": "src/book-reader.mjs",
+      "import": "./core.mjs",
+      "to": "src/core.mjs"
+    },
+    {
+      "from": "src/book-reader.mjs",
+      "import": "./image-sources.mjs",
+      "to": "src/image-sources.mjs"
+    },
+    {
+      "from": "src/book-section-reader.mjs",
+      "import": "./book-image-viewer.mjs",
+      "to": "src/book-image-viewer.mjs"
+    },
+    {
+      "from": "src/book-section-reader.mjs",
+      "import": "./book-progress.mjs",
+      "to": "src/book-progress.mjs"
+    },
+    {
+      "from": "src/book-section-reader.mjs",
+      "import": "./content-reader.mjs",
+      "to": "src/content-reader.mjs"
+    },
+    {
+      "from": "src/book-section-reader.mjs",
+      "import": "./core.mjs",
+      "to": "src/core.mjs"
+    },
+    {
+      "from": "src/book-section-reader.mjs",
+      "import": "./image-sources.mjs",
+      "to": "src/image-sources.mjs"
+    },
+    {
+      "from": "src/book-section-reader.mjs",
+      "import": "./section-reading-position.mjs",
+      "to": "src/section-reading-position.mjs"
+    },
+    {
+      "from": "src/book-shell.mjs",
+      "import": "./core.mjs",
+      "to": "src/core.mjs"
+    },
+    {
+      "from": "src/community-entry.ts",
+      "import": "./core.mjs",
+      "to": "src/core.mjs"
+    },
+    {
+      "from": "src/community-vip-frame.mjs",
+      "import": "./community-vip-frame.ts",
+      "to": "src/community-vip-frame.ts"
+    },
+    {
+      "from": "src/content-reader.mjs",
+      "import": "./content-reader.ts",
+      "to": "src/content-reader.ts"
+    },
+    {
+      "from": "src/core.mjs",
+      "import": "./core.ts",
+      "to": "src/core.ts"
+    },
+    {
+      "from": "src/image-compression-library.mjs",
+      "import": "./image-compression-library.ts",
+      "to": "src/image-compression-library.ts"
+    },
+    {
+      "from": "src/image-compression-library.ts",
+      "import": "./upload-image-metadata.ts",
+      "to": "src/upload-image-metadata.ts"
+    },
+    {
+      "from": "src/image-sources.mjs",
+      "import": "./image-sources.ts",
+      "to": "src/image-sources.ts"
+    },
+    {
+      "from": "src/image-sources.ts",
+      "import": "./core.mjs",
+      "to": "src/core.mjs"
+    },
+    {
+      "from": "src/login-verification-control.mjs",
+      "import": "./login-verification-control.ts",
+      "to": "src/login-verification-control.ts"
+    },
+    {
+      "from": "src/login-verification-control.ts",
+      "import": "./login-verification.mjs",
+      "to": "src/login-verification.mjs"
+    },
+    {
+      "from": "src/login-verification-control.ts",
+      "import": "./login-verification.mjs",
+      "to": "src/login-verification.mjs"
+    },
+    {
+      "from": "src/login-verification-library.mjs",
+      "import": "./login-verification-library.ts",
+      "to": "src/login-verification-library.ts"
+    },
+    {
+      "from": "src/login-verification-library.ts",
+      "import": "./login-verification.mjs",
+      "to": "src/login-verification.mjs"
+    },
+    {
+      "from": "src/login-verification-library.ts",
+      "import": "./login-verification.mjs",
+      "to": "src/login-verification.mjs"
+    },
+    {
+      "from": "src/login-verification.mjs",
+      "import": "./login-verification.ts",
+      "to": "src/login-verification.ts"
+    },
+    {
+      "from": "src/login-verification.ts",
+      "import": "./login-verification-library.mjs",
+      "to": "src/login-verification-library.mjs"
+    },
+    {
+      "from": "src/reader-frames.mjs",
+      "import": "./reader-frames.ts",
+      "to": "src/reader-frames.ts"
+    },
+    {
+      "from": "src/reader-frames.ts",
+      "import": "./community-vip-frame.mjs",
+      "to": "src/community-vip-frame.mjs"
+    },
+    {
+      "from": "src/reader-frames.ts",
+      "import": "./core.mjs",
+      "to": "src/core.mjs"
+    },
+    {
+      "from": "src/reader-membership.mjs",
+      "import": "./reader-membership.ts",
+      "to": "src/reader-membership.ts"
+    },
+    {
+      "from": "src/reader-membership.ts",
+      "import": "./core.mjs",
+      "to": "src/core.mjs"
+    },
+    {
+      "from": "src/reader-policy.mjs",
+      "import": "./reader-policy.ts",
+      "to": "src/reader-policy.ts"
+    },
+    {
+      "from": "src/reader-ui.ts",
+      "import": "./admin-console-navigation.mjs",
+      "to": "src/admin-console-navigation.mjs"
+    },
+    {
+      "from": "src/reader-ui.ts",
+      "import": "./core.mjs",
+      "to": "src/core.mjs"
+    },
+    {
+      "from": "src/reader-ui.ts",
+      "import": "./login-verification-control.mjs",
+      "to": "src/login-verification-control.mjs"
+    },
+    {
+      "from": "src/reader-ui.ts",
+      "import": "./reader-frames.mjs",
+      "to": "src/reader-frames.mjs"
+    },
+    {
+      "from": "src/reader-ui.ts",
+      "import": "./reader-membership.mjs",
+      "to": "src/reader-membership.mjs"
+    },
+    {
+      "from": "src/reader-ui.ts",
+      "import": "./reader-policy.mjs",
+      "to": "src/reader-policy.mjs"
+    },
+    {
+      "from": "src/reader-ui.ts",
+      "import": "./upload-image.mjs",
+      "to": "src/upload-image.mjs"
+    },
+    {
+      "from": "src/reader-ui.ts",
+      "import": "./upload-policy.mjs",
+      "to": "src/upload-policy.mjs"
+    },
+    {
+      "from": "src/upload-image-metadata.mjs",
+      "import": "./upload-image-metadata.ts",
+      "to": "src/upload-image-metadata.ts"
+    },
+    {
+      "from": "src/upload-image.mjs",
+      "import": "./upload-image.ts",
+      "to": "src/upload-image.ts"
+    },
+    {
+      "from": "src/upload-image.ts",
+      "import": "./image-compression-library.mjs",
+      "to": "src/image-compression-library.mjs"
+    },
+    {
+      "from": "src/upload-image.ts",
+      "import": "./image-compression-library.ts",
+      "to": "src/image-compression-library.ts"
+    },
+    {
+      "from": "src/upload-image.ts",
+      "import": "./upload-image-metadata.mjs",
+      "to": "src/upload-image-metadata.mjs"
+    },
+    {
+      "from": "src/upload-image.ts",
+      "import": "./upload-policy.mjs",
+      "to": "src/upload-policy.mjs"
+    }
+  ]
+}

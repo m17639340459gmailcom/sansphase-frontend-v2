@@ -1,0 +1,24 @@
+{
+  "name": "sansphase-frontend-v2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Integrated V2 frontend; requires the original same-origin SANSPHASE API and retained V1/admin services.",
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "scripts": {
+    "check:types": "npm --prefix previews/hero-upgrade run check:types",
+    "build": "npm --prefix previews/hero-upgrade run build",
+    "test": "npm --prefix previews/hero-upgrade test",
+    "dev": "npm --prefix previews/hero-upgrade run dev"
+  },
+  "dependencies": {
+    "compressorjs": "1.4.0",
+    "image-size": "2.0.4"
+  },
+  "overrides": {
+    "blueimp-canvas-to-blob": "3.29.0",
+    "is-blob": "2.1.0"
+  }
+}

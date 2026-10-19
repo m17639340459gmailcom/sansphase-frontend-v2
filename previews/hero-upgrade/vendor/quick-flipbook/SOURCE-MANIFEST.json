@@ -1,0 +1,81 @@
+{
+  "three_modifiers": {
+    "version": "2.5.7",
+    "integrity": "sha512-Z8BU0K3D3zJJNTNfSmeicbqokLGqbD9EbVmm56+/1DUAV98QE9jSI+IQQiRiOcVFBhUZEzZTfyYo4rXXZdp7TQ==",
+    "gitHead": "f0d795e620409e2644ae0e3d8e809d88f0f3e0f2",
+    "tarball": "https://registry.npmjs.org/three.modifiers/-/three.modifiers-2.5.7.tgz",
+    "files": [
+      "package/package.json",
+      "package/README.md",
+      "package/src/modifiers/Bend.ts",
+      "package/src/modifiers/Bloat.ts",
+      "package/src/modifiers/Break.ts",
+      "package/src/modifiers/Cloth.ts",
+      "package/src/util/Dictionary.ts",
+      "package/src/util/EventEmitter.ts",
+      "package/src/core/FaceProxy.ts",
+      "package/src/three/IBufferAttribute.ts",
+      "package/src/three/IMesh.ts",
+      "package/src/core/IModifier.ts",
+      "package/src/index.ts",
+      "package/src/three/IVector3.ts",
+      "package/src/util/Log.ts",
+      "package/src/math/Matrix.ts",
+      "package/src/math/Matrix4.ts",
+      "package/src/core/MeshProxy.ts",
+      "package/src/util/ModConstant.ts",
+      "package/src/core/Modifier.ts",
+      "package/src/ModifierStack.ts",
+      "package/src/modifiers/Noise.ts",
+      "package/src/math/Phase.ts",
+      "package/src/modifiers/Pivot.ts",
+      "package/src/math/Range.ts",
+      "package/src/modifiers/Skew.ts",
+      "package/src/modifiers/Taper.ts",
+      "package/src/three/ThreeMesh.ts",
+      "package/src/three/ThreeVertex.ts",
+      "package/src/util/TMap.ts",
+      "package/src/math/TMath.ts",
+      "package/src/modifiers/Twist.ts",
+      "package/src/modifiers/UserDefined.ts",
+      "package/src/math/Value.ts",
+      "package/src/math/Vector2.ts",
+      "package/src/math/Vector3.ts",
+      "package/src/core/verlet/VerletConnection.ts",
+      "package/src/core/verlet/VerletVertex.ts",
+      "package/src/core/VertexProxy.ts",
+      "package/src/modifiers/Wheel.ts"
+    ]
+  },
+  "quick_flipbook": {
+    "version": "1.1.3",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/bandinopla/quick_flipbook/2c62c76b7dd91861f9e71259d8e37157018ba16e/src/FlipBook.ts",
+        "path": "src/FlipBook.ts",
+        "sha256": "0b6dc7cce7d590d0e1c30e0d4f7c3283089b4f5ee69c65e1f823f88117bd96d3"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/bandinopla/quick_flipbook/2c62c76b7dd91861f9e71259d8e37157018ba16e/src/FlipPage.ts",
+        "path": "src/FlipPage.ts",
+        "sha256": "045b6b4adbca23793923a89b35cfa910b2e7a9a952769f6cf1dd41f690619ebc"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/bandinopla/quick_flipbook/2c62c76b7dd91861f9e71259d8e37157018ba16e/src/modifier/PageCurve.ts",
+        "path": "src/modifier/PageCurve.ts",
+        "sha256": "600445e7a2631877f26a164ed39c1d7381de3f2bc3db8763ebe52541cda51dcb"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/bandinopla/quick_flipbook/2c62c76b7dd91861f9e71259d8e37157018ba16e/LICENSE",
+        "path": "LICENSE",
+        "sha256": "b47cd456759aefa82d400b158a976ef8af67bcd1752eb32c5f7d6e5321ecb45c"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/bandinopla/quick_flipbook/2c62c76b7dd91861f9e71259d8e37157018ba16e/README.md",
+        "path": "README.md",
+        "sha256": "acd641ec648cb32fcae22774fb62e44fea5a07c29bbbccee71712d161cd6f97f"
+      }
+    ],
+    "commit": "2c62c76b7dd91861f9e71259d8e37157018ba16e"
+  }
+}

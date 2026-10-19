@@ -1,0 +1,33 @@
+/* ScrollHighlight from MIT TDX, c73bc4966f0ba808b978e22eccf5a063fc649751.
+ * Copyright (c) 2026 Dingxin Tao. See vendor/tdx/LICENSE and SOURCES.json.
+ * Existing declaration typography retained; only the source's soft reading front is adapted. */
+.manifesto { padding: 112px 0 40px; }
+.manifesto-text {
+  margin: 30px 0 0;
+  max-width: 18em;
+  color: var(--fg);
+  font-family: var(--display);
+  font-variation-settings: "wdth" 100, "wght" 640;
+  font-size: clamp(36px, 5.6vw, 88px);
+  line-height: 1.06;
+  letter-spacing: -.04em;
+}
+html[data-lang="zh"] .manifesto-text {
+  max-width: 12em;
+  font-family: var(--cjk);
+  font-weight: 800;
+  font-variation-settings: normal;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+.manifesto-word { display: inline-block; white-space: nowrap; }
+.manifesto-unit.key { color: var(--accent); }
+/* Original six-unit soft front, one root progress write per scroll update. */
+.manifesto-scrub[data-live] .manifesto-unit {
+  opacity: clamp(.22, calc((var(--p, 0) * (var(--n) + 6) - var(--i)) / 6), 1);
+  transition: opacity .2s linear;
+}
+.manifesto-alt { margin: 26px 0 0; font-size: 15px; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) {
+  .manifesto-scrub[data-live] .manifesto-unit { opacity: 1; transition: none; }
+}

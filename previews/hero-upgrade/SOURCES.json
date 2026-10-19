@@ -1,0 +1,1329 @@
+{
+  "project": "SANSPHASE local homepage interaction exploration",
+  "baseline": {
+    "commit": "902eac1540f2b50ad56bf6380331138468a8879a",
+    "source": "outputs/portfolio-version-4/src and www in the historical prototype commit",
+    "currentSourceRoot": "previews/hero-upgrade",
+    "note": "Historical V4 remains the content and navigation foundation. Source-adapted controllers cover the homepage and the inner-page addendum below. Generated bundles are not source.",
+    "portfolioFoundation": {
+      "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+      "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+      "license": "MIT",
+      "retainedNotice": "vendor/tdx/LICENSE",
+      "scopeRecord": "vendor/tdx/BASELINE.md",
+      "currentParticleComponent": true
+    }
+  },
+  "navigationLifecycleUI": {
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "author": "Dingxin Tao",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "retainedNotice": "vendor/tdx/LICENSE",
+    "verification": {
+      "downloadManifest": "../../outputs/audit-hero-20261018/reference-source/fetch-provenance.json",
+      "pathManifest": "../../outputs/audit-hero-20261018/reference-source/github-file-tree.json",
+      "verifiedGitCheckout": "../../outputs/audit-hero-20261018/verified-tdx-source",
+      "method": "Re-read each retained original file as raw bytes, matched its byte count and SHA-256 against fetch-provenance.json and its fixed-commit raw URL, and confirmed its path in github-file-tree.json. That path manifest contains paths only, not blob hashes. Independently computed Git blob SHA-1 as SHA1('blob ' + byteLength + NUL + originalBytes) and matched every value below against git ls-tree at the declared commit in the verified checkout.",
+      "scope": "These hashes identify reviewed upstream bytes, not adapted local files. Source identity and automated regression coverage do not establish visual equivalence, current browser acceptance, or a measured performance improvement. Earlier homeCompletionUI browser evidence applies to that earlier scope; this addendum's browser results must be recorded separately."
+    },
+    "sourceBindings": [
+      {
+        "local": "src/header.ts",
+        "upstream": [
+          "src/components/layout/use-header-scroll.ts",
+          "src/components/layout/navbar.tsx",
+          "src/components/layout/locale-switcher.tsx"
+        ]
+      },
+      {
+        "local": "src/page-transition.ts",
+        "upstream": [
+          "src/components/providers/page-transition.tsx",
+          "src/app/globals.css"
+        ]
+      },
+      {
+        "local": "src/marquee.ts",
+        "upstream": [
+          "src/components/fx/velocity-marquee.tsx",
+          "src/components/fx/hooks.ts"
+        ]
+      }
+    ],
+    "reviewedSources": [
+      {
+        "path": "src/components/layout/use-header-scroll.ts",
+        "bytes": 1777,
+        "sha256": "d583389034c308349280a8a7c6a6c180d955d8be8aec6f3cf265d5fc27ffe2b9",
+        "gitBlob": "ddae1ccb5edaa42de11df24dc6161b54ae184a08"
+      },
+      {
+        "path": "src/components/layout/navbar.tsx",
+        "bytes": 9174,
+        "sha256": "77c859fa9e53dc65257462a2ff8046049172d2dfb6f924d1c62a10990e25c48d",
+        "gitBlob": "e8be85d0613d710a27b58a78c3c45572ee358682"
+      },
+      {
+        "path": "src/components/layout/locale-switcher.tsx",
+        "bytes": 2245,
+        "sha256": "3bfa2d431ae4fb5cb072ae13bdaa5987d166dead441518615c343c9dbd425d60",
+        "gitBlob": "9c4d2acc57a197339e076e7ddb62818dcd58d706"
+      },
+      {
+        "path": "src/components/providers/page-transition.tsx",
+        "bytes": 850,
+        "sha256": "1c438cb14c66f9a5b38aa42243f00f6a4d063fee7d875a111f23fbba541b8953",
+        "gitBlob": "c560a08414216465e9ea1cb3dc57968aee0141f1"
+      },
+      {
+        "path": "src/app/globals.css",
+        "bytes": 43595,
+        "sha256": "baa91cc7dc192ce6d1bb04ea49dfbf32bb9756f525b940243973308ae9cb353d",
+        "gitBlob": "5cb4429910947682c3583bef41a6035212a9a703"
+      },
+      {
+        "path": "src/components/fx/velocity-marquee.tsx",
+        "bytes": 4787,
+        "sha256": "5e4ab7527fbf5813ef085304f2f806a42a6b8d5fb26fba12f90409d5068e1551",
+        "gitBlob": "f46ae850f94b478144ff16c3e45b1b12aede86e1"
+      },
+      {
+        "path": "src/components/fx/hooks.ts",
+        "bytes": 3708,
+        "sha256": "482be29d26a0b0618bf06027b5c03c3e4988296c7a6b234ba8329d36dc9a55e0",
+        "gitBlob": "b00c60044e30bcc8e7333a5433839a8ebac8c590"
+      }
+    ],
+    "adaptedIn": [
+      "src/header.ts",
+      "src/page-transition.ts",
+      "src/marquee.ts",
+      "src/main.ts",
+      "src/i18n.ts",
+      "www/index.html",
+      "www/style.css"
+    ],
+    "retainedMechanisms": [
+      "Header condensation after 24px, automatic hiding after 160px with 14px downward / 8px upward travel thresholds, and a temporary top-edge preview with 32px enter / 132px leave hysteresis. Keyboard focus, menu state and reduced-motion preference compose the final visibility.",
+      "Explicit EN / Chinese selection with a sliding language thumb; clicking the selected language does not request a language change. Existing in-page language rebuilding replaces upstream locale-route navigation, and native buttons expose their selected state through aria-pressed.",
+      "The upstream route exit lifts by -2.5rem, scales to 0.985 and fades over 260ms. The new page rises from 3.5rem and reveals from inset(100vh 0 0 0) over 600ms after 40ms, retaining the source cubic-bezier curves through installed GSAP CustomEase.",
+      "A repeatable IntersectionObserver visibility gate pauses the marquee offscreen. The preview's pre-existing velocity, skew, looping and 0.15 hover-speed formula are retained; the stationary parent is observed rather than the translated track. Unknown/offscreen updates do not read layout or write style, and leaving resets hover speed."
+    ],
+    "localLifecycleRepairs": [
+      "React / Motion / React ViewTransition integration is adapted to existing native DOM and installed GSAP; no second application or animation runtime is installed. The theme's circular ViewTransition remains independent. This is a presentation adaptation, not an unmodified upstream drop-in.",
+      "Latest-request ownership, explicit cancellation resolution, protection against late animation cleanup, route epochs and reader-reveal scheduling are local integration repairs. They are not attributed as upstream source code or additional upstream business features.",
+      "src/reader-reveal.ts and src/main.ts treat a prepared, not-yet-revealed article as active ownership. A newer route cancels its queued first-paint reveal, releases inert and scroll state, and prevents a stale article from taking focus. Direct article startup retains the scroll lock until the reader is ready.",
+      "src/showcase.ts transfers focus from a replaced side-card button to its new front link and recomputes the focus pause gate. Refreshes preserve usable local focus while suspended/inert sections do not take focus from external controls or overlays.",
+      "Dynamic reduced motion cancels and clears actual page-body entrance tweens even after the outer route transition has completed. Existing global visibility/focus/overlay gates remain responsible for pausing the marquee; its observer caches only viewport eligibility. Marquee.setActive remeasures once when the shared main gate resumes, including clients without IntersectionObserver. Zero-width measurements of a hidden homepage no longer replace a valid cycle with 1px; steady update frames do not poll layout. This width/resume repair is local integration work, not an upstream motion change.",
+      "Controllers remove their listeners and observers on disposal; late IO, queued reveal and canceled animation callbacks cannot resume owned work. No new statistics, accounts, production writes or media assets are introduced."
+    ],
+    "regressionCoverage": [
+      "tests/header.test.mjs",
+      "tests/page-transition.test.mjs",
+      "tests/marquee.test.mjs",
+      "tests/reader-navigation.test.mjs",
+      "tests/showcase.test.mjs"
+    ]
+  },
+  "homeCompletionUI": {
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "author": "Dingxin Tao",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "retainedNotice": "vendor/tdx/LICENSE",
+    "adaptedIn": [
+      "src/home-sections.ts",
+      "src/home-sections.css",
+      "src/home-closing.ts",
+      "src/home-closing.css",
+      "src/magnetic.ts",
+      "src/ambient.ts",
+      "src/main.ts",
+      "www/index.html",
+      "www/style.css"
+    ],
+    "verification": {
+      "downloadManifest": "../../outputs/home-completion-20261018/upstream/download-provenance.json",
+      "gitBlobVerification": "../../outputs/home-completion-20261018/upstream/verified-git-blobs.json",
+      "method": "Downloaded original bytes from the fixed commit, computed their Git blob SHA-1 and compared with the declared upstream blobs. The retained verification rows match. These identify reviewed upstream files, not adapted local bytes.",
+      "browserAcceptance": "Desktop IAB validation completed at 1280x800, 1440x940 and 1920x1080. Checked light/Chinese and dark/English, real article reader and local blog return, hero click/drag, tail hover/focus, magnetic reset, search overlay, reduced-motion changes, footer fitting and back-to-top. Evidence: ../../outputs/home-completion-20261018/browser-acceptance.json. This is local functional/visual acceptance, not a cross-device benchmark or a visual-superiority claim."
+    },
+    "reviewedSources": [
+      {
+        "path": "src/components/fx/spotlight.tsx",
+        "gitBlob": "1b7e1dbd18e61aab7f9a42ce905c3e96fe4cedbe"
+      },
+      {
+        "path": "src/components/home/latest-posts.tsx",
+        "gitBlob": "5135791dc7546087e118652597b90b504712e065"
+      },
+      {
+        "path": "src/components/home/data/post-card-frame.tsx",
+        "gitBlob": "91f9d80ddcf36cd3c759c54c48fb0759be89ee1e"
+      },
+      {
+        "path": "src/components/home/data/post-card.module.css",
+        "gitBlob": "e3a3692847a099ba541b1aa3b6bf0fcdf362a228"
+      },
+      {
+        "path": "src/components/home/data/arrow-swap.tsx",
+        "gitBlob": "a0bf87052a97a064786d7584ae659e48ca1eb13f"
+      },
+      {
+        "path": "src/components/blog/post-card.tsx",
+        "gitBlob": "7e2e505354259f1de2619fd19100a31b35345463"
+      },
+      {
+        "path": "src/components/projects/project-index-list.tsx",
+        "gitBlob": "ef156817593499a33fdd2bce9eaa6b16f0e033a6"
+      },
+      {
+        "path": "src/components/projects/project-index-list.module.css",
+        "gitBlob": "0bec722ae5acdcc43339cb889212c72b3c7db033"
+      },
+      {
+        "path": "src/components/layout/contact-banner.tsx",
+        "gitBlob": "f5e635e7e5bf7382150abce1ffb98058049397be"
+      },
+      {
+        "path": "src/components/layout/contact-banner.module.css",
+        "gitBlob": "a05243fe8d5f89530843d3ca596fffb99a2ea28d"
+      },
+      {
+        "path": "src/components/fx/parallax.tsx",
+        "gitBlob": "3aae60dc864af0b57e23a365a40d78f8ee7fc898"
+      },
+      {
+        "path": "src/components/fx/border-beam.tsx",
+        "gitBlob": "3747f4153564ed8cf7f9b6a11189286a2abbb084"
+      },
+      {
+        "path": "src/components/layout/footer.tsx",
+        "gitBlob": "3adfbbfbebb12c0bafcc6601e92c81f4bcaa9092"
+      },
+      {
+        "path": "src/components/layout/footer.module.css",
+        "gitBlob": "c547afb6e4f8ee613abf37cc92ccdb649f6ea69d"
+      },
+      {
+        "path": "src/components/layout/footer-wordmark.tsx",
+        "gitBlob": "fdf2684ae4659f62df49d7cebabdec1277fa09d1"
+      },
+      {
+        "path": "src/components/layout/back-to-top.tsx",
+        "gitBlob": "ed39fb11fc6a7ab25f76b311e2cfae5ecc5f1f90"
+      },
+      {
+        "path": "src/components/layout/local-clock.tsx",
+        "gitBlob": "58f6d7eecea53f68e5c14b8622e961436d127888"
+      },
+      {
+        "path": "src/components/layout/local-clock.module.css",
+        "gitBlob": "db47d62f84fb8b9869d7c216a638a059b2f8cac6"
+      },
+      {
+        "path": "src/components/ui/reveal.tsx",
+        "gitBlob": "0184af5057649b0f60dd0c6bd02e18992872f151"
+      },
+      {
+        "path": "src/components/fx/hooks.ts",
+        "gitBlob": "b00c60044e30bcc8e7333a5433839a8ebac8c590"
+      },
+      {
+        "path": "src/app/globals.css",
+        "gitBlob": "5cb4429910947682c3583bef41a6035212a9a703"
+      },
+      {
+        "path": "LICENSE",
+        "gitBlob": "c1fcda796e45dc198c86c19b0f7f8af85668a252"
+      }
+    ],
+    "reviewedButNotImported": [
+      {
+        "path": "src/components/home/learning-spotlight.tsx",
+        "gitBlob": "896d9bca8091aef0cc2880073dccc1abb3e02255",
+        "reason": "Reviewed for composition, not imported as an FDE or learning-product business section."
+      },
+      {
+        "path": "src/components/home/data/learning.module.css",
+        "gitBlob": "70a524a9077992f59c69f4108ed56cacb8f54731",
+        "reason": "Reviewed alongside learning spotlight; its product-specific content and actions are not added to this homepage."
+      }
+    ],
+    "retainedMechanisms": [
+      "SpotlightGroup proximity borders and local card light; PostCardFrame tilt, cover parallax and glare; LatestPosts presentation and reveal subset; ProjectIndexList row and matching index feedback",
+      "ContactBanner local light, 0.08 Parallax, 9-second BorderBeam, Reveal fade-up at y=16 for 0.5 seconds with 0.2 intersection threshold and -40px bottom root margin; FooterWordmark fitted typography, letter entrance, sweep and local pointer fill",
+      "Existing TDX-based crosshair, target corners, Aurora and grid trail remain; the magnetic entry fill and original 0.22 / 0.30 pull are retained with bounded local adaptation"
+    ],
+    "adaptations": [
+      "Only presentation subsets are adapted to existing native DOM, CSS and installed GSAP. ContactBanner's source Reveal timing/visibility contract uses the installed GSAP expo.out rather than a new Motion runtime. There is no additional React/Next runtime and no claim of unmodified drop-in components or zero AI-authored integration code.",
+      "The FooterWordmark measurement probe keeps 100px-relative letter spacing and verifies the actual first-to-last glyph envelope after scaling, so fallback-font metrics and rounding do not leave the final glyph outside its frame.",
+      "Community remains in preparation with its existing informational boards. The publishing log uses actual local article dates, not GitHub contributions; keyboard date inspection adds no invented URL or repository data.",
+      "The original three journal cards, six section destinations, two actual social links, services, cooperation action, clock, return-to-top and navigation are retained. All posts opens the existing local /blog page and article links use the existing reader.",
+      "No upstream GitHub/AI usage panels, education facts, FDE products, accounts or business content are imported. No new images, video, textures, particles or generated media are added in this completion pass.",
+      "Controllers bind once, refresh dynamic targets and remove superseded per-card handlers. Modal/reader, route, focus, visibility, coarse-pointer, dynamic reduced-motion and disposal gates clear owned state and do not replay stale pointer input.",
+      "Cursor semantics resolve the nearest real action before outer drag labels. The particle input exposes CLICK / DRAG, large real links expose READ / OPEN, and informational cards do not receive a fictitious action. Settled and native-input cursor paths stop their animation loop.",
+      "Magnetic buttons use event delegation and stable layout bounds rather than their own translated rectangles; leave, cancel, scrolling, keyboard, disabled/removed targets, overlays and preferences restore original inline state. Re-activation requires new pointer input.",
+      "Moving marquee masks measure the actual .f fill-layer origin and refresh under a stationary pointer. Exit, reset and lifecycle cleanup remove local coordinates from every affected layer."
+    ],
+    "mediaBoundary": "Existing SANSPHASE covers and historical assets retain their own provenance limitations. This record does not certify that all original media was created without AI, or that every piece of adaptation code is an untouched third-party component."
+  },
+  "fifthSceneUI": {
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "author": "Dingxin Tao",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "retainedNotice": "vendor/tdx/LICENSE",
+    "adaptedIn": [
+      "src/manifesto.ts",
+      "src/manifesto.css",
+      "src/main.ts"
+    ],
+    "reviewedSources": [
+      {
+        "path": "src/components/projects/scroll-highlight.tsx",
+        "gitBlob": "1d5dafb100c872042c4580180238ee222229ec81"
+      },
+      {
+        "path": "src/components/projects/scroll-highlight.module.css",
+        "gitBlob": "4cb87479e6f7de68dff6e818a330839af7f5795c"
+      },
+      {
+        "path": "src/components/fx/split.ts",
+        "gitBlob": "01d78c65f57e1cbe66716c0a68ccc12c27f9b462"
+      }
+    ],
+    "retainedMechanisms": [
+      "Word/glyph reading-order highlights, auto CJK/Latin tokenization with attached closing punctuation, 90% / 55% reading zone",
+      "A single --p progress write and CSS six-unit soft opacity front; one accessible original and an aria-hidden visual copy"
+    ],
+    "adaptations": [
+      "The existing local manifesto remains in place; no new business section, repository data, AI usage, education or copy is introduced",
+      "Native DOM and the installed GSAP ScrollTrigger replace React/Motion, with the existing Chinese/English bio, emphasis words and typography",
+      "The former per-character class loop is removed; owned trigger cleanup, language refresh, modal/router gates, window focus, visibility and dynamic reduced motion prevent stale progress writes",
+      "The source homepage's next GitHub/AI panels are not imported because no verified account or usage data exists for the site author. Community and publishing-log content remains unchanged; their later interaction enhancement is recorded separately in homeCompletionUI"
+    ],
+    "mediaBoundary": "No new images, particles, video, textures or generated assets. Only the source-adapted reading highlight is used."
+  },
+  "fourthSceneUI": {
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "author": "Dingxin Tao",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "retainedNotice": "vendor/tdx/LICENSE",
+    "adaptedIn": [
+      "src/facts.ts",
+      "src/facts.css",
+      "src/main.ts"
+    ],
+    "reviewedSources": [
+      {
+        "path": "src/components/home/facts.tsx",
+        "gitBlob": "689b4c26217fc1e87019e7f17bf8ac6bee2d3e79"
+      },
+      {
+        "path": "src/components/home/hero/facts.module.css",
+        "gitBlob": "a6936ba362e846cfa2a9807d74a5626f84c97383"
+      },
+      {
+        "path": "src/components/home/hero/fact-value.tsx",
+        "gitBlob": "b0a959e82cd16a903227b642dd5fd84305ff2f2e"
+      },
+      {
+        "path": "src/components/fx/odometer.tsx",
+        "gitBlob": "d49873bd30ed1548051097ee7725da9881fc530f"
+      },
+      {
+        "path": "src/components/fx/spotlight.tsx",
+        "gitBlob": "1b7e1dbd18e61aab7f9a42ce905c3e96fe4cedbe"
+      },
+      {
+        "path": "src/components/fx/trigger.tsx",
+        "gitBlob": "26e5cc99b218745512d6f911a17aafa0e2c0d15b"
+      },
+      {
+        "path": "src/app/globals.css",
+        "gitBlob": "5cb4429910947682c3583bef41a6035212a9a703"
+      }
+    ],
+    "retainedMechanisms": [
+      "Four columns at 1024px, 1px grid gaps, 28px desktop padding, outlined 01-04 indices and stacked values/labels",
+      "Group-wide radial light through grid rules, local cell light and independently positioned numeral masks; hover raises only the body and index",
+      "Per-cell 20% visibility entrance, 70ms cell cadence, 1.3s top-rule sweep, character rise and 1.4s mechanical counter with 20 rows ending at 10 plus the digit"
+    ],
+    "adaptations": [
+      "React FxTrigger/FactValue/Odometer/SpotlightGroup become a native DOM module using the existing GSAP; no additional runtime or dependency",
+      "The author's education and identity facts are replaced with the existing verified public-site snapshot: 04 posts, 11 tags, 06 sections and latest article date 2026.10.01",
+      "The warm secondary glow becomes an ice-blue accent under the existing light/dark theme; source typography uses existing Archivo",
+      "Old duplicate generic reveals, single-run counters, mini bars and relative-day/section-open embellishments are removed; four primary values and labels remain",
+      "Existing preview modal/router gates, document visibility, window focus, dynamic reduced motion and cleanup settle interrupted entrances; language refresh retains seen cells",
+      "Facts remain informational with no new links, buttons, graphs or fabricated personal content. Earlier scenes and the following manifesto are preserved"
+    ],
+    "mediaBoundary": "No new media, generated imagery, particles or textures. This section consists of source-adapted DOM, type, grid rules and pointer light."
+  },
+  "thirdSceneUI": {
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "author": "Dingxin Tao",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "retainedNotice": "vendor/tdx/LICENSE",
+    "adaptedIn": [
+      "src/showcase.ts",
+      "src/showcase.css",
+      "www/index.html"
+    ],
+    "reviewedSources": [
+      {
+        "path": "src/components/home/featured-projects.tsx",
+        "gitBlob": "c724f9bbe5766a8bef48dfc29c0e4f2517df606a"
+      },
+      {
+        "path": "src/components/home/project-showcase.tsx",
+        "gitBlob": "f8a3f5b234aabdb9736fa5210a8c3395408e9358"
+      },
+      {
+        "path": "src/components/home/project-showcase.module.css",
+        "gitBlob": "116f5d1054aedc744feb2876ccd247c962eb1025"
+      },
+      {
+        "path": "src/components/home/showcase/caption.tsx",
+        "gitBlob": "803c5f3b863aab1af58ae303f326adbb201de6d9"
+      },
+      {
+        "path": "src/components/home/showcase/rolling-digits.tsx",
+        "gitBlob": "eca994f48a81b048496412e9729329e6a5b97ebd",
+        "use": "reviewed only; current indices remain plain text"
+      },
+      {
+        "path": "src/components/home/showcase/rolling-digits.module.css",
+        "gitBlob": "5c5db708f1b6d25cf2912a79ff49fc1eb361c217",
+        "use": "reviewed only; not imported"
+      }
+    ],
+    "retainedMechanisms": [
+      "66% / max 780px card, 1500px perspective, continuous offset/shift geometry, 67% step, -180px depth, -22deg turn, 0.06 shrink, 3px depth of field",
+      "Front-only pointer tilt, glass layers, theme-aware glare, atmospheric side fog, reflection and 1.4s sweep",
+      "Horizontal drag thresholds 10px / 1.3 ratio / 40px release, 350ms click suppression, side-card selection",
+      "Native front links, local Arrow/Home/End keys, focus transfer, distant aria-hidden/inert cards",
+      "6500ms CSS bar animationend as sole autoplay clock; matching ring; hover/focus/drag/offscreen/background/reduced-motion gates",
+      "Caption exit lift and incoming character reveal; current project navigation with native buttons"
+    ],
+    "adaptations": [
+      "React/Motion/Next/next-intl bindings use the preview's native DOM, GSAP/SplitText, existing i18n, routing and Reader; no second framework or new dependency",
+      "Four source projects become the four existing author retrospective posts; actual article covers replace UI screenshots, with natural-ratio object-contain rendering",
+      "Full long article titles wrap into two-column navigation; original title, summary, tags, date and slug stay intact",
+      "Window blur, global Reader/search/menu activity, cleanup and language refresh use existing preview lifecycle contracts",
+      "Rolling digits, scramble effects, numeral parallax and shared-cover page morph are not implemented; existing Reader transition remains"
+    ],
+    "mediaBoundary": "No new images, video, textures or AI-generated media. Existing author covers are reused without certifying how they were originally made. The source author's image_gen feature artwork is not imported."
+  },
+  "particleEngine": {
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "author": "Dingxin Tao",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "retainedNotice": "vendor/tdx/LICENSE",
+    "manifest": "vendor/tdx/provenance.json",
+    "adaptedIn": [
+      "src/scene.ts",
+      "src/scene-control.ts",
+      "src/scene-shapes.ts"
+    ],
+    "mechanisms": [
+      "GPGPU simulation with original shader fallback",
+      "Particle entrance, cycle and morph choreography",
+      "Pointer force and click shockwave",
+      "Drag orbit with inertia and scroll scatter",
+      "Registered shape atlas and locality ordering"
+    ],
+    "upstreamConfigurationChanges": [
+      "PLAYBACK_ORDER IDs 2,1,3 become 4,5,6.",
+      "REDUCED_PHASE ID 1 becomes 4.",
+      "Original hero-cycle.upstream.ts and adapted hero-cycle.ts bytes are separately hashed in provenance.json."
+    ],
+    "adaptation": "Thin native-DOM renderer adapter using existing Three.js, current route and modal visibility, theme palette, pause, reduced motion and context lifecycle. Original engine, simulation, shaders and motion timing are retained; thematic resting coordinates replace the demonstration targets.",
+    "contentTargets": {
+      "4": "Film studio: solid movie-camera body, thick perforated reels and a projecting optical barrel assembled from Three.js RoundedBoxGeometry, ExtrudeGeometry, CylinderGeometry and TorusGeometry; links to the existing AI short-video workflow consolidation article. Replaces the prior thin storyboard frames.",
+      "5": "Knowledge archive: physical cabinet sidewalls and three thick, progressively extended drawers assembled from official Three.js box geometries; links to the existing personal knowledge-base completion article. Replaces the prior thin open-page frames.",
+      "6": "無相 identity: upstream rasterizeText and defineSampledShape applied to the existing Noto Sans SC font; no invented article link."
+    },
+    "geometrySources": [
+      "https://github.com/mrdoob/three.js/blob/r186/examples/jsm/math/MeshSurfaceSampler.js",
+      "https://github.com/mrdoob/three.js/blob/r186/examples/jsm/utils/BufferGeometryUtils.js",
+      "https://github.com/mrdoob/three.js/blob/r186/examples/jsm/geometries/RoundedBoxGeometry.js",
+      "https://github.com/mrdoob/three.js/blob/r186/src/geometries/CylinderGeometry.js",
+      "https://github.com/mrdoob/three.js/blob/r186/src/geometries/TorusGeometry.js",
+      "https://github.com/mrdoob/three.js/blob/r186/src/geometries/ExtrudeGeometry.js"
+    ],
+    "surfaceAdaptation": "Pinned Three.js 0.186.0 MeshSurfaceSampler owns weighted area sampling and supplies interpolated vertex normals. The local mesh arrangement adds a sampleWeight attribute for front/side distribution and converts sampled normals to point opacity, keeping rear surfaces subdued. TDX still owns every rendered particle, force, morph, click, drag and lifecycle. No AI-generated raster/model, new renderer, new dynamics or third-party asset rights claim is introduced.",
+    "note": "Custom target geometry and content binding are adaptations, not an unchanged third-party component. No separate replacement particle dynamics or image-pixel particle engine is used."
+  },
+  "ambientAndCursor": {
+    "implementation": [
+      "src/ambient.ts",
+      "src/ambient.css"
+    ],
+    "upstream": "See firstScreenUI reviewedFiles: cursor.tsx, aurora.tsx, grid-trail.tsx and globals.css at the fixed TDX commit.",
+    "description": "TDX crosshair and targeting corners, Aurora atmosphere and pointer-reactive grid-cell trail adapted to the current DOM and cobalt theme. Pointer X/Y text is omitted at the owner's request; semantic labels remain.",
+    "lifecycle": "Native input, text selection, keyboard operation, modal dialogs, background visibility, coarse pointer and reduced motion retain an appropriate system-pointer path. Nearest real actions take precedence over enclosing drag labels; the hero exposes its click/drag action. Settled/native paths sleep instead of running an indefinite cursor frame loop. Layout transitions, actual pointer capture hit tests and lifecycle resets prevent stale targeting; owned events, animations and observers are released on disposal. See homeCompletionUI for the magnetic and homepage-tail adapters."
+  },
+  "libraries": {
+    "three": {
+      "version": "0.186.0",
+      "repository": "https://github.com/mrdoob/three.js"
+    },
+    "gsap": {
+      "version": "3.15.0",
+      "repository": "https://github.com/greensock/GSAP"
+    },
+    "lenis": {
+      "version": "1.3.26",
+      "repository": "https://github.com/darkroomengineering/lenis"
+    },
+    "sanitize-html": {
+      "version": "2.17.7",
+      "repository": "https://github.com/apostrophecms/sanitize-html"
+    },
+    "photoswipe": {
+      "version": "5.4.4",
+      "repository": "https://github.com/dimsemenov/PhotoSwipe",
+      "release": "https://github.com/dimsemenov/PhotoSwipe/releases/tag/v5.4.4",
+      "license": "MIT",
+      "licenseSource": "https://github.com/dimsemenov/PhotoSwipe/blob/v5.4.4/LICENSE",
+      "retainedNotice": "vendor/photoswipe/LICENSE",
+      "retainedFrom": "node_modules/photoswipe/LICENSE, copied byte-for-byte from the installed locked package",
+      "officialDocumentation": [
+        "https://photoswipe.com/data-sources/",
+        "https://photoswipe.com/options/",
+        "https://photoswipe.com/events/"
+      ],
+      "scope": "Official PhotoSwipe core and CSS, single-image dataSource only; the local Reader adapter owns triggers, source dimensions, focus, inert, original scroll and lifecycle coordination. No thumbnail gallery or second application framework."
+    },
+    "fonts": "Fontsource packages: Archivo, Inter, Noto Sans SC, JetBrains Mono; OFL notices retained in installed packages",
+    "versions": "Exact package versions and integrity values are locked in package.json and package-lock.json. Each dependency retains its own license."
+  },
+  "assetsAndContent": {
+    "source": "Existing public SANSPHASE content snapshot and its original media, described in src/content.ts.",
+    "visualSources": "src/hero-sources.ts binds storyboard, knowledge and identity targets to two existing public article records and the author brand.",
+    "newGeneratedMedia": false,
+    "note": "No new AI image, video or texture is created. Historical author media and upstream assets are not guaranteed to have been made without AI. UI adaptation, target-coordinate construction and content binding are project work, not unmodified ready-made third-party components."
+  },
+  "interactionScope": {
+    "introduction": "The left column keeps its introduction and two existing actions, with open space beneath them.",
+    "selection": "Original autoplay is retained initially. Pointer click, Enter and arrow keys select a form; drag orbit does not also click. Manual choice is retained rather than overridden by a subsequent autoplay deadline. Reader destinations follow the actual scene form.",
+    "telemetry": "Particle count, FPS, mode and progress are read from the current engine. Unknown or inactive readings are not replaced by benchmark claims from the reference site.",
+    "navigation": "Existing navigation remains available; no account, VIP, administration or production-data behavior is changed."
+  },
+  "firstScreenUI": {
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "verification": "Computed Git blob SHA-1 from reviewed original file bytes and matched each against git ls-tree at the fixed commit in the verified upstream clone. SHA-256 values identify the same reviewed bytes. These hashes describe original upstream files, not adapted local files.",
+    "reviewedFiles": [
+      {
+        "path": "src/components/home/hero.tsx",
+        "gitBlob": "f44530cde2792b98b2f81cce8c617d4c8c13ff2f",
+        "sha256": "ffd8d4b865ff36036b1f0accc614f601580536212cd8c16c457d473346bcde82"
+      },
+      {
+        "path": "src/components/home/hero/hero-hud.tsx",
+        "gitBlob": "97a57493b7367c366c63b256801e8817f8542cbb",
+        "sha256": "ef9c3934652175dcd9f55502623d3d46918250d315e4a5d4bcc2398a71717700"
+      },
+      {
+        "path": "src/components/home/hero/hud.module.css",
+        "gitBlob": "4cc6fee8bb76c833b1683009f27ca22ab52afc1f",
+        "sha256": "31f7ca4caf3b022f31c93791e884bc0587f0c4f1691f0ff91a5cf6788d25b90e"
+      },
+      {
+        "path": "src/components/home/hero/hero.module.css",
+        "gitBlob": "127faaeab19d35156451be8584d2a576d18fd633",
+        "sha256": "57170eb45d6e3854a549c2ea0b4ae96a686c866039b093dc92982f3eddeffb62"
+      },
+      {
+        "path": "src/components/fx/draw-underline.tsx",
+        "gitBlob": "762e222d0cae2b72fc1d124f800c50a259c8af99",
+        "sha256": "1e8329aaa29d32a5ea098e676f2b234088194614c42989dbc4a788a54bbe290f"
+      },
+      {
+        "path": "src/components/fx/cursor.tsx",
+        "gitBlob": "729abb0864bf6c3ad1b30c7f145245fafbd30621",
+        "sha256": "deca6e7dd8848f48602152cc4f590f5b9c2bf974ebe4d0bc95f870fc7ed71d6e"
+      },
+      {
+        "path": "src/components/fx/aurora.tsx",
+        "gitBlob": "b0d44bb9ae58cf5537c6afc7a8caf42c253c1e29",
+        "sha256": "fbf238974c35800b3b2204139c5539c2d84735e4eef57a60322013d46c0355de"
+      },
+      {
+        "path": "src/components/home/hero/grid-trail.tsx",
+        "gitBlob": "955178a350c6afef037211dd10e1ae3e6bb9aa05",
+        "sha256": "d272893b87d76b35f584903b8e0e5e007460c678ee59b6466f7a2d773c3438fd"
+      },
+      {
+        "path": "src/app/globals.css",
+        "gitBlob": "5cb4429910947682c3583bef41a6035212a9a703",
+        "sha256": "baa91cc7dc192ce6d1bb04ea49dfbf32bb9756f525b940243973308ae9cb353d"
+      },
+      {
+        "path": "src/components/three/hero-canvas.tsx",
+        "gitBlob": "8e6d1a0640fb6cbaf3f13d751d4a6208075ffa57",
+        "sha256": "f7871cf8f53ea4d868bb432461b84678d156be5b5e2a579125818fb78397c6d7"
+      },
+      {
+        "path": "src/components/fx/spotlight.tsx",
+        "gitBlob": "1b7e1dbd18e61aab7f9a42ce905c3e96fe4cedbe",
+        "sha256": "f86d0a3fd23399111224c7c63a921f8162941ff45a66cbc2759b9c5d05eb59aa"
+      },
+      {
+        "path": "src/components/home/hero/hero-motion.tsx",
+        "gitBlob": "9eee9487ff87e8dea714c9a25621ea150493330d",
+        "sha256": "0d1c867bd5d2f2c3aea6c603541c8da8c66ac90518a5a1635a76dc64dfd98c9a"
+      }
+    ],
+    "adaptedIn": [
+      "www/index.html",
+      "src/hero.ts",
+      "src/hero.css",
+      "src/hero-hud.css",
+      "src/ambient.ts",
+      "src/ambient.css"
+    ],
+    "adaptations": [
+      "React components become thin native-DOM adapters in the existing app; no additional React or Next.js runtime is installed.",
+      "SANSPHASE identity, real public content and cobalt light/dark palette replace the demonstration content and warm palette.",
+      "Original square HUD, corner brackets, top/right rulers, scan reveal and desktop composition are retained with namespaced selectors and theme-token aliases.",
+      "HUD CSS removes !important overrides and uses engine progress instead of an independent CSS cycle clock.",
+      "The headline uses the upstream DrawUnderline SVG path with current animation integration.",
+      "Aurora drift, 64px grid-cell trail, crosshair, targeting and damping are retained through a native adapter with modal, native-input, pause and disposal guards. The pointer coordinate text is removed at the owner's request, while semantic labels remain.",
+      "The original HeroSection/useSpotlight masked grid and full-height trail are connected to pointer enter, move, leave and scroll. The particle drawing canvas is pointer-transparent; a separate native button owns input within the adapted HUD, using original canvas-relative projection."
+    ]
+  },
+  "secondSceneUI": {
+    "upstream": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT; vendor/tdx/LICENSE",
+    "reviewedFiles": [
+      {
+        "path": "src/components/home/what-i-do.tsx",
+        "gitBlob": "82c0b2814de0e54001bff9eaa3c7f4127e04d8aa"
+      },
+      {
+        "path": "src/components/home/what-i-do.module.css",
+        "gitBlob": "57aa35ae26b86bd17772e2ab28ca26655ae01219"
+      },
+      {
+        "path": "src/components/home/showcase/depth-card.tsx",
+        "gitBlob": "42363adfd9e2407c2fdde4cae15dbdd47cea9217"
+      },
+      {
+        "path": "src/components/fx/spotlight.tsx",
+        "gitBlob": "1b7e1dbd18e61aab7f9a42ce905c3e96fe4cedbe"
+      },
+      {
+        "path": "src/components/fx/trigger.tsx",
+        "gitBlob": "26e5cc99b218745512d6f911a17aafa0e2c0d15b"
+      },
+      {
+        "path": "src/components/fx/split.ts",
+        "gitBlob": "01d78c65f57e1cbe66716c0a68ccc12c27f9b462"
+      },
+      {
+        "path": "src/components/fx/split-text.tsx",
+        "gitBlob": "2564f3a94cc3cbbcfd2c4e89216d5d2bc4c97aa2"
+      },
+      {
+        "path": "src/components/fx/border-beam.tsx",
+        "gitBlob": "3747f4153564ed8cf7f9b6a11189286a2abbb084"
+      },
+      {
+        "path": "src/app/globals.css",
+        "gitBlob": "5cb4429910947682c3583bef41a6035212a9a703"
+      },
+      {
+        "path": "docs/home-feature-art.json",
+        "gitBlob": "1dbc5cd08c13d36170f95c3ca32399b329498b2e"
+      }
+    ],
+    "adaptedIn": [
+      "src/directions.ts",
+      "src/directions.css",
+      "www/index.html",
+      "src/main.ts"
+    ],
+    "adaptations": [
+      "Three real directions use one tall card and two wide cards. No fourth service or fictitious project is added.",
+      "The native DOM adapter retains normalized pointer coordinates, 1100px perspective, compensated depth planes, inverse image parallax and group-wide pointer lighting. Existing GSAP quickTo and ScrollTrigger replace the React Motion spring and FxTrigger runtime, so this is an adaptation rather than byte-identical reuse.",
+      "The owner's corrective scope removes the extra article lists, dates, counts, simulated browser, section explanation and footer. Each card has one visible native CTA and an aria-hidden whole-card overlay. AI and creative-work cards open the first two existing articles; the website card opens the existing /contact route without a fake article index or invented media.",
+      "Upstream CSS curtain (1.2s), media settle (1.9s), copy rise, split-title reveal, line draw, glass CTA, dual arrows, a 9s tall-card border beam and pointer-masked 64px group grid are namespaced and retained. The title adapts the source split.ts auto-tokenization rules. ScrollTrigger starts idle/play/done states; it no longer translates or fades the whole card.",
+      "The four upstream copper background images are not imported: docs/home-feature-art.json identifies them as generated with image_gen. Existing public author covers are reused; their original creation method is not certified by this preview.",
+      "A legibility mask adapts the existing creative-work cover to a left-copy wide card; no new image is generated or imported. The website card retains its actual description and contact action rather than receiving unrelated generic art.",
+      "Card state, listeners, scheduled frames, tweens and entry triggers are cleaned up on language rebuild and disposal. Modal, offscreen, document visibility, window focus and reduced-motion gates pause the beam and pointer work. Interrupted entrances settle to readable done state and cannot be restarted by canceled callbacks; keyboard entry remains immediately readable."
+    ]
+  },
+  "supersededVersion": {
+    "commit": "de698ae01a9f527bcb840f904a7551dd8795bc7d",
+    "description": "Rejected Bruno Imbrizi image-pixel particle adapter and static pointer design. Not an active source in this version; recover its complete original provenance and permission notices from the same historical commit if needed."
+  },
+  "verificationLimits": "Source provenance and automated tests do not establish actual GPU performance, browser acceptance or a subjective claim of surpassing the reference. Browser evidence must be recorded separately.",
+  "innerPagesUI": {
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "retainedNotice": "vendor/tdx/LICENSE",
+    "reviewedUpstreamFiles": [
+      {
+        "path": "src/components/ui/page-header.tsx",
+        "gitBlob": "ac081baa9a8a7b7cf1057c334a4a1e3bfb3af34a"
+      },
+      {
+        "path": "src/components/blog/blog-explorer.tsx",
+        "gitBlob": "0ee02f881245ac8de9bc1daadfcef189d200febf"
+      },
+      {
+        "path": "src/lib/blog-query.ts",
+        "gitBlob": "cfecc7605e41274edae92038f8b4b0dfc40b5e34"
+      },
+      {
+        "path": "src/app/[locale]/blog/[slug]/page.tsx",
+        "gitBlob": "dbce6ace1f4fedc6a132d80f6b9445502077bdd0"
+      },
+      {
+        "path": "src/components/blog/table-of-contents.tsx",
+        "gitBlob": "5608434500022d412da3f6c9e57bff59f26d2cd6"
+      },
+      {
+        "path": "src/components/projects/projects-grid.tsx",
+        "gitBlob": "03406cc86671d365af83463b2a1933e48960351b"
+      },
+      {
+        "path": "src/components/projects/project-preview-card.tsx",
+        "gitBlob": "4cd2668e5593bbd4a18765008d733e85bff7c1aa"
+      },
+      {
+        "path": "src/app/[locale]/learn/page.tsx",
+        "gitBlob": "2c90afe7c025a97b7a3811cb933c0486a69e6bd1"
+      },
+      {
+        "path": "src/app/[locale]/contact/page.tsx",
+        "gitBlob": "b33281b38baad946ca62426ef10907202652d47b"
+      },
+      {
+        "path": "src/components/contact/status-screen.tsx",
+        "gitBlob": "207fd465ef8efa7245165e0dbc3862a10435dbda"
+      }
+    ],
+    "verification": "Reviewed files in the existing verified fixed-commit Git checkout. Blob IDs above are independently resolved from that commit. The earlier raw download manifest is not claimed to include all of these inner-page files. These identify original upstream files, not the adapted local bytes.",
+    "sourceBindings": [
+      {
+        "local": [
+          "src/pages.ts",
+          "src/inner-pages.css",
+          "src/blog-query.ts",
+          "src/practice-content.ts"
+        ],
+        "upstream": [
+          "PageHeader",
+          "BlogExplorer query/state model only",
+          "blog-query",
+          "project grids/cards",
+          "learn page",
+          "contact page",
+          "StatusScreen"
+        ],
+        "adaptation": "Native DOM shells, real tag/search/sort/clear state and contact sweep. The blog uses one About Publications article index, documented in journalPageUI; BlogExplorer supplies query rules only. Work groups four canonical articles into two practice themes; Learning presents their chronological reading tracks. Software retains the existing account-access boundary. The /resources library replaces the old section-directory and is documented in libraryPageUI; the main site's separate resources content kind still maps to /learning. Existing routes and installed GSAP are retained; no new framework or backend."
+      },
+      {
+        "local": [
+          "src/page-experience.ts",
+          "src/page-experience.css"
+        ],
+        "upstream": [
+          "SpotlightGroup",
+          "PostCardFrame",
+          "Reveal"
+        ],
+        "adaptation": "Reuse the already verified homeCompletionUI source files. Local proximity light, 1.06 cover parallax and .5s/16px entrance; no whole-card invented tilt or new particle engine."
+      },
+      {
+        "local": [
+          "src/article.ts",
+          "src/reader.css"
+        ],
+        "upstream": [
+          "table-of-contents.tsx",
+          "blog/[slug]/page.tsx"
+        ],
+        "adaptation": "Body-bounded progress, 30% current-heading threshold, bottom correction, RAF coalescing, aria-current and narrow-screen details. Added adapter guards for stale network results, retry, author anchors, image layout shifts and native focus return."
+      }
+    ],
+    "contentBoundaries": [
+      "Article-based blog/work/learning pages use the four public articles and original covers. English chrome uses the existing draft translations; article bodies remain original Chinese. The library has a separate real metadata source documented in libraryPageUI; blog records are not book inventory.",
+      "Work and learning present two editorial themes: a personal knowledge base and an AI video workflow. They use the same four published articles, dates, covers and Reader routes. They do not claim a new independent product inventory, a course completion record, new learning files or downloads.",
+      "Anonymous HTTP 401 establishes an access restriction, not empty, unpublished or nonexistent content. Software keeps public tool notes and the main-site entry. The /resources page now represents resource-center books through real metadata only, preserving access restrictions and continuing reading in the main site's existing Reader. The separate resources content kind maps to /learning; no inventory, ranking or download link is invented.",
+      "Community is a plan of four boards and three participation systems; the old synthetic activity counters, generated chart series and custom particle/heartbeat canvases are removed. No live forum or community backend is claimed.",
+      "Contact retains the existing three service headings and two author-owned platform links. Support has no invented payment form or donation QR."
+    ],
+    "limits": [
+      "Thin adapters and page integration are authored for this project; using open-source mechanisms does not mean every line is unmodified third-party code.",
+      "No new image or media generation is used. Original author cover provenance is not certified.",
+      "This local frontend preview does not publish changes or modify production accounts, VIP, storage or backend logic. INNER_PAGES_ACCEPTANCE.md separates previous-batch evidence in browser-acceptance.json from the current unified Publications replacement's actual checks. The current pass has its own journal-replacement-tests.log, screenshots 09/10 and root-owned journal-replacement-browser.json record path; neither pass certifies acceptance of every page or whole-site visual superiority."
+    ]
+  },
+  "libraryPageUI": {
+    "target": "http://127.0.0.1:4285/resources",
+    "replaces": "The old section-directory, not the existing main-site book Reader.",
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "retainedNotice": "vendor/tdx/LICENSE",
+    "reviewedUpstreamFiles": [
+      {
+        "path": "src/components/projects/projects-grid.tsx",
+        "gitBlob": "03406cc86671d365af83463b2a1933e48960351b"
+      },
+      {
+        "path": "src/components/projects/project-preview-card.tsx",
+        "gitBlob": "4cd2668e5593bbd4a18765008d733e85bff7c1aa"
+      },
+      {
+        "path": "src/components/projects/project-preview-card.module.css",
+        "gitBlob": "a1256f73f18b648ab9b36d6714fee6a5e25a17f0"
+      }
+    ],
+    "adaptedIn": [
+      "src/library-page.ts",
+      "src/library-page.css",
+      "src/library-model.ts",
+      "src/pages.ts",
+      "src/main.ts",
+      "server-model.ts",
+      "server.ts"
+    ],
+    "dataAndAccess": [
+      "The /resources preview maps the main site's resource-center book catalog. The separate resources content kind maps to /learning; these are not the same collection. The local demo has six resource references at /learning, six software references at /software and three sample book outlines at /resources, each explicitly labeled and kept separate from real CMS records.",
+      "Default demo mode reads src/demo-library.ts without a CMS request; sample details contain local notes and official GitHub sources, not private book text or invented downloads. Switching to the live collection reuses contentQuery from ../../src/content-reader.ts, validates the response and preserves upstream 401/403. The anonymous relay forwards neither browser Cookie nor Authorization; no account integration or replacement chapter/body reading engine is introduced.",
+      "Switching source clears old actionable cards, categories and pagination before waiting for live results, cancels the previous request and rejects stale response generations. A live HTTP 401 does not establish an empty or unpublished library. The four author blog posts are never substituted for books, and sample inventories are not written to the CMS.",
+      "Live /#/resource-center links continue through the main site's existing Reader and its original access decisions, chapters, local reading position and bookmarks. DEMO_CONTENT_SOURCES.md records the six/six/three sample inventory; UI_SWAP_CONTRACT.md records original-feature preservation and the future same-origin integration gates."
+    ],
+    "presentation": "Thin native DOM/TypeScript adaptation of ProjectsGrid and ProjectPreviewCard hierarchy, category controls and grid/list catalog; existing PageExperience owns catalog pointer light and GSAP reveal. The old CSS volume is replaced by the third-party physical book documented in readingRoomBookUI. It is decorative reading-room artwork, not a fabricated catalog item. Local binding, styles and lifecycle integration are project work, not an untouched upstream component.",
+    "icon": {
+      "repository": "https://github.com/lucide-icons/lucide",
+      "commit": "1ef60af944de207e0d5176905a0759ba12e6ee8d",
+      "path": "icons/book-open.svg",
+      "retainedAsset": "vendor/lucide/book-open.svg",
+      "sha256": "9B9BED0FF057283D5C5C5A1C71F8D3E927DB26A56639603A92FDF7B25961510E",
+      "license": "ISC and retained Feather MIT notice",
+      "retainedNotice": "vendor/lucide/LICENSE",
+      "licenseSha256": "B495047BD93A9B06913511076F504DABA17D5BBEB3E0650F3BB53A4220329C57"
+    },
+    "verification": {
+      "sourceIdentity": "TDX blobs resolved from the verified fixed-commit Git checkout. Retained Lucide SVG and license SHA-256 values were recomputed from local bytes.",
+      "regressionCoverage": [
+        "tests/library-contract.test.mjs",
+        "tests/library-page.test.mjs",
+        "tests/library-demo.test.mjs",
+        "tests/demo-content.test.mjs"
+      ],
+      "finalAcceptance": "Earlier library-only pass: 255/255 full-runner tests, TypeScript check and build passed. IAB verified 1440x1000 Chinese light and 1280x900 English dark without horizontal overflow, live hero tilt, catalog anchor, keyboard guide and reduced motion. The real anonymous catalog remained HTTP 401. A separate labeled synthetic fixture verified populated shelf/list, filtering, search and retained draft; it was not main-site inventory. Historical evidence: INNER_PAGES_ACCEPTANCE.md and outputs/content-adaptation-20261018/library-final-tests.log.",
+      "currentDemoIntegration20261019": "Default labeled sample library, source switching, actual 401/403/error distinction, category/search/list controls, local sample deep links, close/focus return, locale category reset and disposal/late-response isolation are covered by library-demo and the existing live contract suites. The independent round2 runner passed 328/328; a subsequent browser Tab-loop finding was fixed with a failing-then-passing regression, and the final complete runner passed 329/329. Full-task log: ../../outputs/hero-upgrade/full-task-tests.log. Official GitHub license checks and boundaries are in UI_SWAP_CONTRACT.md; final browser evidence is in TASK_ACCEPTANCE_20261019.md, separate from the earlier 255-test pass.",
+      "limits": "No AI media or installed demo-tool binaries. Explicit local samples do not establish author usage, real CMS inventory, authenticated access or chapter reading. Formal UI replacement still requires the existing same-origin account/author/Reader integration and identity, withdrawal, cache and URL regressions described in UI_SWAP_CONTRACT.md. No production content, accounts or persistent data is changed."
+    }
+  },
+  "readingRoomBookUI": {
+    "repository": "https://github.com/fabiosantaniellobruun/irma-book",
+    "commit": "32e8c1a1e22f96059612a89d0c21d46c76ca7374",
+    "license": "MIT",
+    "retainedNotice": "vendor/irma-book/LICENSE",
+    "sourceScope": "Complete irma-book src/book3d case renderer plus the separately pinned quick_flipbook multi-sheet kernel and its fixed modifiers source. No configurator, PDF import, export app, React or new root NPM dependency. Existing Three 0.186.0 is reused.",
+    "pageTurning": {
+      "repository": "https://github.com/bandinopla/quick_flipbook",
+      "version": "1.1.3",
+      "commit": "2c62c76b7dd91861f9e71259d8e37157018ba16e",
+      "license": "BSD-2-Clause",
+      "retainedNotice": "vendor/quick-flipbook/LICENSE",
+      "retainedSource": "vendor/quick-flipbook/src",
+      "runtime": "vendor/quick-flipbook/index.js",
+      "sourceManifest": "vendor/quick-flipbook/SOURCE-MANIFEST.json",
+      "modifiers": {
+        "repository": "https://github.com/drawcall/threejs-mesh-modifiers",
+        "package": "three.modifiers",
+        "version": "2.5.7",
+        "commit": "f0d795e620409e2644ae0e3d8e809d88f0f3e0f2",
+        "license": "BSD-3-Clause as explicitly declared by the original README; no standalone upstream LICENSE file",
+        "retainedNotice": "vendor/quick-flipbook/third-party/three-modifiers/LICENSE-SOURCE.md",
+        "retainedDeclaration": "vendor/quick-flipbook/third-party/three-modifiers/README.md"
+      },
+      "hostChanges": "Optional autoCenter:false keeps the case hinge fixed; isAnimating exposes scheduling state; active and pooled paper geometries receive idempotent teardown; generated materials are tracked while supplied Material ownership stays with the host; CPU-deformed paper recalculates normals and bounds. Upstream Bend, Twist and PageCurve algorithms are retained. The host passes prebuilt Material objects rather than using upstream asynchronous URL loading or its cached decorative AO path."
+    },
+    "adaptedIn": [
+      "src/library-book.ts",
+      "src/library-book-viewer.ts",
+      "src/library-page.ts",
+      "src/library-page.css",
+      "vendor/irma-book/book3d/BookViewer.js",
+      "vendor/irma-book/book3d/BookViewer.d.ts",
+      "vendor/irma-book/book3d/hinge.js",
+      "vendor/quick-flipbook/src/FlipBook.ts",
+      "vendor/quick-flipbook/src/FlipPage.ts",
+      "vendor/quick-flipbook/index.d.ts"
+    ],
+    "upstreamChanges": "BookViewer lifecycle, no export buffer, context/shadow cleanup, stale image guard, setActive/visibility scheduling and compact shadow budget, plus a host reading mode, coordinated flat-open pose/camera, external page layer and split paper supports. Reading mode uses the book mid-thickness hinge Z and a controlled hinge.js maskShift=-blend so the complete front board/lining turns while only the spine-side groove flexes; position, normal and depth paths share that factor. Fixed-source SHA-256 comparison found 11 imported JS modules: BookViewer.js and hinge.js changed; the other nine remain byte-identical. The host declaration is additional. See vendor/irma-book/UPSTREAM.md.",
+    "wrapper": "src/library-book-viewer.ts composes the irma physical case with the licensed multi-sheet engine. It converts millimeter bounds, supplies localized typographic preview faces, owns textures/materials, coordinates the cover/paper state and positions support stacks below the top visible turned sheet. It does not implement new paper-deformation physics.",
+    "content": "Trusted THE READING ROOM / 藏书与阅读 labels across six double-sided preview sheets. Cloth/paper surfaces use the upstream procedural implementation and preview text is rendered with the site's fonts. No AI image, fabricated catalog inventory or uploaded chapter content is introduced; actual books still enter the existing main-site Reader and access checks.",
+    "interaction": "Upright front-facing closed book, then coordinated flat opening; hit-tested wheel next/previous turns within the open book, normal document scrolling outside it and at the page limits, explicit next/previous/open/close/reset buttons, Enter/Space/Home/arrow-key equivalents, no wheel zoom, lazy module/viewport mount, live theme/reduced motion, inactive-page suspension and teardown/fallback.",
+    "status": "Isolated local preview experiment. irma-book had two commits and no release at review. quick_flipbook's latest inspected commit/release is 2024-02-20; three.modifiers 2.5.7 was published 2021-06-10. No inspected repository explicitly declares discontinuation, but active maintenance is not established. These are pinned source adaptations, not claimed mature or production-proven; upstream authors' development processes cannot be certified AI-free.",
+    "limits": "This preview is not a full book reader, catalog record or authenticated reading session. It preserves the main-site Reader for actual chapters. The paper kernel consists of thin double-sided planes with stack spacing rather than volumetric individual leaves; its URL-loading/shared-AO paths are not used by the host. Future Three upgrades require renewed geometry/shader/lifecycle validation.",
+    "regressionCoverage": [
+      "tests/library-book.test.mjs",
+      "tests/library-book-viewer.test.mjs",
+      "tests/library-page.test.mjs",
+      "vendor/quick-flipbook/verify.mjs"
+    ],
+    "evidenceDirectory": "../../outputs/book-review-20261018"
+  },
+  "journalPageUI": {
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "author": "Dingxin Tao",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "retainedNotice": "vendor/tdx/LICENSE",
+    "verification": {
+      "verifiedGitCheckout": "../../outputs/audit-hero-20261018/verified-tdx-source",
+      "method": "Read the exact path/blob entries at the declared commit in the verified source checkout. The original seven About files and the subsequently added DrawUnderline/BorderBeam entries identify nine reviewed upstream files. Read each blob's original bytes with git cat-file, independently computed SHA1('blob ' + byteLength + NUL + bytes), and matched the tree blob ID. Byte counts and SHA-256 below identify those original bytes. No path hash was guessed with git rev-parse in the partial raw-file cache.",
+      "localBaseline": "c102f08 (Adapt journal composition and preserve article image interactions)",
+      "browserAcceptance": "Actual IAB checks completed for the unified Publications replacement: within #journal-catalog the old .blog-shell/.feature/.posts/.rows/[data-view] count is zero and four publication rows remain; no-results returns zero plus the new empty state; Obsidian returns two, oldest order is canonical indices [2,0], clear restores four and search focus, and the obsidian tag returns two. Hover changes the row sweep, underline, outlined index and dual arrows. Reader close returns to catalog-personal-knowledge-base-completed focus and the original catalog fragment. Chinese/light at 1440px and English/dark at 1280px have no horizontal overflow; live reduced motion gives zero-duration arrow/sweep transitions and four rows at opacity 1/transform none. Final warn/error logs are empty. Evidence: ../../outputs/content-adaptation-20261018/09-journal-replacement.png and 10-journal-replacement-dark.png; Structured results are saved in ../../outputs/content-adaptation-20261018/journal-replacement-browser.json. This is the specified index scope, not a repeat acceptance of all pages, a performance benchmark or whole-site superiority.",
+      "automatedAcceptance": "Historical unified-Publications replacement runner: 228/228 passed, zero failed or skipped, recorded in ../../outputs/content-adaptation-20261018/journal-replacement-tests.log; TypeScript and build passed in that batch. Counts describe that execution, not the subsequent hero/story structural correction or a permanent test total. The previous 226/226 result remains the pre-replacement batch in tests.log.",
+      "structuralCorrectionAcceptance": "Independent 2026-10-18 hero/story correction: full runner 279/279 passed, zero failed/skipped; TypeScript and build passed. Actual IAB comparison at 1152x720 measured the local hero at about 540.80px, heading 52px and card 352x316.80px. Light atmosphere/cursor, dark hover tilt/foil/beam, pointer reset, original Reader open/inert pause and focus return, Obsidian search returning two, a single journal ambient after query/language updates, English no horizontal overflow and live reduced-motion pause were checked. Final view restored Chinese/light and native 1162x980 viewport (document clientWidth=scrollWidth=1152); warn/error logs empty. Evidence is in ../../outputs/journal-about-review-20261018/: tests.log, browser.json, 04-reference-1152.png, 05-blog-1152.png, 06-blog-dark-hover.png and 07-blog-final-light.png. This scope does not claim all downstream sections, devices or language/theme combinations were reaccepted or that visual quality exceeds the reference."
+    },
+    "reviewedUpstreamFiles": [
+      {
+        "path": "src/app/[locale]/about/page.tsx",
+        "gitBlob": "464dde5cb19875e5a682726b5a9622a6fde0fea7",
+        "bytes": 8822,
+        "sha256": "88e797c3c66fdf2c38c83768e8287efde3a1b420a8c5452de82e2f4519824711"
+      },
+      {
+        "path": "src/components/about/about.module.css",
+        "gitBlob": "bce08e7d517dcf0bea144ed623675ee4fd6ed29d",
+        "bytes": 9201,
+        "sha256": "1ad3cf2310a29701323ce4db0db7628bcefa317a75e09adcaa4528a395af4409"
+      },
+      {
+        "path": "src/components/about/holo-card.tsx",
+        "gitBlob": "6ce7d13f29cef2c0817c75aa131b691c6ac38f15",
+        "bytes": 2515,
+        "sha256": "7449c89daa19f6c4eee830b0e5ec2ce7fed200f57db1d0e7b5c6151eacf35189"
+      },
+      {
+        "path": "src/components/about/portrait.tsx",
+        "gitBlob": "1f1c453d5ed36a87b650027303acd011408b0204",
+        "bytes": 3495,
+        "sha256": "1700a1a4794b95dbf2bb7dcb40d43ed4be77f496e673eaa1404abdf059258e3f"
+      },
+      {
+        "path": "src/components/about/publications.tsx",
+        "gitBlob": "2ad61054ed6578972be0aece21ebb8e304759b29",
+        "bytes": 5711,
+        "sha256": "ea697b6cb5133150573a73f591f8869c1f2fd84049741c3ffbf143446c1ba243"
+      },
+      {
+        "path": "src/components/about/story.tsx",
+        "gitBlob": "511f8e3733819ad4d2134e3071f273ce07e9e7ca",
+        "bytes": 4742,
+        "sha256": "9d6bebfebaa1b18717df91d86f42990686e6d71a6a8a85d6216f57afff43fbaf"
+      },
+      {
+        "path": "src/components/about/timeline.tsx",
+        "gitBlob": "18a70f3a2a2c50a9ed83347c761dd562911d184e",
+        "bytes": 11506,
+        "sha256": "ffd5e2756181ab9a73da2ad8464386d9d2e52ced37fbbe9cb62362351fc6d867"
+      },
+      {
+        "path": "src/components/fx/draw-underline.tsx",
+        "gitBlob": "762e222d0cae2b72fc1d124f800c50a259c8af99",
+        "bytes": 1133,
+        "sha256": "1e8329aaa29d32a5ea098e676f2b234088194614c42989dbc4a788a54bbe290f"
+      },
+      {
+        "path": "src/components/fx/border-beam.tsx",
+        "gitBlob": "3747f4153564ed8cf7f9b6a11189286a2abbb084",
+        "bytes": 1387,
+        "sha256": "98d86176bbe7a6587ab0dc3d1eedea32d59c251fd8876e24c856fbc3a6cd311f"
+      }
+    ],
+    "adaptedIn": [
+      "src/journal-page.ts",
+      "src/journal-page.css",
+      "src/journal-experience.ts",
+      "src/pages.ts",
+      "src/main.ts",
+      "src/route-anchor.ts"
+    ],
+    "sourceBindings": [
+      {
+        "upstream": "About hero composition, SectionHeading/DrawUnderline, Portrait/HoloCard and BorderBeam; shared Aurora/Spotlight background adapter",
+        "local": "Compact 7/5-column journal hero, 52px heading and 352px 10:9 latest-article cover/Reader link; source scanline materialization, separately timed four-corner HUD/chips/scan edge, bounded pointer tilt, foil, glare, 9-second border beam and the exact DrawUnderline SVG path. Shared mountAmbient supplies the existing cobalt light/grid/trail presentation. No borrowed portrait, identity or new media."
+      },
+      {
+        "upstream": "Story",
+        "local": "Existing blog description and the two existing practice summaries in the source 12-column 3/8/1 allocation, with a 736px body cap, 20px lead and 17px supporting paragraphs; split reading highlight, sticky paragraph index and progress. No invented biography."
+      },
+      {
+        "upstream": "EducationTimeline",
+        "local": "The four canonical articles in actual publication-date order, with native Reader links and timeline progress; no borrowed education, employers or credentials."
+      },
+      {
+        "upstream": "Publications",
+        "upstreamLines": "src/components/about/publications.tsx:29-59",
+        "upstreamUrl": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/components/about/publications.tsx#L29-L59",
+        "local": "One unified Publications article index adapts the ordered rows, top/bottom rules, date column, metadata/title hierarchy, soft row sweep and accent underline to the four canonical articles and native Reader links. It replaces the old featured card, blog grid/list layouts, view toggle and blog.view state. The source paper records are not imported; local article dates replace paper years. Existing BlogExplorer query rules and pages.ts retain search, tags, sorting and clear state only; Journal owns article-row entrance."
+      },
+      {
+        "upstream": "Now section inside src/app/[locale]/about/page.tsx",
+        "local": "Two actual practice themes link to the existing /learning reading tracks. Now is not a separately verified now.tsx file; no source personal status or values are attributed to SANSPHASE."
+      }
+    ],
+    "adaptationBoundaries": [
+      "Native DOM/TypeScript, existing GSAP/ScrollTrigger and the current route/Reader replace the upstream React/Next/Motion integration. Local integration code and theme adaptation are not claimed as an untouched upstream component.",
+      "The Journal controller owns data-journal-* nodes including unified Publications row entrances. pages.ts owns native search/tag/sort/clear controls, while blog-query.ts retains the query model; there is no legacy blog catalog transform owner or blog view toggle. Work's separate practice filter and grid/list state remain outside this blog cleanup. Refresh, stale callbacks, overlays/inert, viewport visibility, focus, reduced motion, pointer capability and disposal are integration lifecycle boundaries.",
+      "Only the existing four public articles, covers, dates and two editorial practice themes are used. No avatar, university, paper, organization, GitHub/AI usage statistics, new generated image or backend feature is imported. Homepage content is outside this journal-page pass.",
+      "This is a whole-About composition adaptation across Hero, Story, Timeline, Publications and a local practice-theme ending, not a claim that only the hero was borrowed or that the complete About biography was copied. The current pass corrects hero/story geometry and hero choreography; it does not claim fresh reimplementation or acceptance of every downstream effect.",
+      "The local halo, foil/glare strength, typography/theme tokens and shared ambient grid trail remain SANSPHASE adaptations. The HUD is deliberately 16px outside the card rather than upstream 9px; chips stay at 12px for readability. Story uses a 24px local grid gap rather than upstream desktop 40px. Existing CSS/GSAP easing replaces Motion springs; matching source timing and geometry does not establish identical motion physics."
+    ],
+    "structuralCorrection20261018": {
+      "source": "The same fixed About page and its real dependencies were re-read from verified Git objects before changing the local composition; screenshot dimensions were not used to invent upstream values.",
+      "hero": {
+        "upstreamPaths": [
+          "src/app/[locale]/about/page.tsx:75-100",
+          "src/components/ui/section-heading.tsx:47-75",
+          "src/components/about/portrait.tsx:41-75",
+          "src/components/about/holo-card.tsx:9-71",
+          "src/components/about/about.module.css:4-184"
+        ],
+        "desktopGeometry": "Top/bottom padding 160/64px, twelve columns with 64px gaps and 7/5 spans, heading 52px at line-height 1.2, right-aligned card max-width 352px at 10:9. No fixed hero height is prescribed; content and font metrics determine the rendered height.",
+        "removedLocalAdditions": "Removed the forced title line break, hero article/theme statistics, browse-catalog CTA and repeated external date line; the real article link, compact title and metadata remain.",
+        "choreography": "Media and scan edge: 1.25s after 0.1s. Four corners: 0.7s after 0.9s + cornerIndex * 0.07s. Chips: 0.6s after 0.75s. Existing GSAP owns a 1.85s feature lifecycle so it clears the materialize state only after the CSS subparts finish; offscreen/paused/reduced/disposal gates still settle owned state. BorderBeam uses the portrait's 9s period and 80deg arc, adapted through local CSS.",
+        "underline": "Reuses DrawUnderline's exact M3 9.6C58 4.9 127 3.2 196 5.3S283 9.6 297 4.4 path, viewBox 0 0 300 14, pathLength 1 and 0.9s draw duration. Local heading entrance/lifecycle triggers it; it does not claim to copy SectionHeading's complete SplitText-delay formula.",
+        "background": "About's hero-glow, Aurora intensity 0.8, base grid opacity 0.7 and pointer-lit grid provide the source layer rationale. Journal calls the existing src/ambient.ts mountAmbient adapter; that shared implementation also retains the site's established 64px grid trail. Same-host query refresh keeps the existing ambient instance; replacement/disposal releases it. No second cursor or particle renderer is mounted."
+      },
+      "story": {
+        "upstreamPaths": [
+          "src/components/about/story.tsx:15-45",
+          "src/components/about/story.tsx:76-117",
+          "src/components/about/about.module.css:190-198"
+        ],
+        "desktopGeometry": "Twelve columns: rail spans 3, text spans 8 and 1 remains empty; body max-width 736px. Top/bottom padding 40/96px, lead 20px/1.85, following paragraphs 17px/1.9 and 20px paragraph separation; local grid gap is 24px. Sticky rail top 112px with a 128px progress rule.",
+        "retainedInteraction": "Source 14-unit soft opacity front, lead reading zone top 85% to bottom 55%, section progress top 70% to bottom 60% and sticky current-paragraph counter remain through the existing native/GSAP controller. The existing two summaries become plain supporting paragraphs, replacing the added topic-heading blocks."
+      },
+      "preservedScope": "The real-date article timeline, unified Publications index, search/tags/sort/clear and original Reader stay in place. Now/Values were not imported as unverified personal facts. This record is source/implementation evidence only, not a browser acceptance or a claim of visual superiority."
+    },
+    "regressionCoverage": [
+      "tests/journal-page.test.mjs",
+      "tests/inner-pages.test.mjs",
+      "tests/reader-navigation.test.mjs",
+      "tests/route-anchor.test.mjs"
+    ]
+  },
+  "catalogPagesUI": {
+    "repository": "https://github.com/DingxinTao0417/tdx-portfolio",
+    "author": "Dingxin Tao",
+    "commit": "c73bc4966f0ba808b978e22eccf5a063fc649751",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2026 Dingxin Tao",
+    "retainedNotice": "vendor/tdx/LICENSE",
+    "status": "Fixed-source review and adaptation boundaries only. This entry does not establish implementation completion, automated-test success or browser acceptance.",
+    "verification": {
+      "verifiedGitCheckout": "../../outputs/audit-hero-20261018/verified-tdx-source",
+      "method": "Read original Git object bytes at the pinned commit without a populated worktree. For each path record byte length and SHA-256, independently compute SHA1(blob + byteLength + NUL + originalBytes), and match git rev-parse. These hashes identify upstream bytes, not adapted local files.",
+      "routes": "Friend learning landing: /learn; Technology & Tools: /skills, not /tech or /tools. The sticky lesson shell is /learn/fde and is separate from SkillMatrix.",
+      "contentAuditBoundary": "The main-source audit for this pass identifies /learning as the independent kind=resources collection and /software as the independent software collection. Anonymous requests return 401 in that audit. No unauthenticated inventory or private item bodies were inspected by this UI source review; authentication-required is not zero inventory."
+    },
+    "reviewedSources": [
+      {
+        "path": "src/app/[locale]/learn/page.tsx",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/app/[locale]/learn/page.tsx",
+        "bytes": 5048,
+        "sha256": "a3499eb5def784a67370ddeb04762a02d90493a6b4e899772fc93adc53cb9888",
+        "gitBlob": "2c90afe7c025a97b7a3811cb933c0486a69e6bd1"
+      },
+      {
+        "path": "src/app/[locale]/skills/page.tsx",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/app/[locale]/skills/page.tsx",
+        "bytes": 5480,
+        "sha256": "9e2bc8b3308821818985cb6b34b0dc2b503bb49a5e0587fea9d3234e8d43f4b8",
+        "gitBlob": "6c0af18cf215e4383d7990d711971d935a6b8d2e"
+      },
+      {
+        "path": "src/components/skills/skills-explorer.tsx",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/components/skills/skills-explorer.tsx",
+        "bytes": 13299,
+        "sha256": "73719c8207f342a24363bc931c993ed18f66881f68969d371d25671faf507f07",
+        "gitBlob": "ec81aaa89f7f8730eff858ba933b32ce80ceda95"
+      },
+      {
+        "path": "src/components/skills/skills.module.css",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/components/skills/skills.module.css",
+        "bytes": 6194,
+        "sha256": "1fd21acc592017c2ce7446b65bdc1c07526e3fdc98a363c434c61601b4b38e89",
+        "gitBlob": "d4829cdb2a80c1f414841ff9e7d67d903c6946a4"
+      },
+      {
+        "path": "src/components/learn/course-shell.tsx",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/components/learn/course-shell.tsx",
+        "bytes": 1662,
+        "sha256": "ae26ce85bb396672a3e109cd3e380a932f9ce3fbf395227d2462a1b2a8123446",
+        "gitBlob": "80132dfc53241db12f22d86424e7fa4d92d21483"
+      },
+      {
+        "path": "src/components/learn/course-sidebar.tsx",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/components/learn/course-sidebar.tsx",
+        "bytes": 9148,
+        "sha256": "5355409af40c3bbb347bdc92163240b95aa2e332599d7d9b793c81d9c119cf03",
+        "gitBlob": "6efa8fcf2e3eeefeadcaf71d6665f0c02ac0dde3"
+      },
+      {
+        "path": "src/components/home/data/post-card-frame.tsx",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/components/home/data/post-card-frame.tsx",
+        "bytes": 2958,
+        "sha256": "a6411da73bb2cf3e9cf77051c791314994199b3608bb50f6f247fc1c8d2f7c9a",
+        "gitBlob": "91f9d80ddcf36cd3c759c54c48fb0759be89ee1e"
+      },
+      {
+        "path": "src/components/home/data/post-card.module.css",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/components/home/data/post-card.module.css",
+        "bytes": 973,
+        "sha256": "52065303a0069c2744cb71030464345451a7ecaa8db96f2efe82cab7bfe22067",
+        "gitBlob": "e3a3692847a099ba541b1aa3b6bf0fcdf362a228"
+      },
+      {
+        "path": "src/components/fx/spotlight.tsx",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/components/fx/spotlight.tsx",
+        "bytes": 3972,
+        "sha256": "f86d0a3fd23399111224c7c63a921f8162941ff45a66cbc2759b9c5d05eb59aa",
+        "gitBlob": "1b7e1dbd18e61aab7f9a42ce905c3e96fe4cedbe"
+      },
+      {
+        "path": "src/components/fx/border-beam.tsx",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/components/fx/border-beam.tsx",
+        "bytes": 1387,
+        "sha256": "98d86176bbe7a6587ab0dc3d1eedea32d59c251fd8876e24c856fbc3a6cd311f",
+        "gitBlob": "3747f4153564ed8cf7f9b6a11189286a2abbb084"
+      },
+      {
+        "path": "src/components/ui/page-header.tsx",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/components/ui/page-header.tsx",
+        "bytes": 3557,
+        "sha256": "025f3e82bb7d6234665147b5c3b03f94a0538de16017d80c29d1ae7a2cd326c1",
+        "gitBlob": "ac081baa9a8a7b7cf1057c334a4a1e3bfb3af34a"
+      },
+      {
+        "path": "src/app/globals.css",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/src/app/globals.css",
+        "bytes": 43595,
+        "sha256": "baa91cc7dc192ce6d1bb04ea49dfbf32bb9756f525b940243973308ae9cb353d",
+        "gitBlob": "5cb4429910947682c3583bef41a6035212a9a703"
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/DingxinTao0417/tdx-portfolio/blob/c73bc4966f0ba808b978e22eccf5a063fc649751/LICENSE",
+        "bytes": 1068,
+        "sha256": "0a3304cbd40d1b32a263e7208dcb3ce97ef0131e1dc4eeb3a4203be69794d208",
+        "gitBlob": "c1fcda796e45dc198c86c19b0f7f8af85668a252"
+      }
+    ],
+    "sourceBindings": [
+      {
+        "upstream": [
+          "src/components/skills/skills-explorer.tsx:SkillsExplorer",
+          "src/components/skills/skills-explorer.tsx:SkillMatrix",
+          "src/components/skills/skills.module.css"
+        ],
+        "plannedLocal": "Real category selection, verified counts and grouped resource/software cards. SkillMatrix itself is a two-column directory, not the sticky sidebar source.",
+        "sourceParameters": "Selector: min-height 48px and 14px label; hover/focus preview separate from active selection; leave/blur restores preview; repeated selected-category click clears. Source Motion spring: stiffness 460, damping 38, mass 0.7. Matrix: 20px heading, 14px description, 40px row, 13px-to-14px row label, 20px-to-24px gaps and 20px-to-28px padding. Its segmented meter is directory share, not proficiency."
+      },
+      {
+        "upstream": [
+          "src/components/learn/course-shell.tsx",
+          "src/components/learn/course-sidebar.tsx"
+        ],
+        "plannedLocal": "Sticky category directory and native details/summary for verified collection categories/item metadata, preserving native keyboard behavior and canonical item destinations.",
+        "sourceParameters": "Source max-width 1440px; desktop sidebar 17rem then 18rem at xl, sticky top 6rem and height calc(100dvh - 7rem); main minmax(0,1fr). Summary and lesson link minimum 44px. Current item opens its containing details. ResizeObserver and toggle adjust active highlight. Learning records/progress are excluded. These are source dimensions, not claims about completed local geometry."
+      },
+      {
+        "upstream": [
+          "src/components/home/data/post-card-frame.tsx",
+          "src/components/home/data/post-card.module.css"
+        ],
+        "plannedLocal": "Reuse current source-adapted cover/link card behavior rather than add a pointer system or generated screenshot.",
+        "sourceParameters": "Fine mouse and non-reduced-motion only. Resting box measured on entry; rAF writes local pixels and normalized -0.5..0.5 offsets. Perspective 1000px, rotateX py*-5deg / rotateY px*6deg (normally maximum 2.5deg/3deg), lift -4px, cover scale 1.06 with px*-12px and py*-10px parallax. Leave/dispose cancels paint and resets; scroll invalidates box."
+      },
+      {
+        "upstream": [
+          "src/components/fx/spotlight.tsx",
+          "src/components/fx/border-beam.tsx",
+          "src/app/globals.css"
+        ],
+        "plannedLocal": "Existing grouped border light, optional featured-card beam and route-owned visibility/reduced-motion gates.",
+        "sourceParameters": "Spotlight: one mouse listener per group, rAF-throttled --mx/my, scroll correction, cleanup; CSS defaults 20rem border light, 26rem inner glow, 1px border and 0.5s opacity. Beam defaults 6s/lap, 70deg arc and 1.5px ring; learn landing explicitly uses 9s/80deg. Beam pauses offscreen or document-hidden and hides under reduced motion."
+      },
+      {
+        "upstream": [
+          "src/components/ui/page-header.tsx",
+          "src/app/[locale]/learn/page.tsx",
+          "src/app/[locale]/skills/page.tsx"
+        ],
+        "plannedLocal": "Shared page heading/watermark and scoped ambient in the current cobalt light/dark theme; no copied course, skills inventory or sphere.",
+        "sourceParameters": "PageHeader combines Aurora/Spotlight/grid with ScrollFade and Parallax watermark. Learn is an actual single-course overview with real lesson/question counts; skills is explorer, matrix, workflow and toolbelt. These compositions are not evidence of SANSPHASE courses or the same tools."
+      }
+    ],
+    "adaptationBoundaries": [
+      "Replace current /learning and /software article substitutes with their independent collections. Old track-knowledge / track-film deep links may remain only as small compatibility links to original articles; editorial themes are not resource or software inventory.",
+      "Use verified main-source titles, summaries, categories, covers, counts, attachments, access checks and destinations. A 401 means login is required, not empty/unpublished inventory. No guessed API, private-content copying, production write, invented download, rating, progress or stock count.",
+      "Preserve account/VIP checks, authorized media, original Reader/content destinations, management and community boundaries. This presentation source review does not authorize business or production-data changes.",
+      "Use native DOM/TypeScript and installed GSAP/Three plus existing PageExperience/cursor/ambient. No React/Next/Motion/R3F, second application, skill sphere, particle renderer, course/quiz engine or learning-record storage is added by this plan.",
+      "Retain MIT copyright and permission notice for copied/substantially adapted component code. Repository code licensing is not an independent rights audit of all upstream images. Use verified SANSPHASE media and approved icons; no new AI media.",
+      "Keep effective information at least 12px and controls 13-14px instead of copying source 10-11px HUD text. Preserve visible native focus without stacked rings. Source timings do not establish identical motion physics, measured performance gains or visual superiority.",
+      "Planned regression boundaries: actual authentication outcomes, stale-response cancellation, no private-body leakage, category/query/clear semantics, canonical destinations, old-anchor compatibility, route disposal, pointer reset, overlay/inert pause, reduced motion and desktop light/dark layout. Results/browser evidence must be recorded separately after implementation."
+    ]
+  },
+  "articleImagesUI": {
+    "dependency": "libraries.photoswipe",
+    "adaptedIn": [
+      "src/article-images.ts",
+      "src/article.ts",
+      "src/reader.css",
+      "src/main.ts"
+    ],
+    "adaptationBoundaries": [
+      "Use the official PhotoSwipe 5.4.4 core and stylesheet with one image per dataSource; no browser frame, thumbnail gallery or custom zoom engine is introduced.",
+      "The sanitized existing body/cover image must finish loading and expose positive naturalWidth/naturalHeight before a native enlargement button is enabled. Author image links keep their original destination, with a separate sibling zoom button rather than nested controls. URLs are taken from the existing image DOM; the article sanitizer and authorized media proxy remain unchanged.",
+      "PhotoSwipe owns zoom/pan and its focus trap. The local adapter makes Reader inert while open, consumes image Escape before article Escape, restores the original Reader scroll and reachable focus, and isolates stale close/destroy callbacks. Article/route/conceal/language changes, source replacement/failure and live reduced motion release the current viewer.",
+      "Open/close use the official no-animation option; reduced motion also removes zoom transitions and loader animation. Theme colors reuse existing variables, the image dialog exposes native cursor ownership, and command-palette access is guarded while it owns focus.",
+      "No new media, account access, content translation or production write is added. A pinned mature dependency is not a safety guarantee; package audit and actual integrated browser results remain separate checks owned by the root acceptance pass."
+    ],
+    "regressionCoverage": [
+      "tests/article-images.test.mjs",
+      "tests/reader-experience.test.mjs",
+      "tests/palette-modal.test.mjs"
+    ]
+  },
+  "directoryIcons": {
+    "project": "https://github.com/lucide-icons/lucide",
+    "version": "lucide-static@1.59.0",
+    "tarball": "https://registry.npmjs.org/lucide-static/-/lucide-static-1.59.0.tgz",
+    "integrity": "sha512-MuHZYaXbHgzN2QO6D3OM19bj09A+8GJiFSdXIMlbnLLEGQQ9+NRH2KaCxuivevD3Y23vM74kV17XBifgtqhfEg==",
+    "license": "ISC",
+    "licenseFile": "vendor/lucide/package/LICENSE",
+    "adapter": "src/icons.ts",
+    "adaptations": [
+      "Only 12 official SVGs are vendored; no complete icon runtime or remote font requested.",
+      "The thin markup adapter adds aria-hidden/focusable and uses currentColor; original geometry is preserved."
+    ],
+    "icons": [
+      {
+        "file": "vendor/lucide/package/icons/arrow-down.svg",
+        "sha256": "bfbfb708818e6cc0b02d830254c8b00f6b6dae659f50006ea253b37b8b05a5bf",
+        "bytes": 343
+      },
+      {
+        "file": "vendor/lucide/package/icons/arrow-right.svg",
+        "sha256": "7fffdce8d4505927f8dfe0395331083397e2c7d7fd59f3291f73d00c2369efdb",
+        "bytes": 343
+      },
+      {
+        "file": "vendor/lucide/package/icons/arrow-up-right.svg",
+        "sha256": "688de0b689495d62072ce1b221ed71e6d6ba2f534eee7fde4f3c852f6e236b73",
+        "bytes": 345
+      },
+      {
+        "file": "vendor/lucide/package/icons/book-open.svg",
+        "sha256": "3cc66629bf1967e1f6fdf0a7700c9581b6c556111495bdfe925a91ba99d25ee1",
+        "bytes": 467
+      },
+      {
+        "file": "vendor/lucide/package/icons/chevron-right.svg",
+        "sha256": "b9e4521dff43288a385af1421b625da8fd40cf28c272a508c933217002090776",
+        "bytes": 321
+      },
+      {
+        "file": "vendor/lucide/package/icons/files.svg",
+        "sha256": "2885ed83fe87d96872bd73e547b4bcbf9bd72b062019a1e9dbe4bc01d4bad3ab",
+        "bytes": 520
+      },
+      {
+        "file": "vendor/lucide/package/icons/layers.svg",
+        "sha256": "2db56bec69d08216e9118099b76cab533791e7ab9c93894b3d26f7b9b9664fcc",
+        "bytes": 587
+      },
+      {
+        "file": "vendor/lucide/package/icons/monitor.svg",
+        "sha256": "29e6d353da67d16641f2090c1f62995cf04df9a27897c690bcb1350070c14548",
+        "bytes": 424
+      },
+      {
+        "file": "vendor/lucide/package/icons/search.svg",
+        "sha256": "c151d66bb2d179451283dfbf8b88609b1789ef07699884d941eea07245ab7cd8",
+        "bytes": 352
+      },
+      {
+        "file": "vendor/lucide/package/icons/terminal.svg",
+        "sha256": "94abfb54e3fbcf7f6b1cdc0fbb05bb16b319d11500a3a80cbcb8d938c73cbb58",
+        "bytes": 340
+      },
+      {
+        "file": "vendor/lucide/package/icons/workflow.svg",
+        "sha256": "74ada228c66bc05a57b4b5ccea5d0701dffe5850f7a09956181bfda334a1b72e",
+        "bytes": 430
+      },
+      {
+        "file": "vendor/lucide/package/icons/x.svg",
+        "sha256": "b22c83fd632ff4082021e34d64b1393591134e7ce2889a6dad5361eff2fcc716",
+        "bytes": 332
+      }
+    ]
+  },
+  "catalogBookBinding": {
+    "repository": "https://github.com/scastiel/book-cover-3d",
+    "commit": "0304f59006705ac9d681505eabd9d70c1252bfb4",
+    "license": "MIT",
+    "retainedNotice": "vendor/book-cover-3d/LICENSE",
+    "scopeRecord": "vendor/book-cover-3d/UPSTREAM.md",
+    "sourceFiles": [
+      {
+        "file": "vendor/book-cover-3d/index.source.tsx",
+        "sha256": "b0df64f49a8f942940e734815d742f21f566c7eaecbc1c1b19596a691a02beec",
+        "bytes": 4563
+      },
+      {
+        "file": "vendor/book-cover-3d/LICENSE",
+        "sha256": "4127cd5b7c2107a9eb54c697878d29ad5ccd887639132d2249f097161f859a30",
+        "bytes": 1096
+      }
+    ],
+    "adapter": "vendor/book-cover-3d/book.css",
+    "host": "src/library-page.css",
+    "runtimeDependencies": [],
+    "limitations": "Inactive upstream; CSS-only reviewed source adaptation, not an installed React package or active-maintenance claim."
+  },
+  "softwareDirectoryItem": {
+    "repository": "https://github.com/shadcn-ui/ui",
+    "commit": "e31626978fe8e3804fe2e792e11e32dc560e40a8",
+    "license": "MIT",
+    "retainedNotice": "vendor/shadcn-item/LICENSE",
+    "reviewedSources": [
+      {
+        "path": "apps/v4/registry/new-york-v4/ui/item.tsx",
+        "local": "vendor/shadcn-item/item.source.tsx",
+        "sha256": "9ade8136f010284b7ec0142f52606616dd4b23798012e75a9fc6aac1fb2d792e"
+      },
+      {
+        "path": "LICENSE.md",
+        "local": "vendor/shadcn-item/LICENSE",
+        "sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f"
+      }
+    ],
+    "scope": "Source-adapted Item media/content/description/footer composition; host renderer and styles in src/catalog-page.ts and src/software-cards.css. No new runtime dependency or remote media requests."
+  }
+}

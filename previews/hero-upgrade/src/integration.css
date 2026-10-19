@@ -1,0 +1,7 @@
+.integration-environment {position:fixed;z-index:25;bottom:12px;left:16px;display:flex;gap:14px;align-items:center;padding:8px 14px;border:1px solid var(--line);border-radius:30px;background:var(--bg);color:var(--muted);font:12px/1.5 var(--mono)}
+.integration-environment a:hover {color:var(--accent)}
+[data-local-account] {display:flex;gap:6px;align-items:center}
+.integration-gate {min-height:65vh;padding-top:180px;padding-bottom:100px}
+.integration-gate h1 {font-size:clamp(32px,4vw,58px);line-height:1.2;margin:24px 0}
+.integration-gate p {max-width:60ch;line-height:1.8;color:var(--muted)}
+.integration-gate .page-actions {margin-top:32px}
